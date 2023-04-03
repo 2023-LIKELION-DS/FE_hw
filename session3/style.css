@@ -15,8 +15,9 @@ h3 {
 /* header */
 .hd {
     position: relative;
-    height: 450px;
+    height: 550px;
     text-align: center;
+    padding: 50px 0;
 
 }
 
@@ -60,8 +61,9 @@ h3 {
 
 /* section */
 .sec {
-    height: 850px;
+    height: 900px;
     text-align: center;
+    padding: 50px 0;
 } 
 
 .edu{
@@ -69,8 +71,8 @@ h3 {
     width: 400px;
     margin-left: 131px;
     margin-right: 80px;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .edu p {
@@ -83,8 +85,8 @@ h3 {
     width: 400px;
     margin-left: 80px;
     margin-right: 131px;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .act p {
@@ -119,16 +121,11 @@ h3 {
     height: 400px;
 }
 
-.sec::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 /* footer */
 .ft {
     position: relative;
     text-align: center;
+    padding: 50px 0;
 }
 
 .cont h3 {
@@ -148,4 +145,3 @@ a:link, a:visited {
     text-decoration: none;
     color: black;
 }
-
