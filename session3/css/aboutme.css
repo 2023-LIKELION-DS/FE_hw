@@ -11,6 +11,7 @@ header {
   width: auto;
   object-fit: cover;
 }
+
 .hd-t {
   padding-left: 100px;
   padding-top: 30px;
@@ -50,9 +51,10 @@ nav ul li {
 footer {
   text-align: center;
 }
+
 footer img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }
 
 footer div {
