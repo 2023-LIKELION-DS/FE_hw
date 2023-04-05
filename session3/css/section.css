@@ -1,0 +1,23 @@
+.section {
+  width: 800px;
+  height: auto;
+  border-bottom: 1px solid gray;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.html img,
+.css img,
+.js img,
+.python img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  justify-content: center;
+}
+
+.section img {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
