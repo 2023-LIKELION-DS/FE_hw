@@ -4,11 +4,8 @@
   font-size: large;
   font-weight: 300;
   border-bottom: 1px solid gray;
-  color: palevioletred;
-
   overflow: auto;
   padding: 30px;
-
   display: flex;
   margin: 0 auto;
 }
