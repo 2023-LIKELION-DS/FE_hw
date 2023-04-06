@@ -1,0 +1,26 @@
+/* EXPERIENCE */
+.ex {
+  width: 800px;
+  height: auto;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+.ex_date1,
+.ex_date2,
+.ex_date3 {
+  font-size: smaller;
+  color: rgb(94, 94, 94);
+  padding: 5px;
+}
+.ex_art1,
+.ex_art2,
+.ex_coding {
+  font-size: medium;
+  color: rgb(54, 54, 54);
+  padding: 5px;
+}
