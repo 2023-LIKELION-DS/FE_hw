@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* navigation bar
+nav {
+    height: 80px;
+    background-color: white;
+    line-height: 40px;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-btn {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.nav-btn {
+    float: left;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: bold;
+} */
+
+/* section1 */
+.sec {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.sec1 img {
+    width: 350px;
+    height: 350px;
+    float: left;
+}
+
+.sec1 h4{
+    text-align: left;
+    margin: 0px;
+}
+
+.sec1 h1{
+    text-align: left;
+    margin: 0px;
+    font-size: 60px;
+}
+
+.sec1 p {
+    font-size: 18px;
+}
+
+/* section2 */
+.sec2 h4 {
+    font-size: 30px;
+}
+
+.edu {
+    float: left;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.act {
+    float: right;
+    width: 300px;
+    padding-right: 10px;
+}
+
+.year {
+    float: left;
+}
+
+.content {
+    float: right;
+    padding-bottom: 30px;
+}
+
+.sec2 p {
+    font-size: 18px;
+}
+
+/* skill */
+.skill {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box {
+  width: 80%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 60%; background-color: #04AA6D;}
+.css {width: 60%; background-color: #2196F3;}
+.js {width: 20%; background-color: #f44336;}
+.php {width: 80%; background-color: #808080;}
+
+/* section3 */
+.sec3 h4 {
+    font-size: 30px;
+}
+
+.sec3 article {
+    float: left;
+    width: 500px;
+    height: 450px;
+    padding: 10px;
+}
+
+.sec3 div img {
+    width: 80%;
+    height: auto;
+    padding-left: 5px;
+}
+
+/* .card {
+    width: 80px;
+    height: 60px;
+} */
+
+/* 기타 */
+hr {
+    width: 80%;
+    height: 1px;
+}
+
+/* footer */
+.ft {
+    padding: 20px;
+    text-align: center;
+}
