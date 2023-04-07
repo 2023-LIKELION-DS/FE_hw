@@ -1,0 +1,71 @@
+header {
+  width: 800px;
+  height: 350px;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+  padding: 50px;
+}
+.hd_photo {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.hd_photo img {
+  overflow: auto;
+  width: 65%;
+  object-fit: contain;
+  align-items: center;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 20%;
+}
+.hd_contact {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 11px;
+  color: rgb(123, 123, 123);
+}
+.hd_contact i {
+  padding: 13px;
+}
+
+.hd_text {
+  font-size: small;
+  color: rgb(54, 54, 54);
+  width: 400px;
+  height: auto;
+  float: right;
+  margin: 0 auto;
+}
+.hd_text text {
+  padding: 3px;
+}
+
+.hd_blog {
+  width: 400px;
+  display: flex;
+  margin: 0 auto;
+}
+.hd_blog a {
+  width: 60px;
+  align-items: center;
+  padding: 10px;
+}
+.photoinfo {
+  height: 500px;
+  text-align: center;
+  /* padding: 50px 50px; */
+}
+
+.hd_info {
+  width: 400px;
+  height: auto;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}

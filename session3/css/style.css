@@ -1,0 +1,26 @@
+* {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.navi {
+  width: 800px;
+  height: 50px;
+  margin: 0px auto;
+  padding: 3px;
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(79, 79, 79);
+  background-color: rgb(255, 234, 237);
+  border: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.navi h4 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 auto;
+}
