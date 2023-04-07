@@ -1,0 +1,139 @@
+/* 폰트 종류 */
+/* font-family: 'Nanum Gothic', sans-serif; -> 한글
+font-family: 'Rajdhani', sans-serif; -> 일반 영어
+font-family: 'Readex Pro', sans-serif; -> 두꺼운 영어 */
+
+* {
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* navigator */
+nav {
+  height: 80px;
+  line-height: 80px;
+}
+
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nav {
+  text-align: center;
+}
+
+/* header */
+.hd {
+  position: relative;
+  height: 330px;
+  text-align: right;
+}
+
+.hd img {
+  width: 100%;
+  height: auto;
+}
+
+.card-img {
+  display: inline-block;
+  overflow: hidden;
+  width: 150px;
+  height: auto;
+}
+
+.hd-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  font-family: "Readex Pro", sans-serif;
+  color: #5b3906;
+}
+
+.hd-content {
+  float: right;
+  margin-left: 250px;
+  width: 500px;
+}
+
+.hd-content-left,
+.hd-content-center,
+.hd-content-right {
+  list-style-type: none;
+  margin: 0;
+  float: left;
+  margin-left: 15px;
+}
+
+ul.hd-content-left > li,
+ul.hd-content-center > li,
+ul.hd-content-right > li {
+  text-align: left;
+  font-size: 15px;
+}
+
+/* section */
+.sec {
+  padding-bottom: 30px;
+}
+
+.sec-intro-edu,
+.sec-intro-about {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Readex Pro", sans-serif;
+  color: #5b3906;
+}
+
+.skills-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Readex Pro", sans-serif;
+  color: #5b3906;
+}
+
+.skills-sub-title {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.sec-introduction {
+  padding: 20px 0;
+}
+
+.sec-introduction > p {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.box-left,
+.box-right {
+  height: 100px;
+  padding: 5px 0;
+  border: 2px solid #c5821f;
+  border-radius: 20px;
+  text-align: center;
+  width: 480px;
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* footer */
+.ft {
+  padding: 3px;
+  text-align: center;
+  background-color: #f1e3ce;
+}
