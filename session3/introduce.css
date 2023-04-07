@@ -1,0 +1,93 @@
+.first {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 100px 100px;
+}
+
+#first_pic {
+  width: 200px;
+  margin-right: 60px;
+}
+
+.introduce > h2 {
+  font-size: 40px;
+}
+
+.introduce > p {
+  text-align: center;
+}
+
+.second {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 100px 100px;
+}
+
+.education {
+  margin-right: 100px;
+  text-align: center;
+}
+
+.activities {
+  margin-left: 100px;
+  text-align: center;
+}
+
+.education > h3 {
+  font-size: 30px;
+}
+
+.activities > h3 {
+  font-size: 30px;
+}
+
+.third {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 100px 100px;
+}
+
+.skills > h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.skills > ul {
+  list-style-type: none;
+}
+
+.language > li {
+  float: left;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.fourth {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 100px 100px;
+  text-align: center;
+}
+
+.hobby article {
+  float: left;
+  width: 300px;
+  margin-right: 30px;
+}
+.hobby article:last-child {
+  margin-right: 0;
+}
+
+.hobby article img {
+  width: 100%;
+  height: auto;
+}
+
+.hobby > h3 {
+  font-size: 30px;
+}
