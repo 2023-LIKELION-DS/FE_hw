@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  height: 100px;
+  background-color: green;
+}
+
+.nav-logo {
+  text-align: center;
+  color: white;
+  font-size: 35pt;
+  line-height: 100px;
+}
+
+.Profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.mouse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.tmi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 16pt;
+}
+
+.colo {
+  font-size: 18pt;
+}
+
+.explain {
+  text-align: center;
+}
+
+.hahaha {
+  display: flex;
+  flex-direction: row;
+  font-size: 16pt;
+}
+
+.first {
+  text-align: center;
+  font-size: 30pt;
+}
+
+.second {
+  text-align: center;
+  font-size: 30pt;
+}
+
+.third {
+  text-align: center;
+  font-size: 30pt;
+}
+
+.seoyoung {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.myId {
+  font-size: 18pt;
+}
+
+.myBtn {
+  font-size: 18pt;
+  color: black;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.myNum {
+  font-size: 18pt;
+  color: black;
+}
+
+.container2 {
+  width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  height: 60px;
+  background-color: green;
+}
