@@ -114,6 +114,11 @@
   margin-top: 20px;
 }
 
+p {
+  display: flex;
+  flex-direction: column;
+}
+
 .p {
   width: 100px;
   height: 100px;
