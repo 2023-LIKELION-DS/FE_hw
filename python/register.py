@@ -45,3 +45,25 @@ while True:
         else:
             print('생년월일 입력값이 올바르지 않습니다.')
     email = input('이메일:')
+
+    user['username'] = username
+    user['password'] = password
+    user['name'] = name
+    user['birth_date'] = birth_date
+    user['email'] = email
+
+    users.append(user)
+    print(users)
+
+    print("------------------------------------------")
+    print(f"{user['name']} 님 가입을 환영합니다!")
+    print("------------------------------------------")
+
+    print('회원가입을 추가로 진행하시겠습니까?')
+    register_another_input = input('>>')
+    register_another_input = register_another_input.lower()
+
+    if register_another_input == 'y':
+        pass
+    elif register_another_input == 'n':
+        exit()
