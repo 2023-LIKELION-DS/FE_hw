@@ -21,3 +21,27 @@ while not register:
         exit()
     else:
         print('입력 값을 확인해주세요.')
+
+users = []
+
+while True:
+
+    user = {}
+
+    username = input('ID : ')
+    while True:
+        password = input('PW:')
+        password_confirm = input('PW 확인: ')
+        if password == password_confirm:
+            break
+        else:
+            print('패스워드가 일치하지 않습니다.')
+
+    name = input('이름: ')
+    while True:
+        birth_date = input('생년월일(6자리):')
+        if len(birth_date) == 6:
+            break
+        else:
+            print('생년월일 입력값이 올바르지 않습니다.')
+    email = input('이메일:')
