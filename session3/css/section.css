@@ -6,10 +6,7 @@
   margin: 0 auto;
   justify-content: center;
 }
-.html img,
-.css img,
-.js img,
-.python img {
+.learn img {
   width: 150px;
   height: 150px;
   object-fit: contain;
