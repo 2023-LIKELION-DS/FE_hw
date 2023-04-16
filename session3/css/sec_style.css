@@ -1,0 +1,129 @@
+/* section */
+.sec {
+  position: relative;
+  height: 1300px;
+  padding-bottom: 30px;
+}
+
+#sec-intro-edu,
+#sec-intro-about {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Readex Pro", sans-serif;
+  color: #5b3906;
+}
+
+#skills-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Readex Pro", sans-serif;
+  color: #5b3906;
+}
+
+.skills-sub-title {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.sec-introduction {
+  padding: 20px 0;
+}
+
+.sec-introduction > p {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.box {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 70px;
+  justify-content: center;
+}
+
+.box > p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #5b3906;
+}
+
+.box-left,
+.box-right {
+  height: 100px;
+  padding: 5px 0;
+  border: 2px solid #c5821f;
+  border-radius: 20px;
+  text-align: center;
+  width: 240px;
+  display: inline-block;
+  list-style-type: none;
+}
+
+#hobby-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Readex Pro", sans-serif;
+  color: #5b3906;
+}
+
+.hobby-music {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 70px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.music-left > p,
+.music-right > p {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+}
+
+.sec article {
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.sec article:last-child {
+  margin-right: 0;
+}
+
+.sec article img {
+  width: 100%;
+  height: auto;
+}
+
+.card-img {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.card-img:hover {
+  filter: brightness(70%);
+}
+
+.card-img > p {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+}
+
+.card-img:hover > p {
+  display: inline-block;
+}

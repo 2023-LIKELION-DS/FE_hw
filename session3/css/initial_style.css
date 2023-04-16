@@ -1,0 +1,31 @@
+/* 폰트 종류 */
+/* font-family: 'Nanum Gothic', sans-serif; -> 한글
+font-family: 'Rajdhani', sans-serif; -> 일반 영어
+font-family: 'Readex Pro', sans-serif; -> 두꺼운 영어 */
+
+* {
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
