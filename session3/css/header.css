@@ -1,18 +1,17 @@
 header {
-  width: 800px;
-  height: 350px;
+  width: 800px; /* content영역에 지정됨*/
   margin: 0 auto;
-  border-bottom: 1px solid gray;
-  padding: 50px;
+  border-bottom: 1px solid gray; /*border은 padding까지 적용됨 */
+  padding: 30px;
+  box-sizing: border-box; /*그러므로 width속성값을 border,padding까지 포함되게 변경해줌*/
 }
 .hd_photo {
   width: 400px;
   height: auto;
   object-fit: contain;
-  float: left;
+  display: flex;
   margin: 0 auto;
-  text-align: center;
-  align-items: center;
+  justify-content: center;
 }
 .hd_photo img {
   overflow: auto;
@@ -23,14 +22,18 @@ header {
   border-radius: 20%;
 }
 .hd_contact {
+  width: 400px;
   display: flex;
   margin: 0 auto;
+  padding: 10px;
   text-align: center;
+  justify-content: center;
   font-size: 11px;
   color: rgb(123, 123, 123);
 }
 .hd_contact i {
-  padding: 13px;
+  padding: 10px;
+  justify-content: center;
 }
 
 .hd_text {
@@ -38,21 +41,27 @@ header {
   color: rgb(54, 54, 54);
   width: 400px;
   height: auto;
-  float: right;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin: 0 auto;
 }
-.hd_text text {
-  padding: 3px;
+.hd_text span {
+  padding: 5px;
 }
 
 .hd_blog {
   width: 400px;
   display: flex;
+  justify-content: center;
   margin: 0 auto;
+  padding: 10px;
 }
 .hd_blog a {
   width: 60px;
+  display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
 }
 .photoinfo {
@@ -64,7 +73,7 @@ header {
 .hd_info {
   width: 400px;
   height: auto;
-  float: left;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
