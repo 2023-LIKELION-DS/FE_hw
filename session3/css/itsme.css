@@ -65,8 +65,7 @@ nav li:hover {
   margin-bottom: 10px;
 }
 
-#link1,
-#link2 {
+#link1 #link2 {
   text-decoration: none;
   color: deeppink;
 }
