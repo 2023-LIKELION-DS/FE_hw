@@ -62,9 +62,19 @@ ul li {
 
 footer {
   text-align: center;
+}
+
+.gal {
+  text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.p1,
+.p2 {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 footer img {
