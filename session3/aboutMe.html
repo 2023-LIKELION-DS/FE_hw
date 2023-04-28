@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,10 +13,21 @@
     <link rel="stylesheet" href="./css/itsme.css" />
     <title>윤윤지 자기소개 페이지</title>
   </head>
-
   <body class="out_box">
+    <nav>
+      <div class="container">
+        <ul class="navul">
+          <li>
+            <a href="#first">About Me</a>
+          </li>
+          <li><a href="#second">Education & Activities</a></li>
+          <li><a href="#third">What I Learn Now</a></li>
+          <li><a href="#forth">What I Love</a></li>
+        </ul>
+      </div>
+    </nav>
     <header>
-      <section class="first">
+      <section id="first">
         <div class="myimg">
           <img class="esther" src="./img/창 보는 에스더버니.jpg" />
         </div>
@@ -27,24 +37,32 @@
             <strong>Yunji Yun</strong>
           </h1>
           <p class="info">
-            2003.10.17<br /><br />
-            컴퓨터공학전공<br /><br />
-            <a href="https://www.instagram.com/yoooooon_03/" target="_blank"
-              >@yoooooon_03</a
-            ><br /><br />
-            010-7113-2332<br /><br />
-            yoon20220823@duksung.ac.kr<br /><br />
+            <span class="infomore">2003.10.17<br /></span>
+            <span class="infomore">컴퓨터공학전공<br /></span>
+            <span class="infomore"
+              ><a
+                href="https://www.instagram.com/yoooooon_03/"
+                target="_blank"
+                id="link1"
+                >@yoooooon_03</a
+              ></span
+            >
+            <span class="infomore">010-7113-2332<br /></span>
+            <span class="infomore">yoon20220823@duksung.ac.kr<br /></span>
+            <span class="infomore"
+              ><a href="https://github.com/Yunji-Yun" target="_blank" id="link2"
+                >@Yunji-Yun</a
+              ></span
+            >
           </p>
         </div>
       </section>
     </header>
-    <hr id="line" />
-    <section class="second">
+    <section id="second">
       <div class="education">
         <div class="education1">
           <h2>Education</h2>
         </div>
-
         <article class="education2">
           <div class="num">
             2019-2022<br /><br />
@@ -72,8 +90,7 @@
         </div>
       </article>
     </section>
-    <hr id="line" />
-    <section class="third">
+    <section id="third">
       <div class="skill">
         <div class="sk1"><h2>What I Learn Now</h2></div>
         <div class="sk2">
@@ -95,8 +112,7 @@
         </div>
       </div>
     </section>
-    <hr id="line" />
-    <section class="forth">
+    <section id="forth">
       <div class="love">
         <div class="love1"><h2>What I Love</h2></div>
         <article class="love2">
@@ -118,7 +134,6 @@
           </div>
           <div class="asmr">
             <p id="name"><strong>ASMR</strong></p>
-
             <img
               src="./img/asmr.jpg"
               alt="ASMR"

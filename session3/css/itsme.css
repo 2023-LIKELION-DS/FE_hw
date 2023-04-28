@@ -1,10 +1,33 @@
 .out_box {
+  background-color: lavenderblush;
   font-family: "Noto Sans KR", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.first {
+nav {
+  background-color: rgb(255, 218, 235);
+  color: deeppink;
+  clear: both;
+  height: 60px;
+  margin-top: 60px;
+}
+
+.navul > li {
+  list-style-type: none;
+  text-decoration: none;
+  color: deeppink;
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+nav li:hover {
+  background-color: white;
+}
+
+#first {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,17 +36,18 @@
 }
 
 .esther {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   margin-right: 60px;
   margin-top: 60px;
 }
 
 #lion {
-  font-size: small;
+  font-size: 10px;
   color: slategray;
   text-align: left;
 }
+
 .myname {
   text-align: center;
   margin-top: 40px;
@@ -31,9 +55,27 @@
 
 .info {
   margin-top: 20px;
+  width: 300px;
+  background-color: rgb(255, 227, 240);
+  border-radius: 30px;
 }
 
-.second {
+.infomore {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#link1 #link2 {
+  text-decoration: none;
+  color: deeppink;
+}
+
+#link1:hover,
+#link2:hover {
+  background-color: white;
+}
+
+#second {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -70,12 +112,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: rgb(255, 227, 240);
+  border-radius: 30px;
+  padding: 30px 30px 10px 30px;
 }
 
 .activities2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: rgb(255, 227, 240);
+  border-radius: 30px;
+  padding: 30px 30px 10px 30px;
 }
 
 .num {
@@ -90,7 +138,7 @@
   margin-left: 20px;
 }
 
-.third {
+#third {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,6 +160,9 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 20px;
+  background-color: rgb(255, 227, 240);
+  border-radius: 30px;
+  padding: 20px;
 }
 
 p {
@@ -140,7 +191,7 @@ p {
   margin-left: 30px;
 }
 
-.forth {
+#forth {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -163,6 +214,9 @@ p {
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 20px;
+  background-color: rgb(255, 227, 240);
+  border-radius: 30px;
+  padding: 10px 20px 20px 20px;
 }
 
 .pizza {
@@ -182,8 +236,4 @@ p {
 
 #name {
   text-align: center;
-}
-
-#line {
-  width: 50%;
 }
