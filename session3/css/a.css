@@ -1,0 +1,58 @@
+/* 피드백2 : float:left -> flex로 배치해보기*/
+
+.logo_name-wrap{
+    display:flex;
+    justify-content:center;
+}
+#logo{margin:40% 0 20% 0;
+    }
+#name{margin:7% 0 0 8%;
+    
+}
+#name p {margin-bottom:-15%;
+
+}
+#name h1{
+    text-align:center; font-size:40px;
+}
+#form{
+    display:inline;
+}
+#information{
+    text-align:center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.edu_act-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+#edu{
+    margin:3% 10% 3% 0;
+    font-weight: bold;
+}
+#edu h2{text-align:center; margin:0 0 13% 0;
+
+}
+#act{
+    margin:3% 0 3% 0;
+    font-weight: bold;
+}
+#act h2{text-align:center; margin:0 0 13% 0;
+
+}
+.imgg{
+    margin:0 3% 5% 0;
+}
+.imgg-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+#last{
+    text-align:center; font-size:15px;
+    font-weight:bold ;
+}
+

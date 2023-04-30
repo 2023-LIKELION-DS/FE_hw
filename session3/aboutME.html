@@ -5,57 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>soeun</title>
-    <style>
-    #logo{
-      float:left;
-      margin:3% 0 3% 27%;
-    }
-    #name{
-      float:left;
-      margin:3% 0 5% 10%;
-    }
-    #name p{ float:left; margin:3% 0 -25% 0%;
-
-    }
-    #name h1{
-      text-align:center; font-size:40px;
-
-    }
-    #form{
-      display:inline;
-    }
-    #information{
-      text-align:center;
-      font-size: 15px;
-      font-weight: bold;
-    }
-    #edu{
-      float:left; margin:3% 0 3% 33%;
-      font-weight: bold;
-    }
-    #edu h2{text-align:center; margin:0 0 13% 0;
-
-    }
-    #act{
-      float:left; margin:3% 0 3% 10%;
-      font-weight: bold;
-    }
-    #act h2{text-align:center; margin:0 0 13% 0;
-
-    }
-    .imgg{
-      float:center;
-      text-align:center;
-      margin:0 -17% 5% 22%;
-    }
-    #last{
-      text-align:center; font-size:15px;
-      font-weight:bold ;
-    }
-    </style>
+    <link href="css/a.css" type="text/css" rel="stylesheet"> <!--피드백1 : CSS 폴더를 만들어서 그 안에서 코드 작성-->
   </head>
   <body>
     <section>
+    <div class="logo_name-wrap">
       <div>
       <img id="logo" src="./img/나.jpg" width="250">
       </div>
@@ -69,35 +23,53 @@
           010-8892-7143<br><br>
           peanutjam159@gmail.com
         </p>
-      </div>
+      </div>  
+    </div>
+    </section>
     <hr width="60%" color="#E1E1E1">
     </section>
     <section>
-    <div id="edu">
+    <section>
+    <div class="edu_act-wrap">
+      <div id="edu">
         <h2>Education</h2>
         <p>2018-2021 &nbsp;&nbsp;&nbsp;&nbsp;한영고등학교</p>
         <p>2022-Now &nbsp;&nbsp;&nbsp;&nbsp;덕성여자대학교</p>
+      </div>
+      <div id="act">
+        <h2>Activities</h2>
+        <p>2023-Now &nbsp;&nbsp;&nbsp;&nbsp;11기 아기사자</p>
+      </div>
     </div>
-    <div id="act">
-      <h2>Activities</h2>
-      <p>2023-Now &nbsp;&nbsp;&nbsp;&nbsp;11기 아기사자</p>
-    </div>
+    </section>
     <hr width="60%" color="#E1E1E1">
     </section>
     <section>
     <div>
       <h2 style="text-align:center ; margin: 3% 0 4% 0;">Hobby</h2>
-      <img class="imgg" src="./img/전시회.jpg" width="220" height="220">
-      <img class="imgg" src="./img/그림.jpg" width="350" height="220">
-      <img class="imgg" src="./img/전시회2.jpg" width="220" height="220">
+      <div class="imgg-wrap">
+        <img class="imgg" src="./img/전시회.jpg" width="220" height="220"> 
+        <img class="imgg" src="./img/그림.jpg" width="350" height="220">
+        <img class="imgg" src="./img/전시회2.jpg" width="220" height="220">
+      </div>
     </div>
     <hr width="60%" color="#E1E1E1">
     </section>
+    <section>
+      <div>
+        <h2 style="text-align:center ; margin: 3% 0 4% 0;">Playlist</h2>
+        <div class="imgg-wrap">
+          <img class="imgg" src="./img/Bad.jpg" width="220" height="150"> 
+          <img class="imgg" src="./img/whiskey and morphine.jpg" width="220" height="150">
+          <img class="imgg" src="./img/파이팅해야지.jpg" width="220" height="150">
+        </div>
+      </div>
+      <hr width="60%" color="#E1E1E1">
+      </section>
     <footer>
     <div>
       <h1 style="text-align:center">!? </h1>
       <p id="last"> 아직 많이 부족하지만 열심히 하겠습니다!!<br>덕성여대 멋쟁이 사자처럼 파이팅!!</p><br>
-      <p> </p>
     </div>
     </footer>
   </body>
