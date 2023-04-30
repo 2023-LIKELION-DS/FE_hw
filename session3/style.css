@@ -44,6 +44,7 @@ nav::after {
 }
 
 .nav-btn {
+  text-align: center;
   list-style-type: none;
   margin: 0;
 }
@@ -59,7 +60,7 @@ ul.nav-btn > li {
 
 .hd {
   position: relative;
-  height: 1000px;
+  height: 280px;
   text-align: center;
 }
 
@@ -79,18 +80,19 @@ ul.nav-btn > li {
   padding-top: 100px;
 }
 
-/* section */
-.sec {
+/* section1 */
+
+.sec1 {
   font-family: sans-serif;
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .window1-pic {
-  float: left;
   width: 250px;
-  margin-left: 170px;
-  margin-right: 40px;
-  margin-top: -750px;
-  margin-bottom: 10px;
+  margin: 50px;
 }
 
 .window1-pic img {
@@ -99,33 +101,37 @@ ul.nav-btn > li {
 }
 
 .window1-info {
-  text-align: center;
-  font-size: 15px;
-
-  float: left;
-  margin-left: 530px;
-  margin-top: -710px;
-  margin-bottom: 10px;
-
-  display: flex;
-  padding: 25px;
-  width: 530px;
+  margin: 50px;
+  width: 600px;
+  height: 200px;
   border-radius: 100px;
+
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.window2-edu {
-  float: left;
-  margin-left: 170px;
-  margin-right: 40px;
-  margin-top: -420px;
-  margin-bottom: 10px;
+.info {
+  text-align: center;
+  font-size: 15px;
+  margin: 50px;
+}
 
+/* section2 */
+
+.sec2 {
+  font-family: sans-serif;
   display: flex;
-  padding: 100px;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.window2-edu {
+  margin: 50px;
   width: 450px;
-  border-radius: 30px;
+  height: 270px;
+  border-radius: 50px;
   background-color: rgb(255, 255, 255, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -133,40 +139,25 @@ ul.nav-btn > li {
 .edu-title {
   font-family: "playfair";
   font-size: 35px;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 30px;
 
-  float: left;
-  margin-left: 235px;
-  margin-right: 40px;
-  margin-top: -400px;
-  margin-bottom: 10px;
   color: rgb(237, 221, 255);
   -webkit-text-stroke: 1px #2e2e2e;
 }
 
 .edu {
-  text-align: left;
+  text-align: center;
   font-size: 15px;
-
-  float: left;
-  margin-left: 330px;
-  margin-right: 40px;
-  margin-top: -350px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .window2-music {
-  text-align: center;
-  font-size: 20px;
-
-  float: left;
-  margin-left: 170px;
-  margin-right: 40px;
-  margin-top: -200px;
-  margin-bottom: 10px;
-
-  display: flex;
-  padding: 80px;
+  margin: 70px;
   width: 450px;
+  height: 270px;
+
   border-radius: 50px;
   background-color: rgb(255, 255, 255, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -174,41 +165,35 @@ ul.nav-btn > li {
 
 .music-title {
   font-family: "playfair";
+  text-align: center;
   font-size: 35px;
 
-  float: left;
-  margin-left: 190px;
-  margin-right: 40px;
-  margin-top: -145px;
-  margin-bottom: 10px;
+  margin: 50px;
+  margin-bottom: 25px;
+
   color: rgb(237, 221, 255);
   -webkit-text-stroke: 1px #2e2e2e;
 }
 
 .music-pic {
-  float: left;
-  margin-left: 270px;
-  margin-right: 40px;
-  margin-top: -175px;
-  margin-bottom: 10px;
+  width: 280px;
+  margin: auto;
+  padding: 0;
 }
 
 .music-pic img {
   width: 280px;
-  height: auto;
+  padding: 0;
   border-radius: 50%;
 }
 
-.window3-photo {
-  float: left;
-  margin-left: 700px;
-  margin-right: 10px;
-  margin-top: -490px;
-  margin-bottom: 10px;
+/* window3 */
 
-  display: flex;
-  padding: 220px;
-  width: 460px;
+.window3-photo {
+  margin: 50px;
+  padding: 0;
+  width: 600px;
+
   border-radius: 30px;
   background-color: rgb(255, 255, 255, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -219,31 +204,22 @@ ul.nav-btn > li {
 .pic-title {
   font-family: "playfair";
   font-size: 35px;
-
-  float: left;
-  margin-left: 0px;
-  margin-right: 10px;
-  margin-top: -200px;
-  margin-bottom: 10px;
-  color: rgb(237, 221, 255);
-  -webkit-text-stroke: 1px #2e2e2e;
+  text-align: center;
+  margin: 50px;
 }
 
 .window3-pic {
-  position: relative;
-  display: flex;
-  height: 400px;
-
-  margin-left: -180px;
-  margin-right: 10px;
-  margin-top: -130px;
-  margin-bottom: -260px;
+  width: 405px;
+  height: 450px;
+  margin: auto;
+  padding: 0;
 }
 
 .window3-pic img {
   object-fit: cover;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
+  padding: 0;
 }
 
 /* footer */
