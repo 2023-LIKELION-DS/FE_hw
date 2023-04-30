@@ -1,13 +1,45 @@
 * {
   box-sizing: border-box;
+  background-color: rgb(57, 77, 110);
+  text-align: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: italic;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px black;
+}
+
+p {
+  color: rgb(206, 206, 206);
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+
+.content {
+  margin-top: -25px;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(169, 169, 169);
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  font-family: "Noto Sans KR", sans-serif;
-  background-color: #b0c9ab;
-  font-style: italic;
+  width: 960px;
 }
 
 a:link,
@@ -16,44 +48,26 @@ a:visited {
   color: white;
 }
 
-.container {
-  width: 960px;
-  margin: 0 auto;
+.memo-image img {
+  filter: blur(2px);
 }
 
-nav {
-  height: 30px;
-  background-color: #00000059;
-  line-height: 30px;
-}
-
-.nav-logo {
-  font-size: 15px;
-  color: white;
-  float: left;
-  margin: 0;
-}
-
-.nav-menu {
-  float: right;
-}
-
-.nav-btn {
-  list-style-type: none;
-  margin: 0;
-}
-
-ul.nav-btn > li {
-  float: left;
-  margin-left: 20px;
-  font-size: 10px;
-  color: white;
+.memo-image img :hover {
+  filter: blur(0);
 }
 
 .hd {
-  position: relative;
-  height: 500px;
-  text-align: center;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+header img {
+  border-radius: 30%;
+  display: flexbox;
+  padding: 0.5rem;
+  margin-top: 10px;
+  border: 1px solid gray;
 }
 
 .hd-title {
@@ -65,77 +79,53 @@ ul.nav-btn > li {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.471);
 }
 
-.hd-content {
-  font-size: 20px;
-  font-family: "Nanum Myeongjo", serif;
-  color: white;
-}
-
-.hd::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-  background-image: url("../img/header-img.jpeg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.hd .container {
-  position: relative;
-  color: black;
-}
-
-.sec {
-  text-align: center;
-  padding: 100px 0;
-}
-
-.intro {
-  margin-bottom: 200px;
-}
-
-h3 {
-  color: white;
-  text-shadow: 2px 2px black;
-}
-
-p {
-  color: grey;
-  font-size: 10px;
-  font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-span {
-  font-weight: bold;
-  font-size: 10px;
-  color: black;
-}
-
-.intro-content {
-  margin-top: -30px;
-  font-family: "Nanum Myeongjo", serif;
-  font-weight: normal;
-  color: rgb(155, 155, 155);
-}
 i {
   font-size: 17px;
 }
+div {
+  margin-top: 100px;
+  margin-bottom: 300px;
+  display: flexbox;
+}
 
-.intro img {
+#memo img {
   float: left;
   width: 225px;
   height: 225px;
   margin-right: 15px;
+  margin-bottom: 15px;
 }
 
-.intro img :last-child {
+#memo img :last-child {
   margin-right: 0;
+}
+
+.menu * {
+  display: inline;
+}
+
+.menu li {
+  margin: 35px;
+}
+
+.menu li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.menu ul {
+  padding-left: 0px;
+}
+
+.menu {
+  font-size: 20px;
+  font-style: italic;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  padding-top: 20px;
 }
