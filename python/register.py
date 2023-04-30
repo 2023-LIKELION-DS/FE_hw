@@ -62,9 +62,9 @@ while True:
     users.append(user)
     print(users)
 
-    print("----------------------")
+    print("---------------------")
     print(f"{user['name']} 님 가입을 환영합니다!")
-    print("----------------------")
+    print("---------------------")
 
     print('회원가입을 추가로 진행하시겠습니까?\ny:진행     N:취소')
     register_another_input = input('>> ')
