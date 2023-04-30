@@ -19,35 +19,24 @@ a:link, a:visited {
     margin: 0 auto;
 }
 
-/* navigation bar
+/* navigation bar */
 nav {
-    height: 80px;
-    background-color: white;
-    line-height: 40px;
-}
-
-.nav-menu {
-    float: right;
+    height: 90px;
 }
 
 .nav-btn {
     list-style-type: none;
-    margin: 0;
-}
-
-ul.nav-btn {
-    float: left;
-    margin-left: 25px;
     font-size: 20px;
     font-weight: bold;
-} */
-
-/* section1 */
-.sec {
     text-align: center;
-    padding: 100px 0;
 }
 
+.nav-btn li {
+    display: inline-block;
+    margin: 0px 50px 0px 50px;
+}
+
+/* section1 */
 .sec1 img {
     width: 350px;
     height: 350px;
@@ -87,10 +76,11 @@ ul.nav-btn {
 }
 
 .year {
-    float: left;
+     float: left; 
 }
 
 .content {
+    align-items: baseline;
     float: right;
     padding-bottom: 30px;
 }
@@ -100,15 +90,22 @@ ul.nav-btn {
 }
 
 /* skill */
-.skill {
-    width: 30%;
+.skill h4 {
+    font-size: 30px;
     text-align: center;
-    margin: 0 auto;
+}
+
+.skill {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto; /* margin의 용도?*/
+    padding-bottom: 20px;
 }
 
 .box {
-  width: 80%;
-  background-color: #ddd;
+    margin: 0 auto; /*margin말고 중앙정렬하는 법?*/
+    width: 70%;
+    background-color: #ddd;
 }
 
 .skills {
@@ -136,8 +133,8 @@ ul.nav-btn {
 }
 
 .sec3 div img {
-    width: 80%;
-    height: auto;
+    width: 400px;
+    height: 300px;
     padding-left: 5px;
 }
 
