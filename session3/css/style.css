@@ -29,21 +29,22 @@ nav {
   line-height: 88px;
 }
 
-nav::after {
-  content: "";
-  display: block;
-  clear: left;
-}
-
-.nav-menu {
-  float: left;
-  position: relative;
-  left: 50px;
+#nav-parent {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .nav-btn {
   list-style: none;
   margin: 0;
+}
+
+.nav-btn a:hover {
+  color: rgb(79, 136, 150);
+}
+
+.nav-btn a:active {
+  color: rgb(29, 39, 116);
 }
 
 ul.nav-btn > li {
@@ -136,6 +137,13 @@ ul.nav-btn > li:last-child {
   line-height: 250%;
   font-size: 25px;
 }
+
+.aboutme-content li a:hover {
+  background: linear-gradient(45deg, #ffc838 20%, #fb3958 60%, #b21ee8 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
 .ds-title {
   /* font 설정 */
   font-size: 30px;
@@ -156,8 +164,18 @@ ul.nav-btn > li:last-child {
 .card-img > a > img {
   object-fit: cover;
   overflow: hidden;
-  height: 300px;
-  width: 400px;
+  height: 270px;
+  width: 360px;
+  padding: 0 1vw;
+}
+
+.card-img > a > img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1); /* 크롬 */
+  -moz-transform: scale(1.1); /* 파이어폭스 */
+  -o-transform: scale(1.1); /* 오페라 */
+  z-index: 1;
+  align-items: center;
 }
 
 .aboutme-title {
