@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>aboutMe_SeoYoon</title>
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/initial_style.css" />
+    <link rel="stylesheet" href="./css/nav_style.css" />
+    <link rel="stylesheet" href="./css/hd_style.css" />
+    <link rel="stylesheet" href="./css/sec_style.css" />
+    <link rel="stylesheet" href="./css/ft_style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -29,41 +33,59 @@
       </div>
     </navigation>
 
+    <navigation class="nav2">
+      <ul class="content-list">
+        <li><a href="#hd-title">RESUME</a></li>
+        <li><a href="#sec-intro-edu">Education</a></li>
+        <li><a href="#sec-intro-about">About me</a></li>
+        <li><a href="#skills-title">Skills</a></li>
+        <li><a href="#hobby-title">Hobby</a></li>
+      </ul>
+    </navigation>
+
     <header class="hd">
       <div class="container">
-        <h2 class="hd-title">RESUME</h2>
+        <div class="hd-box">
+          <div class="hd-left">
+            <div class="card-hd-img">
+              <img src="./img/gamja.jpg" alt="프로필" />
+              <img src="./img/gamja_2.jpg" alt="프로필2" />
+            </div>
+          </div>
+          <div class="hd-right">
+            <h2 id="hd-title">RESUME</h2>
 
-        <div class="card-img">
-          <img src="./img/gamja.jpg" alt="프로필" />
-        </div>
-
-        <div class="hd-content">
-          <ul class="hd-content-left">
-            <li>Frontend</li>
-            <li>Student</li>
-          </ul>
-          <ul class="hd-content-center">
-            <li>SeoyoonKim</li>
-            <li>02.05.03</li>
-            <li>Female</li>
-            <li>Korea</li>
-          </ul>
-          <ul class="hd-content-right">
-            <li><i class="far fa-envelope"></i> pookey1104@naver.com</li>
-            <li><i class="fas fa-phone"></i> 010-3423-9371</li>
-            <li>
-              <i class="fab fa-instagram"></i> instagram :
-              <a href="https://www.instagram.com/may_020503/" target="_blank"
-                >@may_020503</a
-              >
-            </li>
-            <li>
-              <i class="fab fa-github"></i> github :
-              <a href="https://github.com/pookey1104" target="_blank"
-                >pookey1104</a
-              >
-            </li>
-          </ul>
+            <div class="hd-content">
+              <ul class="hd-content-left">
+                <li>Frontend</li>
+                <li>Student</li>
+              </ul>
+              <ul class="hd-content-center">
+                <li>SeoyoonKim</li>
+                <li>02.05.03</li>
+                <li>Female</li>
+                <li>Korea</li>
+              </ul>
+              <ul class="hd-content-right">
+                <li><i class="far fa-envelope"></i> pookey1104@naver.com</li>
+                <li><i class="fas fa-phone"></i> 010-3423-9371</li>
+                <li>
+                  <i class="fab fa-instagram"></i> instagram :
+                  <a
+                    href="https://www.instagram.com/may_020503/"
+                    target="_blank"
+                    >@may_020503</a
+                  >
+                </li>
+                <li>
+                  <i class="fab fa-github"></i> github :
+                  <a href="https://github.com/pookey1104" target="_blank"
+                    >pookey1104</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -72,11 +94,11 @@
       <div class="container">
         <hr />
         <div class="sec-introduction">
-          <h3 class="sec-intro-edu">Education</h3>
+          <h3 id="sec-intro-edu">Education</h3>
           <p>Duksung Women University - major : Software</p>
           <p>LikeLion 11th</p>
           <br />
-          <h3 class="sec-intro-about">About me</h3>
+          <h3 id="sec-intro-about">About me</h3>
           <p>안녕하세요. 덕성 멋사 11기 아기사자 김서윤입니다.</p>
           <p>
             1년동안 프론트엔드와 git 그리고 github를 마스터할 수 있었으면
@@ -88,12 +110,13 @@
 
       <div class="container">
         <div class="sec-skills">
-          <h2 class="skills-title">SKILLS</h2>
+          <h2 id="skills-title">SKILLS</h2>
           <h4 class="skills-sub-title">
             전공 수업에서 접해본 언어들입니다!<br />특별히 잘하는 언어는 아직
             없으며 java와 javascript, html, css에 흥미를 가지고 있습니다.
           </h4>
           <div class="box">
+            <p>WEB</p>
             <ul class="box-left">
               <li>HTML</li>
               <li>CSS</li>
@@ -106,7 +129,137 @@
               <li>java</li>
               <li>SQL</li>
             </ul>
+            <p>LANGUAGE</p>
           </div>
+        </div>
+        <hr />
+      </div>
+
+      <div class="container">
+        <div class="sec-hobby">
+          <h3 id="hobby-title">HOBBY</h3>
+        </div>
+
+        <div class="hobby-music">
+          <div class="music-left">
+            <p>이지금</p>
+            <audio src="./music/dlwlrma.mp3" controls="controls"></audio>
+          </div>
+          <div class="music-right">
+            <p>ICU</p>
+            <audio src="./music/ICU.mp3" controls="controls"></audio>
+          </div>
+        </div>
+
+        <div class="atc-card-img">
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_1.jpg" alt="이미지1" />
+              <p>2017.12.10</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_2.jpg" alt="이미지2" />
+              <p>2017.12.10</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_3.jpg" alt="이미지3" />
+              <p>2019.05.04</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_4.jpg" alt="이미지4" />
+              <p>2019.09.21</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_5.jpg" alt="이미지5" />
+              <p>2019.11.24</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_6.jpg" alt="이미지6" />
+              <p>2022.06.18</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_7.jpg" alt="이미지7" />
+              <p>2022.09.18</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/iu_8.png" alt="이미지8" />
+              <p>2022.09.18</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_1.jpg" alt="이미지9" />
+              <p>2022.06.19</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_2.jpg" alt="이미지10" />
+              <p>2022.06.19</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_3.jpg" alt="이미지11" />
+              <p>2022.06.19</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_4.jpg" alt="이미지12" />
+              <p>2022.06.19</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_5.jpg" alt="이미지13" />
+              <p>2022.07.14</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_6.jpg" alt="이미지14" />
+              <p>2022.07.30</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_7.jpg" alt="이미지15" />
+              <p>2023.02.26</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_8.jpg" alt="이미지16" />
+              <p>2023.02.26</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_9.jpg" alt="이미지17" />
+              <p>2023.04.02</p>
+            </div>
+          </article>
+          <article class="atc">
+            <div class="card-img">
+              <img src="./img/aespa_10.jpg" alt="이미지18" />
+              <p>2023.04.02</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
