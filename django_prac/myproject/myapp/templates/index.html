@@ -9,6 +9,15 @@
   <body>
     Hello World!
     <br />
-    <a href="{%url 'wordCount'%}">wordCount 실습 </a>
+
+    <h2>사용자의 이름을 입력해주세요.</h2>
+    <form action="{% url 'hello' %}">
+      <textarea name="name" cols="50" rows="3"></textarea>
+      <br />
+
+      <input type="submit" value="제출" />
+    </form>
+
+    <a href="{%url 'wordCount' %}">wordCount 실습!!</a>
   </body>
 </html>

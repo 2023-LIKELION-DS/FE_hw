@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('wordCount/', views.wordCount, name="wordCount" ),
-    path('result/', views.result, name='result')
+    path('result/', views.result, name='result'),
+    path('hello', views.hello, name='hello')
 ]
