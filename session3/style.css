@@ -3,8 +3,8 @@
 }
 
 body {
-    margin: 50px;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
     font-family: 'Gowun Dodum', sans-serif;
 }
 
@@ -13,34 +13,76 @@ h3 {
 }
 
 /* header */
-.hd {
-    position: relative;
-    height: 550px;
+video {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.nav-logo {
+    margin: 20px 0 0 70px;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 70px;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* section */
+/* who am i? */
+#profile {
     text-align: center;
     padding: 50px 0;
-
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+    align-items: center;
 }
 
 .pr {
-    float: left;
-    margin-left: 250px;
-    margin-right: 80px;
+    margin-left: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
 
 .me {
-    float: right;
     height: 390px;
-    margin-left: 80px;
-    margin-right: 250px;
+    margin-right: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
 .me h1 {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 40px;
     font-size: 50px;
 }
@@ -48,30 +90,30 @@ h3 {
 .baby {
     font-size: 5px;
     margin-top: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .baby p {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 10px;
     margin-bottom: 0px;
     text-align: left;
 }
 
-
-/* section */
-.sec {
-    height: 900px;
+.addProfile {
     text-align: center;
     padding: 50px 0;
-} 
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+    align-items: center;
+}
 
 .edu{
-    float: left;
     width: 400px;
-    margin-left: 131px;
-    margin-right: 80px;
-    margin-top: 10px;
+    margin-left: 160px;
+    margin-right: 0;
+    margin-top: 25px;
     margin-bottom: 50px;
 }
 
@@ -81,11 +123,10 @@ h3 {
 }
 
 .act {
-    float: right;
     width: 400px;
-    margin-left: 80px;
-    margin-right: 131px;
-    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 160px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
@@ -94,31 +135,54 @@ h3 {
     width: 200px;
 }
 
-.hb h3 {
-    margin-top: 50px;
-    margin-bottom: 40px;
+/* favorite*/
+#favorite {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+    align-items: center;
 }
 
-.sec article {
-    float: left;
-    width: 300px;
-    margin-right: 55px;
-    margin-left: 55px;
+audio {
+    margin: 20px 0 20px 0;
 }
 
-.sec article:last-child {
-    margin-right: 0;
+.img {
+    margin-top: 40px;
 }
 
-.sec article img{
-    width: 100%;
-    height: auto;
+.img img {
+    width: 220px;
+    height: 320px;
+    margin: 10px 50px 0 50px;
 }
 
-.card-img {
-    overflow: hidden;
-    width: 300px;
-    height: 400px;
+/* hobby */
+#hobby {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+    align-items: center;
+}
+
+/* study */
+#study {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+    align-items: center;
+}
+
+.language img {
+    width: 50px;
+    height: 50px;
+    margin: 30px 10px 0 10px;
 }
 
 /* footer */
@@ -129,19 +193,20 @@ h3 {
 }
 
 .cont h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .cont i {
     margin-right: 10px;
+    margin-left: 40px;
 }
 
 .cont a {
     margin-right: 30px;
 }
 
-a:link, a:visited {
+footer a {
     text-decoration: none;
     color: black;
 }
