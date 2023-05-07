@@ -19,7 +19,6 @@ def result(request):
     return render(request, "result.html", {'alltext':entered_text, 'dictionary':word_dictionary.items(),
                                            'word_list': word_list, 'word_count': word_count})
 
-
 def hello(request):
     return render(request, "hello.html")
 
