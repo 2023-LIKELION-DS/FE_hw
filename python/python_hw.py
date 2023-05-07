@@ -7,9 +7,10 @@
 ### 문제1 답안 (이 아래에 적어주세요!)
 print("[문제 1]")
 
-
-
-
+scores = {'국어': 87, '수학': 88, '영어': 92, '과학': 67, '사회': 72}
+score_avg = sum(scores.values())/len(scores)
+print("평균 : ", score_avg)
+print("")
 
 """
 ##### 문제 2 #####
@@ -28,10 +29,11 @@ food = ["김밥", "라면", "튀김", "떡볶이", "순대"]
 ### 문제2 답안 (이 아래에 적어주세요!)
 print("[문제 2]")
 
+food = ["김밥", "라면", "튀김", "떡볶이", "순대"]
+for i in range(0, len(food)) :
+    print("오늘의 메뉴: ", food[i])
 
-
-
-
+print("")
 
 
 """ 
@@ -76,9 +78,47 @@ print("[문제 2]")
 ### 문제3 답안 (이 아래에 적어주세요!)
 print("[문제 3]")
 
+money = 10000
+num_3 = 1
 
+while (num_3 == 1) :
+    select = int(input("입금이면 1, 출금이면 2 (종료는 아무거나 누르세요): "))
 
+    if (select == 1) :
+        plus_money = int(input("금액: "))
 
+        if (plus_money <= 0) :
+            print("금액을 0보다 크게 적으세요.")
+
+        else :
+            money = money + plus_money
+            print(plus_money, "원이 입금되었습니다. 현재 잔고는", money, "원입니다.")
+
+        print("")
+
+    elif (select == 2) :
+        minus_money = int(input("금액: "))
+
+        if (minus_money <= 0) :
+            print("금액을 0보다 크게 적으세요.")
+
+        else :
+            if (minus_money > money) :
+                short_money = minus_money - money
+                print("현재 잔고 부족입니다. ", short_money, "원이 부족합니다.")
+            else :
+                money = money - minus_money
+                if (money == 0) :
+                    print("통장을 파기합니다.")
+                    num_3 = 0
+                else :
+                    print(minus_money, "원이 출금되었습니다. 현재 잔고는", money, "원입니다.")
+        print("")
+
+    else :
+        num_3 = 0
+
+print("")
 
 """
 ##### 문제 4 #####
@@ -118,9 +158,29 @@ print("[문제 3]")
 ### 문제4 답안 (이 아래에 적어주세요!)
 print("[문제 4]")
 
+import random
 
+menus = []
+menu_import = 1
 
+while (menu_import == 1) :
+    menu = input("추가할 메뉴를 입력하세요.(추가 완료 시 '완료'를 입력하세요.): ")
 
+    if (menu == "완료") :
+        print("")
+        menu_import = 0
+    else :
+        menus.append(menu)
+        print("메뉴판: ", menus)
+        print("")
+
+table_num = random.randrange(1, 7)
+
+for i in range(0, table_num) :
+    menu_select = random.choice(menus)
+    print(i+1, "번째 테이블에서", menu_select, "를 주문했습니다.")
+
+print("")
 
 """
 ##### 문제 5-1 #####
@@ -141,6 +201,7 @@ mbti의 검사결과는 아래와 같이 16가지 유형이 있다.
 'ESTJ'
 'ESFJ'
 'ENTJ'
+'ENFJ'
 
 이때, 200명의 mbti 검사결과를 random 하게 만드는 함수를 작성해보세요
 
@@ -155,9 +216,17 @@ random.choice(hint)
 ### 문제 5-1 답안 (이 아래에 적어주세요!)
 print("[문제 5-1]")
 
+import random
 
+mbti_list = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENTJ', 'ENFJ']
+person_mbti = []
 
+person_num = 200
+for i in range(0, person_num) :
+    person_mbti.append(random.choice(mbti_list))
+    print(person_mbti[i], end=" ")
 
+print("")
 
 """
 ##### 문제 5-2 #####
@@ -172,8 +241,53 @@ print("[문제 5-1]")
 ### 문제 5-2 답안 (이 아래에 적어주세요!)
 print("[문제 5-2]")
 
+ISTJ_num = ISFJ_num = INFJ_num = INTJ_num = ISTP_num = ISFP_num = INFP_num = INTP_num = 0
+ESTP_num = ESFP_num = ENFP_num = ENTP_num = ESTJ_num = ESFJ_num = ENTJ_num = ENFJ_num = 0
 
+for i in range(0, person_num) :
+    if (person_mbti[i] == "ISTJ") :
+        ISTJ_num = ISTJ_num + 1
+    elif (person_mbti[i] == "ISFJ") :
+        ISFJ_num = ISFJ_num + 1
+    elif (person_mbti[i] == "INFJ") :
+        INFJ_num = INFJ_num + 1
+    elif (person_mbti[i] == "INTJ") :
+        INTJ_num = INTJ_num + 1
 
+    elif (person_mbti[i] == "ISTP") :
+        ISTP_num = ISTP_num + 1
+    elif (person_mbti[i] == "ISFP") :
+        ISFP_num = ISFP_num + 1
+    elif (person_mbti[i] == "INFP") :
+        INFP_num = INFP_num + 1
+    elif (person_mbti[i] == "INTP") :
+        INTP_num = INTP_num + 1
+
+    elif (person_mbti[i] == "ESTP") :
+        ESTP_num = ESTP_num + 1
+    elif (person_mbti[i] == "ESFP") :
+        ESFP_num = ESFP_num + 1
+    elif (person_mbti[i] == "ENFP") :
+        ENFP_num = ENFP_num + 1
+    elif (person_mbti[i] == "ENTP") :
+        ENTP_num = ENTP_num + 1
+
+    elif (person_mbti[i] == "ESTJ") :
+        ESTJ_num = ESTJ_num + 1
+    elif (person_mbti[i] == "ESFJ") :
+        ESFJ_num = ESFJ_num + 1
+    elif (person_mbti[i] == "ENTJ") :
+        ENTJ_num = ENTJ_num + 1
+    else :
+        ENFJ_num = ENFJ_num + 1
+
+mbti_nums = {'ISTJ': ISTJ_num, 'ISFJ': ISFJ_num, 'INFJ': INFJ_num, 'INTJ': INTJ_num,\
+            'ISTP': ISTP_num, 'ISFP': ISFP_num, 'INFP': INFP_num, 'INTP': INTP_num,\
+            'ESTP': ESTP_num, 'ESFP': ESFP_num, 'ENFP': ENFP_num, 'ENTP':ENTP_num,\
+            'ESTJ': ESTJ_num, 'ESFJ': ESFJ_num, 'ENTJ': ENFJ_num, 'ENFJ':ENFJ_num}
+
+print(mbti_nums)
+print("")
 
 """
 ##### 문제 5-3 #####
@@ -184,3 +298,13 @@ mbti 유형을 딕셔너리의 key로 입력했을 경우, value로 몇 명이 �
 """
 ### 문제 5-3 답안 (이 아래에 적어주세요!)
 print("[문제 5-3]")
+
+search_mbti = input("해당하는 인원 수를 알고 싶은 mbti를 입력하세요: ")
+search_mbti = search_mbti.upper()
+
+if search_mbti in mbti_nums:
+    print(mbti_nums[search_mbti], "명이", search_mbti, "에 속해있습니다.")
+else:
+    print(search_mbti, "는 유효하지 않은 mbti 유형입니다.")
+
+print("")
