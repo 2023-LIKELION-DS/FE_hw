@@ -234,3 +234,14 @@ mbti 유형을 딕셔너리의 key로 입력했을 경우, value로 몇 명이 �
 """
 ### 문제 5-3 답안 (이 아래에 적어주세요!)
 print("[문제 5-3]")
+import random
+mbti_list=['ISTJ','ISFJ','INFJ','INTJ','ISTP','ISFP','INFP','INTP','ESTP','ESFP','ENFP','ENTP','ESTJ','ESFJ','ENTJ']
+result=[]
+for i in range(1,201):
+    result.append(random.choice(mbti_list))
+dict = {}
+for mbti in mbti_list:
+    dict[mbti] = result.count(mbti)
+
+for mbti, count in dict.items():
+    print("{} : {}".format(mbti, count))
