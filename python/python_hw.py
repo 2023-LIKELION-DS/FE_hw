@@ -77,10 +77,10 @@ for i in food:
 통장을 파기합니다.
 
 """
-"""
+
 ### 문제3 답안 (이 아래에 적어주세요!)
 print("[문제 3]")
-base = 10,000
+base = 10000
 while True:
     k = input("입금이면 1, 출금이면 2 (종료는 아무거나 누르세요):")
 
@@ -96,7 +96,7 @@ while True:
         m = int(input("출금하실 금액을 입력해주십시오:"))
         if m <= base:
             base -= m
-            print("%d원이 출금되었습니다. 현재 잔고는 %d원입니다." % (m, base))
+            print(f"{m}원이 출금되었습니다. 현재 잔고는 {base}원입니다.")
             if base == 0:
                 print("통장을 파기합니다.")
                 break
@@ -106,8 +106,8 @@ while True:
             print("금액을 0보다 크게 적으세요.")
     
     else:
+        print("종료합니다.")
         break
-"""
 
 
 """
@@ -143,8 +143,8 @@ while True:
 1번째 테이블에서 김밥를 주문했습니다.
 2번째 테이블에서 김밥를 주문했습니다.
 3번째 테이블에서 떡볶이를 주문했습니다.
-
 """
+
 ### 문제4 답안 (이 아래에 적어주세요!)
 ### 참고 https://khumsfcr.tistory.com/m/7
 print("[문제 4]")
@@ -160,9 +160,8 @@ while True:
 
 tables = random.sample(range(1,7) , random.randint(1, 6))
 for table in tables:
-    order = random.choice(menu) #왜 여기서 sample 함수가 아니라 choice 함수를 써야되지?
+    order = random.choice(menu)
     print(f"{table}번째 테이블에서 {order}을/를 주문했습니다.")
-
 
 
 """
@@ -197,6 +196,9 @@ random.choice(hint)
 """
 ### 문제 5-1 답안 (이 아래에 적어주세요!)
 print("[문제 5-1]")
+###choice와 sample의 차이
+### choice는 리스트 중 1개를 뽑는 함수
+### sample은 리스트에 들어가 있는 요소만큼만 뽑을 수 있음
 import random
 mbti = ['ISTJ','ISFJ','INFJ','INTJ','ISTP','ISFP','INFP','INTP',
 'ESTP','ESFP','ENFP','ENTP','ESTJ','ESFJ','ENTJ']
@@ -224,13 +226,13 @@ print(mbti_value)
 ### 문제 5-2 답안 (이 아래에 적어주세요!)
 print("[문제 5-2]")
 def count(mbti_value):
-    mbti_dic = {}
+    mbti_dict = {}
     for p in mbti_value:
-        if p in mbti_dic:
-            mbti_dic[p] += 1
+        if p in mbti_dict:
+            mbti_dict[p] += 1
         else:
-            mbti_dic[p] = 1
-    return mbti_dic
+            mbti_dict[p] = 1
+    return mbti_dict
 
 mbti_count = count(mbti_value)
 print(mbti_count)
@@ -241,17 +243,18 @@ print(mbti_count)
 
 mbti 유형을 딕셔너리의 key로 입력했을 경우, value로 몇 명이 해당 mbti에 속해있는지 출력하는 함수를 작성
 출력 조건) 알파벳 입력시 대,소문자는 결과에 영향을 미치지 않도록 코드를 작성할 것
+"""
 
-"""
-"""
 ### 문제 5-3 답안 (이 아래에 적어주세요!)
 print("[문제 5-3]")
 
-search = input("찾고자하는 mbti를 입력해주세요: ")
+search = input("찾고자하는 mbti를 입력해주세요. ex)ISFJ, enfp: ")
 
 mbti_search = search.upper()
-if(mbti_search() in mbti_value.keys()):
-    print(f"해당 mbti는 총 {count[mbti_search]}명 입니다.")
+
+value = mbti_count.get(mbti_search)
+
+if (value) == None:
+    print("오타가 없는지 확인하세요.")
 else:
-    print("오타가 없는지 확인해주세요.")
-"""
+    print("해당 mbti는 총 " + str(value) + "명 입니다.")
