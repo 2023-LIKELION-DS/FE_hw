@@ -11,7 +11,8 @@ score = {'국어': 87, '수학': 88, '영어': 92, '과학': 67, '사회': 72}
 total = sum(score.values())
 average = total / len(score)
 
-print("평균은 {:.2f}입니다.".int(average))
+print("평균은 {:.1f}점입니다.".format(average))
+
 
 
 
@@ -206,14 +207,14 @@ print("[문제 5-1]")
 
 import random
 
-mbti_type = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENTJ']
+mbti_types = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 
+              'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENTJ']
 
-mbti_result = []
-for i in range(200):
-    mbti_result.append(random.choice(mbti_type))
-
-print(mbti_result)
-
+mbti_results = []
+for i in range(1, 201):
+    mbti_result = random.choice(mbti_types)
+    mbti_results.append(mbti_result)
+    print(f"{i}번: {mbti_result}")
 
 
 
@@ -255,10 +256,13 @@ mbti 유형을 딕셔너리의 key로 입력했을 경우, value로 몇 명이 �
 ### 문제 5-3 답안 (이 아래에 적어주세요!)
 print("[문제 5-3]")
 
-def count_mbti(mbti_dict, mbti_type):
-    mbti_type = mbti_type.upper() 
-    if mbti_type not in mbti_dict:
-        print("다시입력하세요.")
-        return
-    count = mbti_dict[mbti_type]
-    print("{mbti_type}: {count}")
+def count_mbti(mbti_dict):
+    mbti_input = input("mbti유형중 하나를 입력하세요: ").lower()
+    mbti_count = mbti_dict.get(mbti_input.upper(), 0)
+    print(f"{mbti_input}유형에는 {mbti_count}명이 있습니다.")
+
+mbti_dict = {'ISTJ': 10, 'ISFJ': 20, 'INFJ': 15, 'INTJ': 5, 'ISTP': 12, 
+             'ISFP': 18, 'INFP': 25, 'INTP': 30, 'ESTP': 8, 'ESFP': 22, 
+             'ENFP': 27, 'ENTP': 13, 'ESTJ': 11, 'ESFJ': 17, 'ENTJ': 7}
+
+count_mbti(mbti_dict)
