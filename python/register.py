@@ -20,7 +20,6 @@ while not register:
         print('==============================================')
         exit()
     else:
-<<<<<<< HEAD
         print('입력 값을 확인해주세요.')
 
 users = []
@@ -68,6 +67,4 @@ while True:
         pass
     elif register_another_input == 'n':
         exit()
-=======
         print('입력 값을 확인해주세요.')
->>>>>>> parent of 5862e10 ([0411] 회원가입 프로그램(2))
