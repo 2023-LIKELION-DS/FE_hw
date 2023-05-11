@@ -1,4 +1,4 @@
-header {
+nav {
   display: flex;
   justify-content: center;
 }
@@ -11,9 +11,16 @@ header {
   padding-left: 100px;
 }
 
+.hd-img {
+  height: 300px;
+  background-image: url("../img/01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .menu2 {
   position: absolute;
-  height: 23%;
+  height: 25%;
   width: 100%;
   background-color: rgb(245, 242, 238);
 }
@@ -67,4 +74,8 @@ a {
 }
 a:hover {
   color: rgb(183, 0, 80);
+}
+
+section {
+  display: flex;
 }
