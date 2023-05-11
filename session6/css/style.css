@@ -20,7 +20,7 @@ nav {
 
 .menu2 {
   position: absolute;
-  height: 25%;
+  height: 21%;
   width: 100%;
   background-color: rgb(245, 242, 238);
 }
@@ -72,10 +72,40 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.art1 a {
+  display: flex;
+  color: gray;
+  width: 200px;
+  padding: 10px;
+}
+
 a:hover {
   color: rgb(183, 0, 80);
 }
 
-section {
+.art1 {
+  position:relative;
+  justify-content: center;
+  top: 200px;
+  width: 40%;
+}
+
+.art1-nav {
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+
+.notice {
+  margin: 0%;
+  padding: 0%;
+}
+
+.notice li:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.art1-img{
   display: flex;
+
 }
