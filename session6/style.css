@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+/* header */
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* ikc-gnb-wrap */
+.ikc-gnb-wrap {
+}
+.ds-logo {
+  margin: 0;
+  padding: 0;
+}
+.ds-logo img {
+  width: 50%;
+}
+
+.ikc-gnb {
+  display: flex;
+  padding: 1em;
+  font-weight: 600;
+}
+.ikc-gnb li {
+  display: inline-block;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+}
+.ikc-gnb li a:hover {
+  color: #7b2832;
+  font-weight: bold;
+}
+
+/* ick-imagezone */
+.ick-imagezone img {
+  width: 100%;
+}
+
+/* ikc-container */
+.ikc-container {
+  display: flex;
+}
+
+/* intro-service */
+.intro-service {
+  flex-direction: row;
+  height: 150px;
+  padding: 40px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1127px;
+}
+
+.intro-service li span {
+  display: flex;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.intro-service li span:hover {
+  color: #7b2832;
+  font-weight: bold;
+}
+
+/* ds-section */
+.ds-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.notice-tap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 7em;
+  font-weight: 600;
+  font-size: 100%;
+  border-bottom: 2px solid #000000;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.notice-tap li {
+  padding-right: 2em;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding-right: 0;
+  color: #000000;
+}
+.notice-tap a {
+  padding-right: 2em;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding-right: 0;
+  color: #838383;
+}
+.notice-tap span:hover {
+  font-weight: bold;
+  color: #e888a5;
+}
+.point {
+  font-size: 2rem;
+}
+
+.notice-list li {
+  width: 100%;
+  padding: 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid #838383;
+  text-align: left;
+}
+.notice-list li:hover {
+  color: #7b2832;
+  font-weight: bold;
+}
+
+.ds-banner img {
+  width: 50%;
+}
