@@ -47,6 +47,47 @@ ul.link-button > li {
     font-weight: bold;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.hidden > a > img {
+    width: 0px;
+    height: 0px;
+}
+
+/* 가로 너비가 990px 이하일 때 */
+@media screen and (max-width: 990px) {
+    .link-head {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hidden {
+        visibility: visible;
+        float: right;
+    }
+
+    .hidden > a > img {
+        width: 90px;
+        height: 48px;
+        margin-top: 10px;
+        margin-right: 20px ;
+    }
+
+    .nav-logo {
+        float: left;
+        margin-left: 40px;
+    }
+
+    .logo {
+        width: 280px;
+    }
+}
+
 /* header */
 header {
     background-color: #F4F3F0;
@@ -76,6 +117,61 @@ ul.quik-icon > li {
 ul.quik-icon > li > a > img {
     width: 100px;
     height: 100px;
+}
+
+/* 가로 너비가 990px 이하일 때 */
+@media screen and (max-width: 990px) {
+    /* icon 2줄 정렬 */
+    body {
+        width: 990px;
+    }
+
+    .quik-icon {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.quik-icon > li {
+        margin-left: 80px;
+    }
+
+    header {
+        height: 550px;
+    }
+
+    .quik-icon {
+        margin: 45px;
+    }
+}
+
+/* 가로 너비가 766px 이하일 때 */
+@media screen and (max-width: 766px) {
+    /* icon 2줄 정렬 + 6개 항목 */
+    body {
+        width: 766px;
+    }
+
+    /* 자료구입신청, 모바일학생증 아이콘 사리지게 */
+    .hide {
+        display: none;
+    }
+
+    .quik-icon {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.quik-icon > li {
+        margin-left: 80px;
+    }
+
+    header {
+        height: 550px;
+    }
+
+    .quik-icon {
+        margin-left: 20px;
+    }
 }
 
 /* section */
@@ -148,4 +244,28 @@ ul.text > li > a {
     padding-top: 2px;
     padding-bottom: 10px;
     color: #B5B4B4;
+}
+
+/* 가로 너비가 990px 이하일 때 */
+@media screen and (max-width: 990px) {
+    .list {
+        width: 465px;
+    }
+
+    .banner > img {
+        width: 465px;
+        height: 430px;
+    }
+}
+
+/* 가로 너비가 766px 이하일 때 */
+@media screen and (max-width: 766px) {
+    .notice {
+        display: none;
+    }
+
+    .banner > img {
+        width: 736px;
+        height: 430px;
+    }
 }
