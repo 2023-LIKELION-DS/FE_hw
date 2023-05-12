@@ -1,4 +1,16 @@
-@media all and (max-width: 2560px) {
+@media all and (max-width: 768px) {
+  .art1-hid {
+    display: none;
+  }
+  .hidden {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .menu1 {
+    display: none;
+  }
 }
 
 nav {
@@ -28,7 +40,7 @@ section {
 
 .menu2 {
   position: absolute;
-  height: 21%;
+  height: auto;
   width: 100%;
   background-color: rgb(245, 242, 238);
 }
@@ -37,9 +49,13 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 0%;
 }
 .menu2 li {
-  flex-wrap: wrap;
+  flex: 1;
+  width: 40%;
+  flex-basis: 18%;
 }
 ul li {
   padding: 20px;
