@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js - timer practice2</title>
+        <style>
+            #operation_box,
+            #cntdown_box {
+                border-radius: 10px;
+                width: 100px;
+                text-align: center;
+                background-color: rgb(116, 139, 121);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS 연습2</h1>
+        <div id="operation_box">운영 시간</div>
+        <p>AM 03시 00분 ~ AM 05시 00분</p>
+        <div id="cntdown_box">카운트다운</div>
+        <p id="to_open_time"></p>
+        <p id="to_close_time"></p>
+        <p id="closed"></p>
+        <div id="cntdown_time">
+            <span id="hours"></span>
+            <span class="unit">:</span>
+            <span id="mins"></span>
+            <span class="unit">:</span>
+            <span id="secs"></span>
+        </div>
+        <script>
+            function countdown() {
+                var now = new Date();
+                var open = new Date(
+                    now.getFullYear(),
+                    now.getMonth(),
+                    now.getDate(),
+                    03,
+                    00,
+                    00
+                );
+                var close = new Date(
+                    now.getFullYear(),
+                    now.getMonth(),
+                    now.getDate(),
+                    05,
+                    00,
+                    00
+                );
+                var nt = now.getTime();
+                var ot = open.getTime();
+                var ct = close.getTime();
+
+                if (nt < ot) {
+                    sec = parseInt(ot - nt) / 1000;
+                    day = parseInt(sec / 60 / 60 / 24);
+                    sec = sec - day * 60 * 60 * 24;
+                    hour = parseInt(sec / 60 / 60);
+                    sec = sec - hour * 60 * 60;
+                    min = parseInt(sec / 60);
+                    sec = parseInt(sec - min * 60);
+                    if (hour < 10) {
+                        hour = "0" + hour;
+                    }
+                    if (min < 10) {
+                        min = "0" + min;
+                    }
+                    if (sec < 10) {
+                        sec = "0" + sec;
+                    }
+                    document.getElementById("to_open_time").innerText =
+                        "금일 오픈까지 남은 시간";
+                    document.getElementById("hours").innerText = hour;
+                    document.getElementById("mins").innerText = min;
+                    document.getElementById("secs").innerText = sec;
+                } else if (ct < nt) {
+                    document.getElementById("closed").innerText = "금일 마감";
+                    document.getElementById("cntdown_time").style.display =
+                        "none";
+                } else {
+                    sec = parseInt(ct - nt) / 1000;
+                    day = parseInt(sec / 60 / 60 / 24);
+                    sec = sec - day * 60 * 60 * 24;
+                    hour = parseInt(sec / 60 / 60);
+                    sec = sec - hour * 60 * 60;
+                    min = parseInt(sec / 60);
+                    sec = parseInt(sec - min * 60);
+                    if (hour < 10) {
+                        hour = "0" + hour;
+                    }
+                    if (min < 10) {
+                        min = "0" + min;
+                    }
+                    if (sec < 10) {
+                        sec = "0" + sec;
+                    }
+                    document.getElementById("to_close_time").innerText =
+                        "금일 마감까지 남은 시간";
+                    document.getElementById("hours").innerText = hour;
+                    document.getElementById("mins").innerText = min;
+                    document.getElementById("secs").innerText = sec;
+                }
+            }
+
+            setInterval(countdown, 1000);
+        </script>
+    </body>
+</html>
