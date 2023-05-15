@@ -1,0 +1,139 @@
+.sec {
+  position: relative;
+  height: auto;
+  background-color: #f4f3f0;
+}
+
+@media screen and (max-width: 870px) {
+  .sec-2 > .sec-box-left {
+    display: none;
+  }
+}
+
+.sec-lib-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sec-lib-list > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5%;
+  list-style-type: none;
+}
+
+.sec-lib-list img {
+  width: 55%;
+  height: auto;
+}
+
+.sec-lib-list li:nth-child(n + 3):nth-child(-n + 5) > img,
+.sec-lib-list li:last-child > img {
+  width: 66.9%;
+  height: auto;
+}
+
+.sec-2 {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 3% auto;
+}
+
+.sec-box-left {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+}
+
+.sec-box-right {
+  display: inline-block;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  margin-left: 1%;
+}
+
+.title-left {
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* title-left-left */
+.title-left-left > p {
+  display: inline-block;
+}
+
+.title-left-left > p:first-child {
+  font-size: 180%;
+  font-weight: bold;
+  color: rgb(239, 149, 149);
+  margin: 0 auto;
+}
+
+.title-left-left > p:nth-child(2) {
+  font-size: 180%;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.title-left-left > p:last-child {
+  color: rgb(181, 181, 181);
+}
+
+/* title-left-center */
+.title-left-center > p {
+  display: inline-block;
+}
+
+.title-left-center > p:first-child {
+  font-size: 160%;
+  color: rgb(181, 181, 181);
+  margin: 0 auto;
+}
+
+.title-left-center > p:nth-child(2) {
+  font-size: 160%;
+  margin: 0 auto;
+}
+
+.title-left-center > p:last-child {
+  color: rgb(181, 181, 181);
+}
+
+/* title-left-right */
+.title-left-right > p {
+  font-size: 220%;
+  color: rgb(239, 149, 149);
+  margin: 0 auto;
+}
+
+/* content-list */
+.content-list > li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-bottom: 0.5%;
+}
+
+.content-list > hr:first-child {
+  border-top: 2px solid black;
+}
+
+.content-list > hr {
+  border-top: 1px solid rgb(181, 181, 181);
+}
+
+.content-list > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content-list > li > p:last-child {
+  color: rgb(181, 181, 181);
+}
