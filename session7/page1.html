@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Page1</title>
+        <style>
+            .outbox {
+                border-color: mistyrose;
+                border-width: 2px;
+                border-style: solid;
+                width: 300px;
+                height: 200px;
+                margin: 1%;
+            }
+            .title {
+                text-align: center;
+                font-weight: bold;
+                background-color: mistyrose;
+                width: 90px;
+                height: 25px;
+                padding: 1%;
+                margin: 10px;
+                border-radius: 10px;
+            }
+            .opentime {
+                font-weight: bold;
+                margin-left: 10px;
+                margin-bottom: 40px;
+            }
+            .count {
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outbox">
+            <div class="title">오픈 시간</div>
+            <div class="opentime">
+                <script>
+                    let opentime = document.querySelector(".opentime");
+                    opentime = new Date("2023-06-12 00:00:00");
+                    const year = opentime.getFullYear();
+                    const month = opentime.getMonth() + 1;
+                    const day = opentime.getDate();
+                    const hour = String(opentime.getHours()).padStart(2, "0");
+                    const min = String(opentime.getMinutes()).padStart(2, "0");
+                    const sec = String(opentime.getSeconds()).padStart(2, "0");
+                    document.write(year + "년 ");
+                    document.write(month + "월 ");
+                    document.write(day + "일 ");
+                    document.write(hour + "시 ");
+                    document.write(min + "분 ");
+                    document.write(sec + "초");
+                </script>
+            </div>
+            <div class="title">카운트다운</div>
+            <div class="count">
+                <script>
+                    let count = document.querySelector(".count");
+                    var current = new Date();
+                    count = opentime - current;
+                    let c_day = Math.floor(count / (1000 * 60 * 60 * 24));
+                    let c_hour = Math.floor((count / (1000 * 60 * 60)) % 24);
+                    let c_min = Math.floor((count / (1000 * 60)) % 60);
+                    let c_sec = Math.floor((count / 1000) % 60);
+                    if (count <= 0) {
+                        document.write("00일 00시간 00분 00초");
+                    } else {
+                        document.write(c_day + "일 ");
+                        document.write(c_hour + "시간 ");
+                        document.write(c_min + "분 ");
+                        document.write(c_sec + "초");
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
