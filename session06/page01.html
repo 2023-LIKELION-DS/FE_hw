@@ -33,10 +33,19 @@
                 const days = hours * 24;
                 const diff = open - now;
 
-                const day = Math.floor(diff / days);
-                const hour = Math.floor((diff % days) / hours);
-                const min = Math.floor((diff % hours) / mins);
-                const sec = Math.floor((diff % mins) / secs);
+                const day = String(Math.floor(diff / days)).padStart(2, 0);
+                const hour = String(Math.floor((diff % days) / hours)).padStart(
+                    2,
+                    0
+                );
+                const min = String(Math.floor((diff % hours) / mins)).padStart(
+                    2,
+                    0
+                );
+                const sec = String(Math.floor((diff % mins) / secs)).padStart(
+                    2,
+                    0
+                );
 
                 document.getElementById("countdown").innerHTML =
                     day +
