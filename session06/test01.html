@@ -4,17 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>페이지2과제</title>
-        <style>
-            h3 {
-                width: 100px;
-                height: 30px;
-                background: pink;
-                border-radius: 20px;
-                text-align: center;
-                line-height: 30px;
-            }
-        </style>
+        <title>Operating Hours Countdown</title>
     </head>
     <body>
         <h3>운영시간</h3>
@@ -22,41 +12,49 @@
         <h3>카운트다운</h3>
         <p id="count-title"></p>
         <div id="countdown"></div>
+
         <script>
             function countDown() {
                 const now = new Date();
-                const close = new Date();
-                close.setHours(18, 0, 0);
                 const open = new Date();
-                open.setHours(9, 0, 0);
+                open.setHours(9, 0, 0); // Set the opening time to 9:00 AM
+                const close = new Date();
+                close.setHours(18, 0, 0); // Set the closing time to 6:00 PM
 
                 let remainingTime;
                 let countTitle;
-
-                if (now > open && now < close) {
-                    remainingTime = close - now;
-                    countTitle = "금일 마감까지 남은 시간";
+                if (now < open) {
+                    remainingTime = open - now;
+                    countTitle = "금일 오픈까지 남은 시간";
                 } else if (now > close) {
+                    // Calculate the remaining time until next day's opening time
                     const nextOpen = new Date(open);
                     nextOpen.setDate(nextOpen.getDate() + 1);
                     remainingTime = nextOpen - now;
                     countTitle = "금일 오픈까지 남은 시간";
                 } else {
+                    // The current time is within operating hours
                     document.getElementById("count-title").innerHTML =
-                        "금일 마감";
-                    document.getElementById("countdown").innerHTML = "";
+                        "현재 운영중";
                     return;
                 }
+
+                // Calculate hours, minutes, and seconds from remaining time
                 const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-                const mins = Math.floor(
+                const minutes = Math.floor(
                     (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
                 );
-                const secs = Math.floor((remainingTime % (1000 * 60)) / 1000);
+                const seconds = Math.floor(
+                    (remainingTime % (1000 * 60)) / 1000
+                );
+
+                // Display the countdown in the HTML document
                 document.getElementById("count-title").innerHTML = countTitle;
                 document.getElementById("countdown").innerHTML =
-                    hours + ":" + mins + ":" + secs;
+                    hours + ":" + minutes + ":" + seconds;
             }
-            setInterval(countDown, 1000);
+
+            setInterval(countDown, 1000); // Update the countdown every second
         </script>
     </body>
 </html>
