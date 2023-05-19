@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .time {
+        height: 30px;
+        width: 100px;
+        background-color: pink;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 3px 0;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="time">오픈시간</div>
+    <!--오픈 시간 담음-->
+    <div id="open"></div>
+
+    <div class="time">카운트다운</div>
+    <!--카운트다운 담음-->
+    <div id="count"></div>
+
+    <script>
+      // 오픈 시간 보여주는 창
+
+      const openWindow = document.querySelector("#open");
+
+      function showOpenTime() {
+        const date = new Date("2023-06-12 00:00:00");
+        const str1 =
+          date.getFullYear() +
+          "년 " +
+          (date.getMonth() + 1) +
+          "월 " +
+          date.getDate() +
+          "일 " +
+          date.getHours() +
+          "시 " +
+          date.getMinutes() +
+          "분 " +
+          date.getSeconds() +
+          "초";
+        openWindow.innerText = str1;
+      }
+
+      showOpenTime();
+
+      // 카운트다운 보여주는 창
+      const countWindow = document.querySelector("#count");
+
+      function countDown() {
+        const today = new Date();
+        const date2 = new Date("2023-06-12 00:00:00");
+        const leftTime = date2 - today;
+
+        const leftTimeDay = Math.floor(leftTime / (1000 * 60 * 60 * 24));
+        const leftTimeHour = Math.floor((leftTime / (1000 * 60 * 60)) % 24);
+        const leftTimeMin = Math.floor((leftTime / (1000 * 60)) % 60);
+        const leftTimeSec = Math.floor((leftTime / 1000) % 60);
+
+        countWindow.innerHTML =
+          leftTimeDay +
+          "일 " +
+          leftTimeHour +
+          "시간 " +
+          leftTimeMin +
+          "분 " +
+          leftTimeSec +
+          "초 남았습니다";
+      }
+
+      countDown();
+      setInterval(countDown, 1000);
+    </script>
+  </body>
+</html>
