@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 2</title>
+
+    <style>
+        .open {
+            border-radius: 2px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #e0e0e0;
+            width: 100px;
+            height: 30px;
+        }
+
+        .countdown {
+            border-radius: 2px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #e0e0e0;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="open">운영 시간</div>
+    <div id="open_time">11시 00분 ~ 20시 00분</div>
+    <br>
+    <div class="countdown">카운트다운</div>
+    <div id="countdown_time"></div>
+
+    <script>
+        const open = new Date('2023-06-12 11:00:00');
+        const close = new Date('2023-06-12 20:00:00');
+        var countdown_time = document.getElementById("countdown_time");
+
+        function countdown(){
+
+            var now = new Date('2023-06-12 21:23:11'); 
+
+            //운영 전에는 오픈까지 남은 시간 표기
+            if(now.getHours() < open.getHours()){
+                let hours = open.getHours() - now.getHours();
+                let minutes = open.getMinutes() - now.getMinutes();
+                let seconds = open.getSeconds() - now.getSeconds();
+
+                if(hours<=0){
+                    hours += 24;
+                }
+                if(minutes<=0){
+                    minutes += 60;
+                    hours -= 1;
+                }
+                if(seconds<=0){
+                    seconds += 60;
+                    minutes -= 1;
+                }
+
+                if(hours<10) hours = '0' + hours;
+                if(minutes<10) minutes = '0' + minutes;
+                if(seconds<10) seconds = '0' + seconds;
+                countdown_time.innerText = '금일 오픈까지 남은 시간\n' + hours +': ' + minutes + ': ' + seconds;
+            }
+
+            //운영 중에는 마감까지 남은 시간 표기
+            if(now.getHours() >= open.getHours() && now.getHours() < close.getHours()){
+                let hours = close.getHours() - now.getHours();
+                let minutes = close.getMinutes() - now.getMinutes();
+                let seconds = close.getSeconds() - now.getSeconds();
+
+                if(hours<=0){
+                    hours += 24;
+                }
+                if(minutes<=0){
+                    minutes += 60;
+                    hours -= 1;
+                }
+                if(seconds<=0){
+                    seconds += 60;
+                    minutes -= 1;
+                }
+
+                if(hours<10) hours = '0' + hours;
+                if(minutes<10) minutes = '0' + minutes;
+                if(seconds<10) seconds = '0' + seconds;
+                countdown_time.innerText = '금일 마감까지 남은 시간\n' + hours +': ' + minutes + ': ' + seconds;
+            }
+
+            //마감 후에는 시간 표시하지 않음
+            if(now.getHours() >= close.getHours()){
+                countdown_time.innerText = '금일 마감';
+            }
+        }
+
+        setInterval(countdown, 1000);
+
+    </script>
+</body>
+</html>

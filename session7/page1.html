@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 1</title>
+
+    <style>
+        .open {
+            border-radius: 2px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #e0e0e0;
+            width: 100px;
+            height: 30px;
+        }
+
+        .countdown {
+            border-radius: 2px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #e0e0e0;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="open">오픈 시간</div>
+    <div id="open_time">2023년 06월 12일 00시 00분 00초</div>
+    <br>
+    <div class="countdown">카운트다운</div>
+    <div id="countdown_time"></div>
+
+    <script>
+        const open = new Date('2023-06-12 00:00:00');
+        var countdown_time = document.getElementById("countdown_time");
+
+        function countdown(){
+
+            var now = new Date(); 
+
+            let days = open.getDate() - now.getDate();
+            let hours = open.getHours() - now.getHours();
+            let minutes = open.getMinutes() - now.getMinutes();
+            let seconds = open.getSeconds() - now.getSeconds();
+
+            if(days<=0){
+                days += 30;
+            }
+            if(hours<=0){
+                hours += 24;
+                days -= 1;
+            }
+            if(minutes<=0){
+                minutes += 60;
+                hours -= 1;
+            }
+            if(seconds<=0){
+                seconds += 60;
+                minutes -= 1;
+            }
+            countdown_time.innerText = days + '일 ' + hours +'시간 ' + minutes + '분 ' + seconds + '초';
+        }
+
+        setInterval(countdown, 1000);
+
+    </script>
+</body>
+</html>
