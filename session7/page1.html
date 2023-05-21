@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과제1</title>
+    <style>
+      .OT {
+        background-color: cadetblue;
+      }
+
+      .countD {
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="openTime">
+      <span class="OT">오픈시간</span>
+      <p>2023년 6월 12일 00시 00분 00초</p>
+
+      <span class="countD">카운트다운</span>
+      <div class="time">
+        <span id="d-day-day">00</span>
+        <span>일</span>
+        <span id="d-day-hour">00</span>
+        <span>시간</span>
+        <span id="d-day-min">00</span>
+        <span>분</span>
+        <span id="d-day-sec">00</span>
+        <span>초</span>
+      </div>
+    </div>
+
+    <script>
+      function remaindTime() {
+        var now = new Date();
+        var open = new Date(2023, 5, 12, 0, 0, 0);
+
+        var nt = now.getTime();
+        var ot = open.getTime();
+
+        if (nt < ot) {
+          var sec = parseInt((ot - nt) / 1000);
+          var day = parseInt(sec / (24 * 3600));
+          sec = sec % (24 * 3600);
+          var hour = parseInt(sec / 3600);
+          sec = sec % 3600;
+          var min = parseInt(sec / 60);
+          sec = sec % 60;
+
+          day = day < 10 ? "0" + day : day;
+          hour = hour < 10 ? "0" + hour : hour;
+          min = min < 10 ? "0" + min : min;
+          sec = sec < 10 ? "0" + sec : sec;
+
+          document.getElementById("d-day-day").innerHTML = day;
+          document.getElementById("d-day-hour").innerHTML = hour;
+          document.getElementById("d-day-min").innerHTML = min;
+          document.getElementById("d-day-sec").innerHTML = sec;
+        } else {
+          document.getElementById("d-day-day").innerHTML = "00";
+          document.getElementById("d-day-hour").innerHTML = "00";
+          document.getElementById("d-day-min").innerHTML = "00";
+          document.getElementById("d-day-sec").innerHTML = "00";
+        }
+      }
+      setInterval(remaindTime, 1000);
+    </script>
+  </body>
+</html>
