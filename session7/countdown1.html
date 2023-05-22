@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <style>
+      #open-box,
+      #count-box {
+        width: 100px;
+        height: 35px;
+        margin: 10px;
+        line-height: 35px;
+        text-align: center;
+
+        background-color: rgba(175, 159, 255, 0.616);
+        /* cursor: pointer; */
+      }
+
+      #open-date,
+      #clock {
+        margin: 10px;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>First Countdown</h1>
+    <div id="open-box">오픈 시간</div>
+    <div id="open-date">2023년 6월 12일 00시 00분 00초</div>
+    <br />
+    <div id="count-box">카운트다운</div>
+    <div id="clock"></div>
+
+    <script>
+      const clock = document.querySelector("#clock");
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      function countdown() {
+        const open = new Date("2023-06-12 00:00:00+0900");
+        const today = new Date();
+        const gap = open - today;
+        const days = Math.floor(gap / day);
+        const hours = Math.floor((gap % day) / hour);
+        const minutes = Math.floor((gap % hour) / minute);
+        const seconds = Math.floor((gap % minute) / second);
+        const hoursStr = String(hours).padStart(2, "0");
+        const minutesStr = String(minutes).padStart(2, "0");
+        const secondsStr = String(seconds).padStart(2, "0");
+        clock.innerText = `${days}일 ${hoursStr}시간 ${minutesStr}분 ${secondsStr}초`;
+      }
+      countdown();
+      setInterval(countdown, 1000);
+    </script>
+  </body>
+</html>
