@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown1_LSK</title>
+<style>
+    .title {
+        background-color: rgb(216, 216, 216);
+    }
+</style>
+</head>
+
+<body>
+    <span class="title">운영 시간</span>
+    <div class="run_time">PM 12시 00분 ~ PM 08시 00분</div>
+    <div class="open_time"></div>
+    <div class="close_time"></div>
+    <br />
+    <span class="title">카운트다운</span>
+    <div class="until_open_time"></div>
+    <div class="until_close_time"></div>
+    <div class="end_time"></div>
+
+</body>
+
+<script>
+    function remainTime(){
+        var now = new Date();
+        var open = new Date(now.getFullYear(),now.getMonth(),now.getDate(),12,00,00);
+        var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),20,00,00);
+
+        var nt = now.getTime(); // 현재의 시간만 가져온다
+        var ot = open.getTime(); // 오픈시간만 가져온다
+        var et = end.getTime(); // 종료시간만 가져온다.
+
+        if(nt < ot){
+            ("금일 오픈까지 남은 시간");
+
+            // day 구하기
+            sec = parseInt(ot - nt)/1000;
+            day = parseInt(sec/60/60/24);
+            sec = (sec - (day * 60 * 60 * 24));
+            // hour 구하기
+            hour = parseInt(sec/60/60);
+            sec = (sec - (hour*60*60));
+            // min 구하기
+            min = parseInt(sec/60);
+            sec = parseInt(sec-(min*60));
+
+            if(hour<10){hour="0"+hour;}
+            if(min<10){min="0"+min;}
+            if(sec<10){sec="0"+sec;}
+            $(".hours").html(hour);
+            $(".minutes").html(min);
+            $(".seconds").html(sec);
+            } else if(nt > et){
+                ("금일 마감");
+            }else {
+                ("금일 마감까지 남은 시간");
+                sec =parseInt(et - nt) / 1000;
+                day  = parseInt(sec / 60 / 60 / 24);
+                sec = (sec - (day * 60 * 60 * 24));
+
+                hour = parseInt(sec / 60 / 60);
+                sec = (sec - (hour * 60 * 60));
+
+                min = parseInt(sec / 60);
+                sec = parseInt(sec-(min*60));
+
+                if(hour<10){hour="0"+hour;}
+                if(min<10){min="0"+min;}
+                if(sec<10){sec="0"+sec;}
+                $(".hours").html(hour);
+                $(".minutes").html(min);
+                $(".seconds").html(sec);
+            }       
+
+    setInterval(remainTime,1000);
+    }
+</script>
+</html>

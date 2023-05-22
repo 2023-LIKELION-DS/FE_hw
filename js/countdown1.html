@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown1_LSK</title>
+<style>
+    .title {
+        background-color: rgb(216, 216, 216);
+    }
+</style>
+</head>
+
+<body>
+    <div class="open">
+        <span class="title">오픈 시간</span>
+        <div id="opentime">2023년 6월 12일 00시 00분 00초</div>
+    </div>
+    <br />
+    <div class="count">
+        <span class="title">카운트다운</span>
+        <div id="cd"></div>
+    </div>
+</body>
+
+<script>
+    const cd = document.querySelector("#cd");
+    const sec = 1000;
+    const min = sec * 60;
+    const hour = min * 60;
+    const day = hour * 24;
+
+    function countDown() {
+        const open = new Date("2023-06-12 00:00:00");
+        const now = new Date();
+        const timeterm = open - now;
+
+        const days = Math.floor(timeterm / day);
+        const hours = Math.floor((timeterm % day) / hour);
+        const mins = Math.floor((timeterm % hour) / min);
+        const secs = Math.floor((timeterm % min) / sec);
+
+        const hourStr = String(hours);
+        const minStr = String(mins);
+        const secStr = String(secs);
+        cd.innerText = `${days}일 ${hourStr}시간 ${minStr}분 ${secStr}초`;
+        }
+    countDown();
+    setInterval(countDown, 1000);
+</script>
+</html>
