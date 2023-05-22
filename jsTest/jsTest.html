@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jsTest</title>
+    </head>
+    <body>
+        <script>
+            // 문제 1 - hello = function() {return "Hello World!";} 화살표 함수로 바꾸기
+            hello = () => "Hello World!";
+
+            // 문제 2
+            let age = prompt("나이를 입력하세요", "0");
+            let welcome = function () {
+                if (age >= 20) {
+                    age = age + " : 성인";
+                } else {
+                    age = age + " : 미성년자";
+                }
+                alert(age);
+            };
+            welcome();
+
+            // 문제 3
+            let n;
+            do {
+                n = prompt("100을 초과하는 숫자를 입력해주세요.", "0");
+            } while (parseInt(n) <= 100);
+
+            // 문제 4
+            let str = "likelion";
+            console.log(str.slice(2, 4) + str.slice(0, 2));
+            let lion = "lion";
+            console.log(
+                "duksung like lion front",
+                "duksung like lion front".includes(lion)
+            );
+            // 사진과 동일하게 하려고 넣었어요!
+            alert("duksung like lion front".includes(lion));
+
+            // 문제 5
+            let time = new Date("2002-06-01 01:30:00");
+            alert(time.toLocaleString());
+
+            // 문제 6
+            function getSecondsToday() {
+                let start = new Date();
+                start.setHours(0, 0, 0);
+                let cur = new Date();
+                let cha = cur - start;
+                return Math.floor(cha / 1000);
+            }
+
+            alert(getSecondsToday());
+
+            // 문제 7
+            function randomNum() {
+                let num = Math.random() * 100 + 1;
+                num = Math.floor(num);
+                return num;
+            }
+
+            document.write("<br>첫번째 랜덤난수 : " + randomNum());
+            document.write("<br>두번째 랜덤난수 : " + randomNum());
+            document.write("<br>세번째 랜덤난수 : " + randomNum() + "<br>");
+
+            // 문제 8
+            let a = getElementById("hz");
+            function change() {
+                let a = getElementById("hz");
+                if (a.innerText == "A") {
+                    a.innerText = "B";
+                } else if (a.innerText == "B") {
+                    a.innerText = "C";
+                } else {
+                    a.innerText = "A";
+                }
+            }
+        </script>
+        <span id="hz">A</span><br />
+        <input type="button" value="클릭" onclick="change()" />
+    </body>
+</html>
