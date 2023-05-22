@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <style>
+      #open-box {
+        width: 100px;
+        height: 35px;
+        margin: 10px;
+        line-height: 35px;
+        text-align: center;
+
+        background-color: rgba(159, 185, 255, 0.616);
+        /* cursor: pointer; */
+      }
+      .count-box {
+        width: 200px;
+        height: 35px;
+        margin: 10px;
+        line-height: 35px;
+        text-align: center;
+
+        background-color: rgba(159, 185, 255, 0.616);
+        /* cursor: pointer; */
+      }
+      #open-date {
+        margin: 10px;
+        margin-top: 15px;
+      }
+      .time {
+        margin: 10px;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Second Countdown</h1>
+    <div id="open-box">운영 시간</div>
+    <div id="open-date">AM 9시 00분 ~ PM 6시 00분</div>
+    <br />
+    <div class="count-box">금일 마감까지 남은 시간</div>
+    <div class="time">
+      <span class="hours"></span>
+      <span class="col">:</span>
+      <span class="minutes"></span>
+      <span class="col">:</span>
+      <span class="seconds"></span>
+    </div>
+
+    <script>
+      function countdown() {
+        var now = new Date();
+        var end = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate(),
+          18,
+          00,
+          00
+        );
+        var open = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate(),
+          09,
+          00,
+          00
+        );
+
+        var nt = now.getTime();
+        var ot = open.getTime();
+        var et = end.getTime();
+
+        if (nt < ot && nt > 24) {
+          document.querySelector(".time").style.display = "block";
+          document.querySelector(".count-box").innerHTML =
+            "금일 오픈까지 남은 시간";
+
+          sec = parseInt(ot - nt) / 1000;
+          day = parseInt(sec / 60 / 60 / 24);
+          sec = sec - day * 60 * 60 * 24;
+          hour = parseInt(sec / 60 / 60);
+          sec = sec - hour * 60 * 60;
+          min = parseInt(sec / 60);
+          sec = parseInt(sec - min * 60);
+
+          if (hour < 10) {
+            hour = "0" + hour;
+          }
+          if (min < 10) {
+            min = "0" + min;
+          }
+          if (sec < 10) {
+            sec = "0" + sec;
+          }
+          document.querySelector(".hours").innerHTML = hour;
+          document.querySelector(".minutes").innerHTML = min;
+          document.querySelector(".seconds").innerHTML = sec;
+        } else if (nt >= et || nt < ot) {
+          document.querySelector(".count-box").innerHTML = "금일 마감";
+          document.querySelector(".time").style.display = "none";
+          document.querySelector(".col").style.display = "none";
+        } else {
+          document.querySelector(".time").style.display = "block";
+          document.querySelector(".count-box").innerHTML =
+            "금일 마감까지 남은 시간";
+          sec = parseInt(et - nt) / 1000;
+          day = parseInt(sec / 60 / 60 / 24);
+          sec = sec - day * 60 * 60 * 24;
+          hour = parseInt(sec / 60 / 60);
+          sec = sec - hour * 60 * 60;
+          min = parseInt(sec / 60);
+          sec = parseInt(sec - min * 60);
+
+          if (hour < 10) {
+            hour = "0" + hour;
+          }
+          if (min < 10) {
+            min = "0" + min;
+          }
+          if (sec < 10) {
+            sec = "0" + sec;
+          }
+          document.querySelector(".hours").innerHTML = hour;
+          document.querySelector(".minutes").innerHTML = min;
+          document.querySelector(".seconds").innerHTML = sec;
+        }
+      }
+      setInterval(countdown, 1000);
+    </script>
+  </body>
+</html>
