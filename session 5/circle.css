@@ -1,0 +1,65 @@
+/* 2560px 미만이 되는 순간부터 적용 */
+@media all and (max-width: 2560px) {
+  .circle {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(288, 288, 288);
+    margin: 0 auto;
+    padding: 3em;
+    text-align: center;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4,
+  .circle5,
+  .circle6,
+  .circle7,
+  .circle8 {
+    width: 7vw;
+    height: 11vh;
+    border-radius: 10%;
+    border: 0.3rem rgb(183, 0, 80);
+    border-style: solid;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/* 390px미만에서 적용 */
+@media all and (max-width: 390px) {
+  .circle {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(288, 288, 288);
+    padding: 5px;
+    font-size: 0.2rem;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4,
+  .circle5,
+  .circle6,
+  .circle7,
+  .circle8 {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 0.1rem solid rgb(183, 0, 80);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+}

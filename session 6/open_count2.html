@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 30px;
+        width: 100px;
+        background-color: skyblue;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 3px 0;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">운영시간</div>
+    <div>AM 09시 00분 ~ PM 17시 00분</div>
+
+    <div class="box">카운트다운</div>
+    <div id="countdown"></div>
+
+    <script>
+      //오픈시간
+      const open = new Date("2023-05-19 09:00:00");
+
+      //마감시간
+      const close = new Date("2023-05-19 17:00:00");
+
+      function main() {
+        setInterval(updateCountdown, 1000);
+      }
+      main();
+
+      function updateCountdown() {
+        const today = new Date();
+
+        if (today < open) {
+          beforeOpen(today);
+        } else if (today < close) {
+          afterOpen(today);
+        } else {
+          closeToday();
+        }
+      }
+
+      //금일 오픈까지 남은 시간 : 오픈시간 - 현재시간(오픈시간>현재시간)
+      //운영시간 전
+      function beforeOpen(today) {
+        const beforeOpenWindow = document.querySelector("#countdown");
+        const openToday = open - today;
+
+        const openTodayHour = Math.floor(openToday / (1000 * 60 * 60));
+        const openTodayMin = Math.floor((openToday / (1000 * 60)) % 60);
+        const openTodaySec = Math.floor((openToday / 1000) % 60);
+
+        beforeOpenWindow.innerHTML =
+          "금일 오픈까지 남은 시간 " +
+          openTodayHour +
+          ":" +
+          openTodayMin +
+          ":" +
+          openTodaySec;
+      }
+
+      //금일 마감까지 남은 시간 : 마감시간 - 현재시간(마감시간>현재시간)
+      //운영 중
+      function afterOpen(today) {
+        const afterOpenWindow = document.querySelector("#countdown");
+        const openIng = close - today;
+
+        const openIngHour = Math.floor(openIng / (1000 * 60 * 60));
+        const openIngMin = Math.floor((openIng / (1000 * 60)) % 60);
+        const openIngSec = Math.floor((openIng / 1000) % 60);
+
+        afterOpenWindow.innerHTML =
+          "금일 마감까지 남은 시간 " +
+          openIngHour +
+          ":" +
+          openIngMin +
+          ":" +
+          openIngSec;
+      }
+
+      //금일 마감 : 현재시간 > 마감시간
+      function closeToday() {
+        const closeTodayWindow = document.querySelector("#countdown");
+        closeTodayWindow.innerHTML = "금일 마감";
+      }
+    </script>
+  </body>
+</html>
