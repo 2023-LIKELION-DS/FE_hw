@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="hz">A</span><br />
+    <input type="button" value="클릭" onclick="change()" />
+
+    <script>
+      // Q1
+      let hello = () => "Hello World!";
+
+      // Q2
+      alert("알림창");
+      let age = prompt("나이를 입력하세요");
+      let welcome = () =>
+        age > 19
+          ? console.log(age + ": 성인")
+          : console.log(age + ": 미성년자");
+      welcome();
+
+      // Q3
+      alert("알림창");
+      do {
+        var i = prompt("100을 초과하는 숫자를 입력해주세요.");
+      } while (i > 100);
+
+      // Q4 (1)
+      let str = "likelion";
+      console.log(str[(2, 5)]);
+
+      // Q4 (1)
+      let lion = "lion";
+      console("duksung like lion front", str.includes(lion));
+
+      // Q5
+      var date = new Date("2002-06-01 01:30:00");
+      alert(date);
+
+      // Q6
+      var today = new Date();
+      let getSecondsToday = () => (seconds = setSeconds(today));
+      alert(getSecondsToday());
+
+      // Q7
+      function randomNum() {
+        alert("첫번째 랜덤난수: " + Math.random(0, 100));
+        alert("두번째 랜덤난수: " + Math.random(0, 100));
+        alert("세번째 랜덤난수: " + Math.random(0, 100));
+      }
+      randomNum();
+
+      // Q8
+      function change() {
+        var text = setElementById(".hz");
+
+        switch (text) {
+          case "A":
+            text == "B";
+            break;
+          case "B":
+            text == "C";
+            break;
+          case "C":
+            text == "A";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
