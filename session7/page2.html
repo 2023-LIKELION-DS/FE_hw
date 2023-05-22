@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Page2</title>
+        <style>
+            .outbox {
+                border-color: mistyrose;
+                border-width: 2px;
+                border-style: solid;
+                width: 300px;
+                height: 200px;
+                margin: 1%;
+            }
+            .title {
+                text-align: center;
+                font-weight: bold;
+                background-color: mistyrose;
+                width: 90px;
+                height: 25px;
+                padding: 1%;
+                margin: 10px;
+                border-radius: 10px;
+            }
+            .opentime {
+                font-weight: bold;
+                margin-left: 10px;
+                margin-bottom: 40px;
+            }
+            .count {
+                font-weight: bold;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outbox">
+            <div class="title">오픈 시간</div>
+            <div class="opentime">
+                <script>
+                    let opentime = document.querySelector(".opentime");
+                    opentime = new Date();
+                    opentime.setHours(1, 5, 0);
+                    let open_h = opentime.getHours();
+                    let open_m = opentime.getMinutes();
+                    let closetime = new Date();
+                    closetime.setHours(1, 9, 0);
+                    let close_h = closetime.getHours();
+                    let close_m = closetime.getMinutes();
+                    if (open_h > 12) {
+                        document.write(
+                            "PM " +
+                                String(open_h).padStart(2, "0") +
+                                "시 " +
+                                String(open_m).padStart(2, "0") +
+                                "분 "
+                        );
+                    } else {
+                        document.write(
+                            "AM " +
+                                String(open_h).padStart(2, "0") +
+                                "시 " +
+                                String(open_m).padStart(2, "0") +
+                                "분 "
+                        );
+                    }
+                    if (close_h > 12) {
+                        document.write(
+                            "~ PM " +
+                                String(close_h).padStart(2, "0") +
+                                "시 " +
+                                String(close_m).padStart(2, "0") +
+                                "분"
+                        );
+                    } else {
+                        document.write(
+                            "~ AM " +
+                                String(close_h).padStart(2, "0") +
+                                "시 " +
+                                String(close_m).padStart(2, "0") +
+                                "분"
+                        );
+                    }
+                </script>
+            </div>
+            <div class="title">카운트다운</div>
+            <div class="count">
+                <script>
+                    let count = document.querySelector(".count");
+                    count = new Date();
+
+                    function goOpen() {
+                        let u_open = opentime - count;
+                        let o_hour = Math.floor(
+                            (u_open / (1000 * 60 * 60)) % 24
+                        );
+                        let o_min = Math.floor((u_open / (1000 * 60)) % 60);
+                        let o_sec = Math.floor((u_open / 1000) % 60);
+                        document.write("금일 오픈까지 남은 시간<br>");
+                        document.write(
+                            String(o_hour).padStart(2, "0") +
+                                " : " +
+                                String(o_min).padStart(2, "0") +
+                                " : " +
+                                String(o_sec).padStart(2, "0")
+                        );
+                    }
+
+                    function goClose() {
+                        let u_close = closetime - count;
+                        let c_hour = Math.floor(
+                            (u_close / (1000 * 60 * 60)) % 24
+                        );
+                        let c_min = Math.floor((u_close / (1000 * 60)) % 60);
+                        let c_sec = Math.floor((u_close / 1000) % 60);
+                        document.write("금일 마감까지 남은 시간<br>");
+                        document.write(
+                            String(c_hour).padStart(2, "0") +
+                                " : " +
+                                String(c_min).padStart(2, "0") +
+                                " : " +
+                                String(c_sec).padStart(2, "0")
+                        );
+                    }
+
+                    if (count < opentime) {
+                        goOpen();
+                    } else if (count < closetime) {
+                        goClose();
+                    } else {
+                        document.write("금일 마감");
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
