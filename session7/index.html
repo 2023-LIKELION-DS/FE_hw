@@ -8,28 +8,56 @@
   </head>
   <style>
     div {
-      display: flex;
-      justify-content: center;
-      
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .open,
     .countdown {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
       width: 100px;
-      height: 10px;
+      height: 30px;
+      border-radius: 50px;
       background-color: rgb(205, 205, 205);
-      border-radius: 1px;
     }
   </style>
   <body>
-    <h1>JS 연습</h1>
     <div class="open">오픈 시간</div>
-    <div class="open-time"></div>
+    <div class="open-time">2023년 6월 12일 00시 00분 00초</div>
     <div class="countdown">카운트다운</div>
-    <div class="countdown-time"></div>
-    <script>
-      opentime = document.querySelector("open-time");
-      console.log(opentime);
-      //opentime = document.querySelector("open-time");
-    </script>
+    <div id="countdown-time"></div>
   </body>
+  <script>
+    const countDownTimer = function (id, date) {
+      var _vDate = new Date(date); // 전달 받은 일자
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+        var now = new Date();
+        console.log(now);
+        var distDt = _vDate - now;
+
+        var days = Math.floor(distDt / _day);
+        var hours = Math.floor((distDt % _day) / _hour);
+        var minutes = Math.floor((distDt % _hour) / _minute);
+        var seconds = Math.floor((distDt % _minute) / _second);
+
+        document.getElementById("countdown-time").textContent = days + "일 ";
+        document.getElementById("countdown-time").textContent +=
+          hours + "시간 ";
+        document.getElementById("countdown-time").textContent +=
+          minutes + "분 ";
+        document.getElementById("countdown-time").textContent += seconds + "초";
+      }
+
+      timer = setInterval(showRemaining, 1000);
+    };
+
+    countDownTimer("countdown-time", "06/12/2023 00:00 AM");
+  </script>
 </html>
