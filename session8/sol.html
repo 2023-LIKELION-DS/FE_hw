@@ -44,7 +44,12 @@
       var now = new Date();
       now.getTime();
 
-      alert(now - today);
+      var remain = now - today;
+      var _sec = remain * 1000;
+      var _min = _sec * 60;
+      var _hour = _min * 60;
+
+      alert(_hour + "시간" + _min + "분" + _sec + "초");
     };
     getSecondsToday("html요소의id입력");
     //문제 7
