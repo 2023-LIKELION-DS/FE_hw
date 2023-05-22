@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/a.css" type="text/css" rel="stylesheet">
+    <title>페이지2</title>
+</head>
+<body>
+    <div class="btn1">오픈 시간</div><br>
+    <div> PM 17시 00분 ~ PM 18시 00분</div><br><br>
+    <div class="btn1">카운트다운</div>
+    <div id="time1_f"></div>
+    <div id="time2_f"></div>
+    <div id="time1_e"></div>
+    <div id="time2_e"></div>
+    <div id="time_e"></div>
+</body>
+<script>
+    function updateTimer() {
+    var time0_f = new Date();
+    time0_f.setHours(17, 0, 0);
+
+    var time0_e = new Date();
+    time0_e.setHours(18, 0, 0);
+
+    var time0_n = new Date();
+    //time0_n.setHours(2,30, 0);    
+    if (time0_n < time0_f) {
+        var time_t = time0_f - time0_n;
+        var days = Math.floor(time_t / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((time_t / (1000 * 60 * 60)) % 24);
+        var min = Math.floor((time_t / 1000 / 60) % 60);
+        var sec = Math.floor((time_t / 1000) % 60);
+        document.getElementById("time1_f").textContent =
+        "금일 오픈까지 남은 시간"
+        document.getElementById("time2_f").textContent =
+        hours+':'+min+':'+sec;
+    } 
+    else if (time0_n > time0_e) {
+        document.getElementById("time_e").textContent = "금일 마감";
+    } 
+    else {
+        var time_t = time0_e - time0_n;
+        var hours = Math.floor(time_t / (1000 * 60 * 60));
+        var min = Math.floor((time_t / 1000 / 60) % 60);
+        var sec = Math.floor((time_t / 1000) % 60);
+        document.getElementById("time1_e").textContent =
+        "금일 마감까지 남은 시간"
+        document.getElementById("time2_e").textContent =
+        hours+':'+min+':'+sec;
+    }
+}
+    setInterval(updateTimer, 1000);
+</script>
+</html>
