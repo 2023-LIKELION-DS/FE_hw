@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/a.css" type="text/css" rel="stylesheet">
+    <title>페이지 1</title>
+</head>
+<body>
+    <div class="btn1">오픈 시간</div>
+    <div> 2023년 6월 12일 00시 00분 00초</div><br>
+    <div class="btn1">카운트다운</div>
+    <div id = "time00"></div>
+    
+    <script>
+        function updateTimer() {
+                //Date()객체를 이용하여 구하고, 오픈시간에서 현재 정보들을 빼서 date_n에 저장하였음
+                const date1 = new Date("2023/06/12 00:00:00");
+                const date0 = new Date();
+                const date_n = date1 - date0;   
+
+                //if문 대신 나누기 기호를 이용하고, 각각의 변수에 저장하였음
+                const day1 = Math.floor(date_n / (1000 * 60 * 60 * 24)); 
+                const hour1 = Math.floor(date_n / (1000 * 60 * 60));
+                const min1 = Math.floor(date_n / (1000 * 60));
+                const sec1 = Math.floor(date_n / 1000);
+
+                const date2 = day1;
+                const hour2 = hour1 - day1 * 24;
+                const min3 = min1 - hour1 * 60;
+                const sec4 = sec1 - min1 * 60;
+
+                //아이디선택자를 이용하여 브라우저에 표시가 되게 하였음
+                document.querySelector("#time00").innerHTML = date2 + "일 " + hour2 + "시간 " + min3 +
+                    '분 ' + sec4 +'초';
+            }
+
+            setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
