@@ -14,7 +14,7 @@
     <div id = "time00"></div>
     
     <script>
-        function updateTimer() {
+        function timer() {
                 //Date()객체를 이용하여 구하고, 오픈시간에서 현재 정보들을 빼서 date_n에 저장하였음
                 const date1 = new Date("2023/06/12 00:00:00");
                 const date0 = new Date();
@@ -36,7 +36,7 @@
                     '분 ' + sec4 +'초';
             }
 
-            setInterval(updateTimer, 1000);
+            setInterval(timer, 1000);
     </script>
 </body>
 </html>

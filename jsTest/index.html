@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script> 
+    //1    
+        let hello = {
+        return "Hello World!";
+    };
+
+    //2
+
+    //3
+    do{ var num = prompt("100을 초과하는 숫자를 입력해주세요.")
+
+    }while(num<=100);
+
+    //4
+    
+    //5
+    const date00 = new Date("2002/06/01 01:30:00");
+    const year3 = getFullYear(date3);
+    const month3 = getMonth(date3);
+    const date3 = getDate(date3);
+    const hours3 = getHours(date3);
+    const min3 = getMinutes(date3);
+    const sec3 = getSeconds(date3);
+    alert(year3+"년 "+month3+"월 "+date3+"일, 오전 "+hours3+"시 "+min3+"분");
+    //6
+    function getSecondsToday(){
+                const date1 = new Date("2023/06/12 00:00:00");
+                const date0 = new Date();
+                const date_n = date1 - date0;   
+
+                const date0 = new Date();
+                const time0 = new Date();
+                time0.setHours(0, 0, 0);
+                const date1 = date0 - time0;
+                
+                const hour1 = Math.floor(date1 / (1000 * 60 * 60));
+                const min1 = Math.floor(date1 / (1000 * 60));
+                const sec1 = Math.floor(date1 / 1000);
+                const hour2=hour1;
+                const min2 = (min1 - hour1 * 60)*60;
+                const sec2 = sec1 - min1 * 60;
+                const hap=min2+sec2;
+        }
+    alert(hap);
+    </script>
+
+</body>
+</html>
