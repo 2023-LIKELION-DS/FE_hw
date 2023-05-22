@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>페이지1과제</title>
+        <style>
+            h3 {
+                width: 100px;
+                height: 30px;
+                background: pink;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>오픈시간</h3>
+        <div id="open">2023년 06월 12일 00시 00분 00초</div>
+        <br />
+        <h3>카운트다운</h3>
+        <div id="countdown"></div>
+
+        <script>
+            function countDown() {
+                const open = new Date("2023/06/12 00:00:00");
+                const now = new Date();
+                const secs = 1000;
+                const mins = secs * 60;
+                const hours = mins * 60;
+                const days = hours * 24;
+                const diff = open - now;
+
+                const day = String(Math.floor(diff / days)).padStart(2, 0);
+                const hour = String(Math.floor((diff % days) / hours)).padStart(
+                    2,
+                    0
+                );
+                const min = String(Math.floor((diff % hours) / mins)).padStart(
+                    2,
+                    0
+                );
+                const sec = String(Math.floor((diff % mins) / secs)).padStart(
+                    2,
+                    0
+                );
+
+                document.getElementById("countdown").innerHTML =
+                    day +
+                    "일" +
+                    " " +
+                    hour +
+                    "시" +
+                    " " +
+                    min +
+                    "분" +
+                    " " +
+                    sec +
+                    "초";
+            }
+
+            setInterval(countDown, 1000);
+        </script>
+    </body>
+</html>

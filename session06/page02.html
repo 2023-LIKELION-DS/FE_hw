@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>페이지2과제</title>
+        <style>
+            h3 {
+                width: 100px;
+                height: 30px;
+                background: pink;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>운영시간</h3>
+        <div id="info">AM 09:00 ~ PM 6:00</div>
+        <h3>카운트다운</h3>
+        <p id="count-title"></p>
+        <div id="countdown"></div>
+        <script>
+            function countDown() {
+                const now = new Date();
+                const close = new Date();
+                close.setHours(18, 0, 0);
+                const open = new Date();
+                open.setHours(9, 0, 0);
+
+                let remainingTime;
+                let countTitle;
+
+                if (now > open && now < close) {
+                    remainingTime = close - now;
+                    countTitle = "금일 마감까지 남은 시간";
+                } else if (now > close) {
+                    const nextOpen = new Date(open);
+                    nextOpen.setDate(nextOpen.getDate() + 1);
+                    remainingTime = nextOpen - now;
+                    countTitle = "금일 오픈까지 남은 시간";
+                } else {
+                    document.getElementById("count-title").innerHTML =
+                        "금일 마감";
+                    document.getElementById("countdown").innerHTML = "";
+                    return;
+                }
+                const hours = String(
+                    Math.floor(remainingTime / (1000 * 60 * 60))
+                ).padStart(2, 0);
+                const mins = String(
+                    Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60))
+                ).padStart(2, 0);
+                const secs = String(
+                    Math.floor((remainingTime % (1000 * 60)) / 1000)
+                ).padStart(2, 0);
+
+                document.getElementById("count-title").innerHTML = countTitle;
+                document.getElementById("countdown").innerHTML =
+                    hours + ":" + mins + ":" + secs;
+            }
+            setInterval(countDown, 1000);
+        </script>
+    </body>
+</html>
