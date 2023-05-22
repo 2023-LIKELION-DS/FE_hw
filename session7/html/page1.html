@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="open_time">
+            <h1>오픈시간</h1>
+            <div>2023년 6월 12일 00시 00분 00초</div>
+            <div class="now_time"></div>
+        </div>
+        <div class="count_down">
+            <h1>카운트다운</h1>
+            <div class="timer"></div>
+        </div>
+
+        <script>
+            function updateTimer() {
+                const future = new Date("2023/06/12 00:00:00");
+                const now = new Date();
+                const diff = future - now;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const mins = Math.floor(diff / (1000 * 60));
+                const secs = Math.floor(diff / 1000);
+
+                const ddate = days;
+                const dhour = hours - days * 24;
+                const dmin = mins - hours * 60;
+                const dsec = secs - mins * 60;
+
+                document.querySelector(".timer").innerHTML =
+                    ddate +
+                    "일 " +
+                    dhour +
+                    "시간 " +
+                    dmin +
+                    "분 " +
+                    dsec +
+                    "초";
+            }
+
+            setInterval(updateTimer, 1000);
+        </script>
+    </body>
+</html>
