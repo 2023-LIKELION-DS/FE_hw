@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .work-time,
+    #countdown {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      width: 100px;
+      height: 30px;
+      border-radius: 50px;
+      background-color: rgb(205, 205, 205);
+    }
+
+    #countdown-time,
+    #countdown-endtime,
+    #end-time {
+      display: flex;
+      margin-top: 20px;
+      width: 500px;
+      height: 20px;
+    }
+  </style>
+  <body>
+    <div class="work-time">운영시간</div>
+    <div class="work-time1">AM 09:00 - PM 09:00</div>
+    <div id="countdown">카운트다운</div>
+    <div id="countdown-time"></div>
+    <div id="countdown-endtime"></div>
+    <div id="end-time"></div>
+
+    <script>
+      var openingTime = new Date();
+      openingTime.setHours(9, 0, 0);
+
+      var closingTime = new Date();
+      closingTime.setHours(21, 0, 0);
+
+      var currentTime = new Date();
+
+      if (currentTime < openingTime) {
+        var timeDiff = openingTime - currentTime;
+        var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+        var minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+        var seconds = Math.floor((timeDiff / 1000) % 60);
+        document.getElementById("countdown-time").textContent =
+          "오픈까지 " +
+          days +
+          "일 " +
+          hours +
+          "시간 " +
+          minutes +
+          "분 " +
+          seconds +
+          "초 남았습니다.";
+      } else if (currentTime > closingTime) {
+        document.getElementById("end-time").textContent = "마감되었습니다.";
+      } else {
+        var timeDiff = closingTime - currentTime;
+        var hours = Math.floor(timeDiff / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+        var seconds = Math.floor((timeDiff / 1000) % 60);
+        document.getElementById("countdown-endtime").textContent =
+          "마감까지 " +
+          hours +
+          "시간 " +
+          minutes +
+          "분 " +
+          seconds +
+          "초 남았습니다.";
+      }
+    </script>
+  </body>
+</html>

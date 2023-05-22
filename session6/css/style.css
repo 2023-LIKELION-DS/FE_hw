@@ -1,12 +1,162 @@
-ul {
-  display: flex;
+@media all and (max-width: 768px) {
+  .art1-hid {
+    display: none;
+  }
+  .hidden {
+    display: none;
+  }
+  .menu2 li {
+    flex-basis: 25%;
+  }
+  .notice-img {
+    margin-right: 40px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .menu1 {
+    display: none;
+  }
 }
 
 li {
-  padding: 10px;
   list-style: none;
 }
+nav {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  margin-top: 10px;
+}
+.menu1 ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+}
 
-li:link {
-  text-decoration: none;
+.menu1 li {
+  padding: 20px;
+}
+
+.hd-img {
+  height: 300px;
+  background-image: url("../img/01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu2 {
+  height: auto;
+  width: 100%;
+  background-color: rgb(245, 242, 238);
+}
+
+.menu2 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.menu2 li {
+  flex: 1;
+  width: 33%;
+}
+
+.box1 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+.img1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.img2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.box1:hover .img2 {
+  display: block;
+}
+
+a {
+  text-decoration-line: none;
+  color: rgb(43, 43, 43);
+  font-weight: 700;
+  align-items: center;
+}
+
+.menu2 a {
+  text-decoration-line: none;
+  color: gray;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.art1 a {
+  display: flex;
+  width: 160px;
+  padding: 10px;
+}
+
+a:hover {
+  color: rgb(183, 0, 80);
+}
+
+.art1 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.notice-header {
+  display: flex;
+  padding: 0%;
+  height: 50px;
+}
+.align-left {
+  display: flex;
+  justify-content: right;
+}
+.notice-content {
+  padding: 0%;
+  margin: 0%;
+}
+
+.notice-content li:hover {
+  background-color: rgb(233, 233, 233);
+  text-decoration-line: underline;
+  color: rgb(183, 0, 80);
+}
+
+.notice-img {
+  margin-left: 40px;
+  margin-top: 20px;
+  width: 550px;
+  height: 400px; 
+  background-image: url("../img/04.jpg");
+  background-size: cover;
 }
