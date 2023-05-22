@@ -15,7 +15,7 @@
     .countdown {
       display: flex;
       justify-content: center;
-      margin-top: 10px;
+      margin-top: 20px;
       width: 100px;
       height: 30px;
       border-radius: 50px;
@@ -29,15 +29,15 @@
     <div id="countdown-time"></div>
   </body>
   <script>
-    const countDownTimer = function (id, date) {
-      var _vDate = new Date(date); // 전달 받은 일자
+    const countDown = function (id, date) {
+      var _vDate = new Date(date);
       var _second = 1000;
       var _minute = _second * 60;
       var _hour = _minute * 60;
       var _day = _hour * 24;
       var timer;
 
-      function showRemaining() {
+      function Remain() {
         var now = new Date();
         console.log(now);
         var distDt = _vDate - now;
@@ -55,9 +55,9 @@
         document.getElementById("countdown-time").textContent += seconds + "초";
       }
 
-      timer = setInterval(showRemaining, 1000);
+      timer = setInterval(Remain, 1000);
     };
 
-    countDownTimer("countdown-time", "06/12/2023 00:00 AM");
+    countDown("countdown-time", "06/12/2023 00:00 AM");
   </script>
 </html>
