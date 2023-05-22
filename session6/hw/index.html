@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js - timer practice</title>
+        <style>
+            #open_box,
+            #cntdown_box {
+                border-radius: 10px;
+                width: 100px;
+                text-align: center;
+                background-color: rgb(116, 139, 121);
+                cursor: pointer;
+            }
+            #unit {
+                width: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JS 연습</h1>
+        <div id="open_box">오픈 시간</div>
+        <p>2023년 6월 12일 00시 00분 00초</p>
+        <div id="cntdown_box">카운트다운</div>
+        <div id="cntdown_time">
+            <span id="days"></span>
+            <span class="unit">일</span>
+            <span id="hours"></span>
+            <span class="unit">시간</span>
+            <span id="mins"></span>
+            <span class="unit">분</span>
+            <span id="secs"></span>
+            <span class="unit">초</span>
+        </div>
+        <script>
+            function countdown() {
+                var open = new Date(2023, 05, 12, 00, 00, 00);
+                var now = new Date();
+                var sec, min, hour, day;
+                var interval = open.getTime() - now.getTime();
+                if (interval > 0) {
+                    sec = parseInt(interval) / 1000;
+                    hour = parseInt(sec / 3600);
+                    day = parseInt(hour / 24);
+                    sec = sec - hour * 60 * 60;
+                    hour = hour - day * 24;
+                    min = parseInt(sec / 60);
+                    sec = parseInt(sec - min * 60);
+                    if (hour < 10) {
+                        hour = "0" + hour;
+                    }
+                    if (min < 10) {
+                        min = "0" + min;
+                    }
+                    if (sec < 10) {
+                        sec = "0" + sec;
+                    }
+                    document.getElementById("days").innerText = day;
+                    document.getElementById("hours").innerText = hour;
+                    document.getElementById("mins").innerText = min;
+                    document.getElementById("secs").innerText = sec;
+                } else {
+                    document.getElementById("days").innerText = "00";
+                    document.getElementById("hours").innerText = "00";
+                    document.getElementById("mins").innerText = "00";
+                    document.getElementById("secs").innerText = "00";
+                }
+            }
+
+            setInterval(countdown, 1000);
+        </script>
+    </body>
+</html>
