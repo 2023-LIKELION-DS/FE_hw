@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지 1</title>
+
+    <style>
+      h3 {
+        display: inline-block;
+        background-color: rgb(174, 220, 250);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>오픈 시간</h3>
+    <div class="open_time">2023년 6월 12일 00시 00분 00초</div>
+    <br />
+    <h3>카운트다운</h3>
+    <div class="countdown_time"></div>
+  </body>
+  <script>
+    var openDate = new Date("2023-06-12 00:00:00").getTime();
+    var countdownTime = setInterval(function () {
+      var nowDate = new Date().getTime();
+      var distance = openDate - nowDate;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var timeObj = new Date(distance);
+      var hours = timeObj.getUTCHours();
+      var minutes = timeObj.getUTCMinutes();
+      var seconds = timeObj.getUTCSeconds();
+      document.querySelector(".countdown_time").innerHTML =
+        days +
+        "일 " +
+        hours +
+        "시간 " +
+        minutes +
+        "분 " +
+        seconds +
+        "초 남았습니다.";
+      if (distance < 0) {
+        clearInterval(countdownTime);
+      }
+    }, 1000);
+  </script>
+</html>

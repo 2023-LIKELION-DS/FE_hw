@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지 2</title>
+
+    <style>
+      h3 {
+        display: inline-block;
+        background-color: rgb(174, 220, 250);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>운영 시간</h3>
+    <div class="during_time">PM 00시 00분 ~ AM 04시 00분</div>
+    <div class="open_time"></div>
+    <div class="close_time"></div>
+    <br />
+    <h3>카운트다운</h3>
+    <div class="until_open_time"></div>
+    <div class="until_close_time"></div>
+    <div class="closed_time"></div>
+  </body>
+  <script>
+    var openTime = new Date("2023-05-20 00:00:00").getTime();
+    var closeTime = new Date("2023-05-20 04:00:00").getTime();
+
+    setInterval(function () {
+      var currentTime = new Date().getTime();
+
+      if (currentTime < openTime) {
+        // 운영 전
+        var timeDifference = openTime - currentTime;
+        var formattedTime = formatTime(timeDifference);
+
+        document.querySelector(".until_open_time").innerHTML =
+          "금일 오픈까지 남은 시간<br>" + formattedTime;
+        document.querySelector(".until_close_time").innerHTML = "";
+        document.querySelector(".closed_time").innerHTML = "";
+      } else if (currentTime >= openTime && currentTime < closeTime) {
+        // 운영 중
+        var timeDifference = closeTime - currentTime;
+        var formattedTime = formatTime(timeDifference);
+
+        document.querySelector(".until_open_time").innerHTML = "";
+        document.querySelector(".until_close_time").innerHTML =
+          "금일 마감까지 남은 시간<br>" + formattedTime;
+        document.querySelector(".closed_time").innerHTML = "";
+      } else {
+        // 마감 후
+        document.querySelector(".until_open_time").innerHTML = "";
+        document.querySelector(".until_close_time").innerHTML = "";
+        document.querySelector(".closed_time").innerHTML = "금일 마감";
+      }
+    }, 1000);
+
+    function formatTime(time) {
+      var hours = Math.floor(time / (1000 * 60 * 60));
+      var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((time % (1000 * 60)) / 1000);
+
+      var formattedHours = ("0" + hours).slice(-2);
+      var formattedMinutes = ("0" + minutes).slice(-2);
+      var formattedSeconds = ("0" + seconds).slice(-2);
+
+      return (
+        formattedHours + " : " + formattedMinutes + " : " + formattedSeconds
+      );
+    }
+  </script>
+</html>
