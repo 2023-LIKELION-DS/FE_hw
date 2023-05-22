@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 문제 1
+      var hello = () => "Hello World!";
+
+      //문제 2
+      let age = prompt("나이를 입력하세요");
+      let welcome = age > 20 ? alert(age + ":성인") : alert(age + ":미성년자");
+      welcome();
+
+      //문제 3 do-while반복문을 사용해 100 초과하는 숫자를 입력할 때 까지 반복하세요.
+
+      do {
+        num = prompt("100을 초과하는 숫자를 입력해주세요");
+      } while (num < 100);
+
+      //문제 4
+
+      let str = "likelion";
+
+      console.log(str.slice(2, 6));
+
+      let lion = "lion";
+
+      console("duksung like lion front", lion.includes("lion")); //true ?>> 약간 보류
+
+      //문제 5
+      var date = new Date("2002-06-01 01:30:00");
+      alert(date);
+
+      //문제 6 오늘 하루가 시작된 이후 몇 초나 지났는지 반환하는 함수
+      function getSecondsToday() {
+        var date = new Date();
+
+        var hours = date.getHours() * 3600;
+        var minutes = date.getMinutes() * 60;
+        var seconds = date.getSeconds();
+        alert(hours + minutes + seconds);
+      }
+      getSecondsToday();
+      Math.floor((leftTime / 1000) % 60);
+
+      //문제 7 0~100까지의 랜덤 난수를 생성하는 함수 randomNum()을 만드세요.  화면에 출력해주는 입출력 함수를 사용하세요
+
+      function randomNum() {
+        for (var i = 0; i <= 1000; i++) {}
+      }
+
+      document.write("첫 번째 랜덤 난수 : ");
+      document.write("두 번째 랜덤 난수 : ");
+      document.write("세 번째 랜덤 난수 : ");
+
+      //문제 8
+    </script>
+  </body>
+</html>
