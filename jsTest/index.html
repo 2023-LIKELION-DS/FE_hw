@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="ranNum1"></p>
+        <p id="ranNum2"></p>
+        <p id="ranNum3"></p>
+
+        <span id="hz">A</span><br />
+        <input type="button" value="클릭" onClick="change()" id="btn" />
+        <script>
+            // // Q1
+            hello = () => {
+                "Hello World!";
+            };
+
+            // Q2
+            let age = prompt("나이를 입력하세요");
+            let welcome =
+                age >= 20 ? alert(age + ":성인") : alert(age + ":미성년자");
+            welcome();
+
+            // Q3
+            do {
+                var num = prompt("100을 초과하는 숫자를 입력해주세요.");
+            } while (num <= 100);
+
+            //Q4
+            let str = "likelion";
+            console.log(str.slice(2, 6));
+
+            // Q5
+            var date = new Date(2002, 06, 01, 01, 30, 00);
+            alert(date);
+
+            // Q6
+            function getSecondsToday() {
+                var now = new Date(2023, 05, 22, 00, 01, 00);
+                var start = new Date(
+                    now.getFullYear(),
+                    now.getMonth(),
+                    now.getDate(),
+                    00,
+                    00,
+                    00
+                );
+                var interval = now.getTime() - start.getTime();
+                alert(interval / 1000);
+            }
+            getSecondsToday();
+
+            //Q7
+            function randomNum() {
+                var num = Math.round(Math.random() * 100);
+                return num;
+            }
+            let num1 = randomNum();
+            let num2 = randomNum();
+            let num3 = randomNum();
+            document.getElementById("ranNum1").innerText =
+                "첫번째 랜덤난수 : " + num1;
+            document.getElementById("ranNum2").innerText =
+                "첫번째 랜덤난수 : " + num2;
+            document.getElementById("ranNum3").innerText =
+                "첫번째 랜덤난수 : " + num3;
+
+            //Q8
+            const hz = document.querySelector("#hz");
+            document.querySelector("#btn").addEventListener("click", () => {
+                change();
+            });
+            function change() {
+                if (hz === "A") {
+                    document.getElementById("hz").innerText = B;
+                } else if (hz === "B") {
+                    document.getElementById("hz").innerText = C;
+                } else if (hz === "C") {
+                    document.getElementById("hz").innerText = A;
+                }
+            }
+        </script>
+    </body>
+</html>
