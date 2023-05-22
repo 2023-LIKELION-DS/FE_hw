@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    width: 1400px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* navigation */
+nav {
+    height: 100px;
+    margin-top: 20px;
+}
+
+.link-head {
+    margin: 0;
+    display: flex;
+}
+
+.nav-logo {
+    width: 280px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+}
+
+.link-button {
+    list-style-type: none;
+    margin: 30px;
+    display: flex;
+}
+
+ul.link-button > li {
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hidden > a > img {
+    width: 0px;
+    height: 0px;
+}
+
+/* 가로 너비가 990px 이하일 때 */
+@media screen and (max-width: 990px) {
+    .link-head {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hidden {
+        visibility: visible;
+        float: right;
+    }
+
+    .hidden > a > img {
+        width: 90px;
+        height: 48px;
+        margin-top: 10px;
+        margin-right: 20px ;
+    }
+
+    .nav-logo {
+        float: left;
+        margin-left: 40px;
+    }
+
+    .logo {
+        width: 280px;
+    }
+}
+
+/* header */
+header {
+    background-color: #F4F3F0;
+    height: 470px;
+}
+
+.library {
+    width: 100%;
+}
+
+/* quik-wrap */
+.quik-icon {
+    list-style-type: none;
+    margin: 30px;
+    display: flex;
+    align-content: stretch;
+}
+
+ul.quik-icon > li {
+    margin-left: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666666;
+}
+
+ul.quik-icon > li > a > img {
+    width: 100px;
+    height: 100px;
+}
+
+/* 가로 너비가 990px 이하일 때 */
+@media screen and (max-width: 990px) {
+    /* icon 2줄 정렬 */
+    body {
+        width: 990px;
+    }
+
+    .quik-icon {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.quik-icon > li {
+        margin-left: 80px;
+    }
+
+    header {
+        height: 550px;
+    }
+
+    .quik-icon {
+        margin: 45px;
+    }
+}
+
+/* 가로 너비가 766px 이하일 때 */
+@media screen and (max-width: 766px) {
+    /* icon 2줄 정렬 + 6개 항목 */
+    body {
+        width: 766px;
+    }
+
+    /* 자료구입신청, 모바일학생증 아이콘 사리지게 */
+    .hide {
+        display: none;
+    }
+
+    .quik-icon {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.quik-icon > li {
+        margin-left: 80px;
+    }
+
+    header {
+        height: 550px;
+    }
+
+    .quik-icon {
+        margin-left: 20px;
+    }
+}
+
+/* section */
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.notice {
+    padding: 15px;
+}
+
+.notice > a {
+    margin: 0;
+    padding: 0;
+    font-size: 27.2px;
+    font-weight: bold;
+}
+
+.notice > a > span {
+    color: #E888A5;
+}
+
+.small {
+    color: #999999;
+    font-size: 13.6px;
+}
+
+.banner {
+    padding: 15px;
+}
+
+.banner > img {
+    width: 570px;
+    height: 430px;
+}
+
+.list {
+    width: 570px;
+}
+
+.text {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+ul.text > li {
+    border-top: 1px solid #B5B4B4;
+}
+
+ul.text > li.last {
+    border-bottom: 1px solid #B5B4B4;
+}
+
+ul.text > li > a {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: #333333;
+    padding-left: 10px;
+    padding-right: 25px;
+    padding-top: 10px;
+}
+
+.day {
+    display: block;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    color: #B5B4B4;
+}
+
+/* 가로 너비가 990px 이하일 때 */
+@media screen and (max-width: 990px) {
+    .list {
+        width: 465px;
+    }
+
+    .banner > img {
+        width: 465px;
+        height: 430px;
+    }
+}
+
+/* 가로 너비가 766px 이하일 때 */
+@media screen and (max-width: 766px) {
+    .notice {
+        display: none;
+    }
+
+    .banner > img {
+        width: 736px;
+        height: 430px;
+    }
+}
