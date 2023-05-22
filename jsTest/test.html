@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Q1
+        let hello = () => { return "Hello World!"; }
+        
+        //Q2
+        let age = prompt("나이를 입력하세요");
+        (age<20) ? alert(age + " : 미성년자") : alert(age + " : 성인");
+        
+        //Q3
+        let num;
+        do {
+            num = prompt("100을 초과하는 숫자를 입력해주세요.");
+        } while(num < 100) {
+            alert("입력하신 숫자: " + num);
+        }
+        
+        //Q4
+        //4-1
+        let  str = "likelion";
+        console.log(str.slice(2, 6));
+        
+        //4-2
+        let lion = "lion"
+        console.log("duksung like lion front", lion);
+        alert(lion.includes(lion));
+        
+        //Q5
+        const date = new Date('2002-06-01 01:30:00');
+        alert(date.toLocaleString());
+        
+        //Q6
+        function getSecondsToday() {
+            
+            var today = new Date();
+        
+            let hours = today.getHours();
+            let minutes = today.getMinutes();
+            let seconds = today.getSeconds();
+        
+            if(hours>0){
+                minutes = minutes+hours*60;
+            }
+            if(minutes>0){
+                seconds = seconds+minutes*60;
+            }
+            
+            alert(seconds);
+        }
+        
+        getSecondsToday();
+        
+        //Q7
+        function randomNum(){
+            document.write("첫번째 랜덤난수 : " + Math.random(0,101));
+            document.write("두번째 랜덤난수 : " + Math.random(0,101));
+            document.write("세번째 랜덤난수 : " + Math.random(0,101));
+        }
+        randomNum();
+    </script>
+
+
+    <span id="hz">A</span><br>
+    <input type="button" value="클릭" onClick="change()">
+
+    <script>
+    //Q8
+    var hz = document. getElementById("hz");
+
+    function change(){
+        if(hz === 'A'){
+            z.innerText = "B";
+        }
+        if(hz === 'B'){
+            z.innerText = "C";
+        }
+        if(hz === 'C'){
+            z.innerText = "A";
+        }
+    }
+
+    document.querySelector("button").addEventListener("onClick", change());
+    </script>
+</body>
+</html>
