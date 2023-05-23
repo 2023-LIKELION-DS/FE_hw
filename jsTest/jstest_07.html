@@ -6,5 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
-    <body></body>
+    <body>
+        <script>
+            var randomNum = function () {
+                const num = Math.floor(Math.random() * 101);
+                document.write("첫번째 랜덤난수: " + num + "<br>");
+                const num2 = Math.floor(Math.random() * 101);
+                document.write("두번째 랜덤난수: " + num2 + "<br>");
+                const num3 = Math.floor(Math.random() * 101);
+                document.write("세번째 랜덤난수: " + num3 + "<br>");
+            };
+
+            randomNum();
+        </script>
+    </body>
 </html>
