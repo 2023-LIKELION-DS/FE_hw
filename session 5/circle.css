@@ -1,12 +1,14 @@
-/* 2560px 미만이 되는 순간부터 적용 */
-@media all and (max-width: 2560px) {
+/* 1440px 미만이 되는 순간부터 적용 */
+@media all and (max-width: 1440px) {
   .circle {
+    width: auto;
+    height: max-content;
     display: flex;
-    justify-content: space-around;
-    background-color: rgb(288, 288, 288);
-    margin: 0 auto;
-    padding: 3em;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 228, 228);
+    padding: 30px;
+    object-fit: contain;
   }
 
   .circle1,
@@ -17,30 +19,32 @@
   .circle6,
   .circle7,
   .circle8 {
-    width: 7vw;
-    height: 11vh;
-    border-radius: 10%;
-    border: 0.3rem rgb(183, 0, 80);
-    border-style: solid;
-    display: inline-block;
-    justify-content: center;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .circle img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
   }
 }
 
 /* 390px미만에서 적용 */
 @media all and (max-width: 390px) {
   .circle {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    width: auto;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3px;
     align-items: center;
-    background-color: rgb(288, 288, 288);
-    padding: 5px;
-    font-size: 0.2rem;
-    font-weight: bold;
-    margin: 0 auto;
+    background-color: rgb(228, 228, 228);
   }
 
   .circle1,
@@ -51,15 +55,12 @@
   .circle6,
   .circle7,
   .circle8 {
-    width: 100%;
+    width: 100px;
     height: auto;
-    border-radius: 50%;
-    border: 0.1rem solid rgb(183, 0, 80);
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    align-items: center;
+    padding: 10px;
+  }
+
+  .circle img {
+    object-fit: contain;
   }
 }
