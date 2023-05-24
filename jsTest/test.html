@@ -72,22 +72,22 @@
     <input type="button" value="클릭" onClick="change()">
 
     <script>
-    //Q8
-    var hz = document. getElementById("hz");
+        //Q8
+        var hz = document. getElementById("hz");
 
-    function change(){
-        if(hz === 'A'){
-            z.innerText = "B";
+        function change(){
+            if(hz === 'A'){
+                z.innerText = "B";
+            }
+            if(hz === 'B'){
+                z.innerText = "C";
+            }
+            if(hz === 'C'){
+                z.innerText = "A";
+            }
         }
-        if(hz === 'B'){
-            z.innerText = "C";
-        }
-        if(hz === 'C'){
-            z.innerText = "A";
-        }
-    }
 
-    document.querySelector("button").addEventListener("onClick", change());
+        document.querySelector("button").addEventListener("onClick", change());
     </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 body {
     font-family: 'Nanum Gothic', sans-serif;
     margin: 0;
-    width: 1400px;
+    width: 100%;
 }
 
 a:link, a:visited {
@@ -91,7 +91,6 @@ ul.link-button > li {
 /* header */
 header {
     background-color: #F4F3F0;
-    height: 470px;
 }
 
 .library {
@@ -99,19 +98,25 @@ header {
 }
 
 /* quik-wrap */
+.quik-wrap {
+    color: #666666;
+}
 .quik-icon {
     list-style-type: none;
     margin: 30px;
+    padding: 0;
     display: flex;
     align-content: stretch;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 ul.quik-icon > li {
-    margin-left: 50px;
+    margin-left: 80px;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
-    color: #666666;
 }
 
 ul.quik-icon > li > a > img {
@@ -132,7 +137,7 @@ ul.quik-icon > li > a > img {
     }
 
     ul.quik-icon > li {
-        margin-left: 80px;
+        margin-left: 100px;
     }
 
     header {
@@ -162,7 +167,7 @@ ul.quik-icon > li > a > img {
     }
 
     ul.quik-icon > li {
-        margin-left: 80px;
+        margin-left: 105px;
     }
 
     header {
