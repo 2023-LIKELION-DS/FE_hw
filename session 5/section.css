@@ -1,18 +1,21 @@
-/* 2560px 미만이 되는 순간부터 적용 */
-@media all and (max-width: 2560px) {
+/* 1440px 미만이 되는 순간부터 적용 */
+@media all and (max-width: 1440px) {
   .section {
+    width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   .section1 {
     display: inline-block;
-    width: 100em;
+    width: 50%;
   }
 
   .section1_warp {
     display: inline-block;
     justify-content: center;
-    width: 100em;
+    width: 50%;
+    height: 50%;
   }
 
   .sect1_notice {
@@ -24,6 +27,12 @@
   .sect1_notice li {
     display: inline-block;
     padding: 1.7em;
+  }
+
+  .sect1_notice span {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(222, 115, 161);
   }
 
   .section1_warp ul {
@@ -50,32 +59,41 @@
 
   .section2 {
     display: inline-block;
-    width: 100em;
-    height: 40rem;
-    padding: 30px;
+    width: 50%;
+    height: 30%;
+    padding: 20px 30px;
     overflow: hidden;
+  }
+
+  .banner1 {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 20px 30px;
   }
 
   .section2 > .banner1 img {
     width: 100%;
-    height: 50%;
+    height: 100%;
     object-fit: cover;
     overflow: hidden;
   }
 }
 
+/* 1024px미만에서 적용 */
+@media all and (max-width: 1024px) {
+  .section1 {
+    display: none;
+  }
+}
 /* 390px미만에서 적용 */
 @media all and (max-width: 390px) {
   .section {
     flex-wrap: wrap;
   }
   .section1 {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .sect1_warp {
-    font-size: 3px;
+    display: none;
   }
 
   .section2 {
@@ -83,22 +101,7 @@
     justify-content: center;
     margin: 0 auto;
     width: 100%;
-    height: 60%;
-  }
-  .sect1_notice {
-    font-size: 3px;
-    border-top: 0.1em solid gray;
-    border-bottom: 0.1em solid gray;
-  }
-  .sect1_notice span {
-    font-size: 6em;
-    color: palevioletred;
-    font-weight: bold;
-  }
-
-  .sect1_content li {
-    font-size: 4em;
-    padding: 10px;
+    height: 100%;
   }
 
   .section2 > .banner1 {
