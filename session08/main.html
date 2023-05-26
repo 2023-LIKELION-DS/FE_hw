@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Youtube</title>
+        <link rel="stylesheet" href="./main.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="./images/menu.png" width="25px" />
+                    <img src="./images/logo.png" width="120px" />
+                </div>
+                <div class="nav-search">
+                    <input type="text" placeholder="검색" />
+                    <img
+                        id="search-ic"
+                        src="./images/search.png"
+                        width="70px"
+                        height="40px"
+                    />
+                    <img
+                        id="search-ic2"
+                        src="./images/audio.png"
+                        width="20px"
+                    />
+                </div>
+                <div class="nav-arm">
+                    <img src="./images/video-camera.png" width="25px" />
+                    <img src="./images/notification-bell.png" width="25px" />
+                    <img src="./images/user.png" width="30px" />
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="content">
+                <div class="vid">
+                    <video
+                        src="./images/hdnr.MP4"
+                        width="1000px"
+                        height="500px"
+                        controls
+                    ></video>
+                </div>
+                <div class="vid-content">
+                    <h3>한대노리 가을 정기공연</h3>
+                    <div class="vid-info">
+                        <div class="vid-sec01">
+                            <div class="vid-user">
+                                <img src="./images/user.png" width="30px" />
+                            </div>
+                            <div class="vid-name">
+                                <span class="num">한지원</span>
+                                <span class="small">구독자 2.22만명</span>
+                            </div>
+                            <p class="vid-sub">구독</p>
+                        </div>
+                        <div class="vid-sec02">
+                            <div class="vid-like">
+                                <img src="./images/like.png" width="20px" />
+                                <p>1.8만</p>
+                                <p style="color: gray">|</p>
+                                <img src="./images/unlike.png" width="20px" />
+                            </div>
+                            <div class="vid-share">
+                                <img src="./images/share.png" width="20px" />
+                                공유
+                            </div>
+                            <p class="vid-down">오프라인저장</p>
+                            <div class="vid-more">
+                                <img src="./images/more.png" width="20px" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vid-infomore">
+                        <p>
+                            조회수 <span class="num">222</span>만회
+                            <spnan class="num">3</spnan>개월전<br />한대노리
+                            정기공연 '월백풍천'영상입니다. <br /><br />
+                            <span style="color: #2c66db">#한대노리 #hdnr</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="vid-men">
+                    <div class="vid-men-op">
+                        <p>댓글 100개</p>
+                        <div class="vid-filter">
+                            <img src="./images/filter.png" width="20px" />
+                            <p>정렬기준</p>
+                        </div>
+                    </div>
+                    <div class="vid-newmen">
+                        <img src="./images/user.png" width="40px" />
+                        <div class="vid-wrt">
+                            <input
+                                type="text"
+                                id="textad"
+                                placeholder="댓글추가..."
+                            />
+                        </div>
+                    </div>
+                    <div class="vid-wrtbtn">
+                        <p id="cs" onclick="nosub()">취소</p>
+                        <p id="ad" onclick="sub()">추가</p>
+                    </div>
+                    <div class="vid-oldmen">
+                        <img src="./images/user.png" width="40px" />
+                        <div class="oldmen-content">
+                            <div class="oldmen-name">
+                                @user01 <span class="small">3일전</span>
+                            </div>
+                            <p class="oldmen-cont">
+                                장구가락은 덩기다쿵따 덩기다쿵따
+                            </p>
+                            <div class="oldmen-likes">
+                                <div class="oldmen-like">
+                                    <img src="./images/like.png" width="20px" />
+                                    <p>3</p>
+                                </div>
+                                <img src="./images/unlike.png" width="20px" />
+                                <p>답글</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vid-oldmen">
+                        <img src="./images/user.png" width="40px" />
+                        <div class="oldmen-content">
+                            <div class="oldmen-name">
+                                @user02 <span class="small">5일전</span>
+                            </div>
+                            <p class="oldmen-cont">
+                                쇠가락은 갠지갱 갱갱 갠지갱 갱갱
+                            </p>
+                            <div class="oldmen-likes">
+                                <div class="oldmen-like">
+                                    <img src="./images/like.png" width="20px" />
+                                    <p>78</p>
+                                </div>
+                                <img src="./images/unlike.png" width="20px" />
+                                <p>답글</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vid-oldmen">
+                        <img src="./images/user.png" width="40px" />
+                        <div class="oldmen-content">
+                            <div class="oldmen-name">
+                                @user03 <span class="small">3달전</span>
+                            </div>
+                            <p class="oldmen-cont">채상은 외사돌리기</p>
+                            <div class="oldmen-likes">
+                                <div class="oldmen-like">
+                                    <img src="./images/like.png" width="20px" />
+                                    <p>134</p>
+                                </div>
+                                <img src="./images/unlike.png" width="20px" />
+                                <p>답글</p>
+                            </div>
+                            <div id="submen-btn" onclick="ok()">
+                                <p id="submen-t">〉</p>
+                                <p>댓글 1개</p>
+                            </div>
+                            <div id="submen">
+                                <img src="./images/user.png" width="20px" />
+                                <div class="submen-content">
+                                    <div class="submen-name">
+                                        @user04 <span class="small">2달전</span>
+                                    </div>
+                                    <p class="submen-cont">
+                                        사사는 못 돌려요??
+                                    </p>
+                                    <div class="submen-likes">
+                                        <div class="submen-like">
+                                            <img
+                                                src="./images/like.png"
+                                                width="20px"
+                                            />
+                                            <p>1</p>
+                                        </div>
+                                        <img
+                                            src="./images/unlike.png"
+                                            width="20px"
+                                        />
+                                        <p>답글</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ano">
+                <div class="ano-vid">
+                    <video
+                        src="./images/hdnr.MP4"
+                        width="180px"
+                        height="100px"
+                    ></video>
+                    <div class="ano-content">
+                        <p>한대노리 한복파티 공연영상</p>
+                        <div class="small">
+                            <p>한지원</p>
+                            <p>조회수 1.4천회 •9달전</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ano-vid">
+                    <video
+                        src="./images/hdnr.MP4"
+                        width="180px"
+                        height="100px"
+                    ></video>
+                    <div class="ano-content">
+                        <p>한대노리의 우당탕탕 겨울 필봉일지</p>
+                        <div class="small">
+                            <p>한지원</p>
+                            <p>조회수 3천회 •6달전</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ano-vid">
+                    <video
+                        src="./images/hdnr.MP4"
+                        width="180px"
+                        height="100px"
+                    ></video>
+                    <div class="ano-content">
+                        <p>[0506] 울언니와 함께하는 외사돌리기</p>
+                        <div class="small">
+                            <p>한지원</p>
+                            <p>조회수 100회 •1달전</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ano-vid">
+                    <video
+                        src="./images/hdnr.MP4"
+                        width="180px"
+                        height="100px"
+                    ></video>
+                    <div class="ano-content">
+                        <p>한대노리의 우당탕탕 겨울 필봉일지2</p>
+                        <div class="small">
+                            <p>한지원</p>
+                            <p>조회수 1.4천회 •6달전</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ano-vid">
+                    <video
+                        src="./images/hdnr.MP4"
+                        width="180px"
+                        height="100px"
+                    ></video>
+                    <div class="ano-content">
+                        <p>한대노리 숙풍과 상상유니브 공연</p>
+                        <div class="small">
+                            <p>한지원</p>
+                            <p>조회수 202회 •6달전</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="ano-more">더보기</p>
+            </div>
+        </section>
+        <script>
+            function sub() {
+                var text = document.getElementById("textad").value;
+                alert(text);
+            }
+
+            function nosub() {
+                document.getElementById("textad").value = null;
+            }
+
+            function ok() {
+                if (
+                    document.getElementById("submen").style.display === "flex"
+                ) {
+                    document.getElementById("submen").style.display = "none";
+                    document.getElementById("submen-t").textContent = "〉";
+                } else {
+                    document.getElementById("submen").style.display = "flex";
+                    document.getElementById("submen-t").textContent = "〈";
+                }
+            }
+        </script>
+    </body>
+</html>
