@@ -1,0 +1,236 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.hamberger-bar img {
+  width: 40px;
+  margin-right: 30px;
+  opacity: 50%;
+}
+.youtube-logo img {
+  width: 150px;
+  height: 35px;
+}
+
+.search-bar input {
+  width: 450px;
+  height: 35px;
+  border: solid 0.5px gray;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.search-bar button {
+  height: 38.6px;
+  border: solid 0.5px gray;
+  background-color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.search-bar button img {
+  height: 20px;
+  width: 20px;
+  padding: 0 15px 0 15px;
+  opacity: 70%;
+}
+.my-img img {
+  width: 45px;
+  height: 45px;
+  padding-left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+nav div {
+  display: flex;
+}
+
+ul li a {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li p {
+  padding-left: 10px;
+}
+
+ul li a img {
+  border-radius: 10%;
+  width: 200px;
+  margin-top: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0%;
+  margin-left: 20px;
+}
+.entire-unit {
+  display: flex;
+  justify-content: center;
+}
+.main-unit {
+  width: 60%;
+}
+.main-video {
+  width: 100%;
+  margin-right: 35px;
+  margin-top: 20px;
+}
+
+.main-video iframe {
+  width: 100%;
+  height: 70vh;
+}
+.other-videos {
+  max-width: 30%;
+}
+
+.youtuber-section {
+  width: 100%;
+}
+.youtuber-section h2,
+.youtuber-section h3,
+.youtuber-section p {
+  margin-top: 7px;
+}
+
+.youtuber-profile {
+  display: flex;
+  flex-direction: row;
+}
+.youtuber-profile-name {
+  flex-direction: column;
+  margin-right: 20px;
+}
+.youtuber-profile-name h3 {
+  margin: 0%;
+}
+.youtuber-profile img {
+  width: 65px;
+  height: 65px;
+  padding-right: 10px;
+}
+
+.subscribe-button {
+  background-color: rgb(60, 60, 60);
+  height: 40px;
+  width: 70px;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  text-align: center;
+}
+.content-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.content-buttons img {
+  width: 20px;
+  height: 20px;
+  opacity: 60%;
+}
+.like-button {
+  background-color: rgb(228, 228, 228);
+  height: 30px;
+  width: max-content;
+  border: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  text-align: center;
+}
+.dislike-button {
+  background-color: rgb(228, 228, 228);
+  height: 30px;
+  width: max-content;
+  border: none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  text-align: center;
+  margin-right: 10px;
+}
+.button {
+  background-color: rgb(228, 228, 228);
+  height: 30px;
+  width: max-content;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  margin-right: 10px;
+}
+.plus-information {
+  display: flex;
+  background-color: rgb(228, 228, 228);
+  height: 100px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.reple-information {
+  display: flex;
+  flex-direction: row;
+}
+
+.create-reple img {
+  width: 55px;
+  height: 55px;
+}
+
+.create-reple input {
+  border: none;
+}
+
+.reple1 img {
+  width: 55px;
+  height: 55px;
+}
+.reple-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.reple-buttons img {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+.reple-context {
+  display: flex;
+  flex-direction: column;
+}
+.reple1 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.reple1 h4 {
+  margin: 0%;
+}
+
+.reple1 span {
+  margin: 10px;
+  color: grey;
+}
+
+.reple1 p {
+  margin: 10px;
+}
+
+.more-reple {
+  display: flex;
+  flex-direction: row;
+  color: skyblue;
+}
+
+.more-reple img {
+  width: 20px;
+  height: 20px;
+}
