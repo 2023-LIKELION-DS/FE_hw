@@ -8,12 +8,23 @@
   .sec-2 > .sec-box-left {
     display: none;
   }
+
+  ul.sec-lib-list {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  ul.sec-lib-list > li {
+    flex-direction: row;
+  }
 }
 
 .sec-lib-list {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  padding: 20px 0;
 }
 
 .sec-lib-list > li {
@@ -26,13 +37,7 @@
 }
 
 .sec-lib-list img {
-  width: 55%;
-  height: auto;
-}
-
-.sec-lib-list li:nth-child(n + 3):nth-child(-n + 5) > img,
-.sec-lib-list li:last-child > img {
-  width: 66.9%;
+  width: 60px;
   height: auto;
 }
 
