@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Youtube</title>
+
+  <script src="https://kit.fontawesome.com/e3e7530894.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+</head>
+
+
+  <!-- header -->
+  <header>
+    <div class="logo">
+      <i class=" hamberger fa-solid fa-bars"></i>
+      <i class="youtube fa-brands fa-youtube"></i>
+      <span class="title"><b>Youtube<sup class="sup">KR</sup></b></span>
+    </div>
+    <div class="search">
+      <div class="contain">
+        <input type="text" placeholder="   검색">
+      </div>
+      <div class="glass">
+        <button><img src="imgs/search.png"></button>
+      </div>
+      <div class="audio"><img src="imgs/audio.png"></div>
+    </div>
+    <div class="login">
+      <div><img src="imgs/dots.png"></div>
+      <div class="user">
+        <button><img src="imgs/user.png"><span>로그인</span></button>
+      </div>
+    </div>
+  </header>
+
+<div class="all">
+
+  <div class="left">
+    <!-- Video Player -->
+    <section class="player">
+        <video controls src="imgs/video.MOV"></video>
+    </section>
+
+    <!-- Video Info -->
+    <section class="info">
+      <!-- Metadata -->
+      <div class="metadata">
+        <ul class="hashtags">
+          <li>#서재페</li>
+          <li>#백예린</li>
+        </ul>
+        <div class="titleAndButton">
+          <span class="title clamp">
+            [Seoul Jazz Festival] 물고기 리허설 🐠
+        </span>
+        </div>
+        <div class="views">1M views  1 month ago</div>
+      </div>
+
+      <!-- Channel Description -->
+      <div class="channel">
+        <div class="metadata">
+          <img class="me" src="imgs/profile.jpg">        
+          <div class="info">
+              <span class="name">하은 HAEUN</span>
+              <span class="subscribers">구독자 6.26만명</span>
+          </div>
+          <div>
+            <p class="sub">구독</p>
+          </div>
+        </div>
+        <div class="action">
+          <button><i class="fa-solid fa-thumbs-up fa-xs"></i><span> 2.7만 |  </span><i class="fa-solid fa-thumbs-down fa-xs"></i></button>
+          <button><i class="fa-solid fa-share fa-xs"></i><span> 공유</span></button>
+          <button><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i><span> 저장</span></button>
+          <button><i class="fa-solid fa-ellipsis-h fa-xs"></i></button>
+        </div>
+      </div>
+      
+      <div class="des">
+        <span>조회수 10만회 1년 전 #서재페 #백예린
+          <br>[Seoul Jazz Festival] 물고기 리허설 🐠
+        </span>
+      </div>  
+
+      <div class="comment-add">
+        <div class="comment-thumb">
+          <img src="./imgs/user.png"/>
+        </div>
+        <div class="comment-write">
+          <input class="comment-box" type="text" placeholder="댓글 추가...">
+          <hr/>
+          <div class="comment-controls">
+            <button id="btn-clear">취소</button>
+            <button id="btn-show">댓글</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment">
+        <div class="comment-thumb">
+          <img src="./imgs/user.png"/>
+        </div>
+        <div class="comment-text">
+          <p class="channel-name">bunny</p>
+          <p class="comment-content">she is my bunny 🐰</p>
+            
+          <div class="comment-more">
+            <i class="fa-solid fa-angle-down toggle" id="toggle-btn-down" onclick="show()" style="cursor: pointer;"></i>
+            <i class="fa-solid fa-angle-up toggle" id="toggle-btn-up" onclick="hide()" style="cursor: pointer;"></i>
+            <p>답글 1개</p>
+          </div>
+          <div class="recomment">
+            <div class="recomment-thumb">
+              <img src="./imgs/user.png"/>
+            </div>
+            <div class="recomment-text">
+              <p class="channel-name">당근당근</p>
+              <p class="recomment-content">나는 너의 토깽~</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="right">
+    <ul>
+      <li class="item">
+        <div class="img"><img src="imgs/join_tvt.jpeg"></div>
+        <div class="info">
+          <span class="title">Join the TVT Club!</span>
+          <span class="name">The Volunteers</span>
+          <span class="views">3.2K views</span>
+        </div>
+        <div>
+        <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+      </li>
+      <li class="item">
+        <div class="img"><img src="imgs/this is_tvt.jpg"></div>
+        <div class="info">
+          <span class="title">This is the TVT🎸</span>
+          <span class="name">The Volunteers</span>
+          <span class="views">1.7K views</span>
+        </div>
+        <div>
+        <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+      </li>
+      <li class="item">
+      <div class="img"><img src="imgs/ourloveisgreat.jpg"></div>
+        <div class="info">
+          <span class="title">Our Love is Great🩷</span>
+          <span class="name">Yerin Baek</span>
+          <span class="views">2.4K views</span>
+        </div>
+        <div>
+          <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+      </li>
+      <li class="item">
+        <div class="img"><img src="imgs/rest.png"></div>
+        <div class="info">
+            <span class="title">Rest (Christmas Ver.)</span>
+            <span class="name">Yerin Baek</span>
+            <span class="views">1.4K views</span>
+        </div>
+        <div>
+          <button class="moreBtn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
