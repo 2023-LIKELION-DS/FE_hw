@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Youtube</title>
+        <link rel="stylesheet" href="../session9/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <div class="youtube">
+                <div class="nav-bar-icon">
+                    <img src="../session9/img/menu.png" />
+                </div>
+                <img src="../session9/img/youtube.png" />
+                <h1 class="youtubetitle">Youtube</h1>
+            </div>
+            <div class="search">
+                <div class="search-bar">
+                    <div class="search-searching">검색</div>
+                    <div class="search-icon">
+                        <img src="../session9/img/search.png" />
+                    </div>
+                </div>
+                <div class="record-icon">
+                    <img src="../session9/img/audio.png" />
+                </div>
+            </div>
+            <div class="youtube-more">
+                <img src="../session9/img/dots.png" />
+                <img src="../session9/img/user.png" />
+            </div>
+        </nav>
+
+        <section>
+            <div class="screen">
+                <div class="left">
+                    <div class="video-main">
+                        <video src="../session9/img/영상.mp4" controls></video>
+                    </div>
+
+                    <div class="video-name">
+                        <h2>[도쿄 여행 3일차]디즈니랜드씨</h2>
+                    </div>
+
+                    <div class="video-info">
+                        <div class="video-info-front">
+                            <div class="video-owner">
+                                <img src="../session9/img/user.png" />
+                                <ul class="video-owner-info">
+                                    <li>이현주</li>
+                                    <li>구독자 20만명</li>
+                                </ul>
+                            </div>
+
+                            <div class="video-like">
+                                <div class="vlike-icon">
+                                    <img src="../session9/img/like.png" />
+                                </div>
+                                <div class="howmany">
+                                    <h4>3.3만 |</h4>
+                                </div>
+                                <div class="vunlike-icon">
+                                    <img src="../session9/img/unlike.png" />
+                                </div>
+                                <div class="shareshare">
+                                    <div class="vshare-icon">
+                                        <img src="../session9/img/share.png" />
+                                    </div>
+                                    <div class="letshare">
+                                        <h4>공유</h4>
+                                    </div>
+                                </div>
+                                <div class="vfilter">
+                                    <img src="../session9/img/filter.png" />
+                                </div>
+                                <div class="save">
+                                    <h4>저장</h4>
+                                </div>
+                                <div class="vmore-icon">
+                                    <img src="../session9/img/more.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-info">
+                            조회수 30만회 6일전 #도쿄 #도쿄디즈니랜드씨
+                        </div>
+
+                        <div class="comment">
+                            <div class="comment-img">
+                                <div class="comment-cnt">
+                                    <div class="comment-cntcnt">댓글 26개</div>
+                                    <img src="../session9/img/filter.png" />
+                                    <div class="comment-cntmain">정렬 기준</div>
+                                </div>
+                                <div class="comment-write">
+                                    <img src="../session9/img/user.png" />
+                                    <h4 class="comment-plus">댓글 추가...</h4>
+                                </div>
+                            </div>
+                            <div class="comment-people">
+                                <ul>
+                                    <li class="commentlist">
+                                        <div class="first-comment">
+                                            <div class="commentlist-img">
+                                                <img
+                                                    src="../session9/img/user.png"
+                                                />
+                                            </div>
+                                            <div class="comment-everything">
+                                                <div class="comment-what">
+                                                    <div class="commentwhemwho">
+                                                        <div class="hyunseo">
+                                                            투썸 케이크 먹고
+                                                            싶다
+                                                        </div>
+                                                        <div class="days5">
+                                                            5일전
+                                                        </div>
+                                                    </div>
+                                                    너무 예뻐요..!
+                                                </div>
+                                                <br />
+                                                <div class="comment-like">
+                                                    <div class="comment-icon1">
+                                                        <img
+                                                            src="../session9/img/like.png"
+                                                        />
+                                                    </div>
+                                                    <div class="commentcnt">
+                                                        144
+                                                    </div>
+                                                    <div class="comment-icon2">
+                                                        <img
+                                                            src="../session9/img/unlike.png"
+                                                        />
+                                                    </div>
+                                                    <div class="response">
+                                                        답글
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-respond">
+                                            <button id="btn">댓글 1</button>
+                                            <div
+                                                style="display: none"
+                                                class="hide"
+                                            >
+                                                <div class="respond-text">
+                                                    <div class="moremore">
+                                                        <div
+                                                            class="commentlist-img"
+                                                        >
+                                                            <img
+                                                                src="../session9/img/user.png"
+                                                            />
+                                                        </div>
+                                                        <div class="more">
+                                                            <div class="stop">
+                                                                <div
+                                                                    class="commentwhemwho"
+                                                                >
+                                                                    <div
+                                                                        class="hyunseo"
+                                                                    >
+                                                                        미라클모닝
+                                                                    </div>
+                                                                    <div
+                                                                        class="days5"
+                                                                    >
+                                                                        6시간 전
+                                                                    </div>
+                                                                </div>
+                                                                그니깐요...
+                                                                우리나라에도
+                                                                디즈니랜드
+                                                                들어왔으면
+                                                                좋겠어요!!
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                    </div>
+
+                                                    <div class="comment-like">
+                                                        <div
+                                                            class="comment-icon1"
+                                                        >
+                                                            <img
+                                                                src="../session9/img/like.png"
+                                                            />
+                                                        </div>
+                                                        <div class="commentcnt">
+                                                            900
+                                                        </div>
+                                                        <div
+                                                            class="comment-icon2"
+                                                        >
+                                                            <img
+                                                                src="../session9/img/unlike.png"
+                                                            />
+                                                        </div>
+                                                        <div class="response">
+                                                            답글
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="more-video">
+                        <ul class="more-video">
+                            <li class="video1">
+                                <img src="../session9/img/짱구1.jpg" />
+                                <div class="video1-info">
+                                    <h3>짱구는 못말려</h3>
+                                    <h4>
+                                        짱구는 옷말려<br />조회수 1.4만회 7시간
+                                        전
+                                    </h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img src="../session9/img/화면3.png" />
+                                <div class="video2-info">
+                                    <h3>
+                                        [이거 아는 사람 최소 98년생] 슈가슈가룬
+                                        ost
+                                    </h3>
+                                    <h4>
+                                        카드값줘 체리<br />조회수 22만회 1일전
+                                    </h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img src="../session9/img/짱구2.jpg" />
+                                <div class="video2-info">
+                                    <h3>짱구는 못말려 액션가면과 함께</h3>
+                                    <h4>
+                                        짱구는 옷말려<br />조회수 2.1만회 1일전
+                                    </h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img src="../session9/img/화면5.png" />
+                                <div class="video2-info">
+                                    <h3>안녕히 계세요 여러분</h3>
+                                    <h4>퇴사하자<br />조회수 40억회 4일전</h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img
+                                    src="../session9/img/무한도전_기억삭제.jpg"
+                                />
+                                <div class="video2-info">
+                                    <h3>
+                                        지금부터 당신의 기억을 없애드리도록
+                                        하죠..
+                                    </h3>
+                                    <h4>지우개<br />조회수 100만회 26일전</h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img src="../session9/img/2학기.jpg" />
+                                <div class="video2-info">
+                                    <h3>1학기 안녕~!</h3>
+                                    <h4>
+                                        인생은 성적순이야<br />조회수 33만회
+                                        21일전
+                                    </h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img src="../session9/img/상큼하게.jpg" />
+                                <div class="video2-info">
+                                    <h3>안녕? 만나서 반가워</h3>
+                                    <h4>형<br />조회수 190만회 4일전</h4>
+                                </div>
+                            </li>
+                            <li class="video2">
+                                <img src="../session9/img/어디갔지.jpg" />
+                                <div class="video2-info">
+                                    <h3>어라...왜 없지..?</h3>
+                                    <h4>
+                                        지갑다이어트<br />조회수 50만회 2일전
+                                    </h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const text = document.querySelector(".hide");
+            const button = document.querySelector("#btn");
+
+            document.querySelector("#btn").addEventListener("click", () => {
+                open();
+            });
+
+            function open() {
+                text.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

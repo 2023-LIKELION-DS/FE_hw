@@ -4,19 +4,21 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Q2</title>
     </head>
     <body>
-        <div class="age"></div>
+        <script>
+            let age = prompt("나이를 입력해주세요:");
+            let welcome = function () {
+                if (age >= "20") {
+                    age = age + " : 어른";
+                    alert(age);
+                } else if (age < "20") {
+                    age = age + " : 청소년";
+                    alert(age);
+                }
+            };
+            welcome();
+        </script>
     </body>
-    <script>
-        let age = prompt("나이를 입력해주세요:");
-        let welcome = function () {
-            if (age > "20") {
-                confirm(document.write(age + "어른"));
-            } else if (age < "20") {
-                confirm(document.write(age + "미성년자"));
-            }
-        };
-    </script>
 </html>
