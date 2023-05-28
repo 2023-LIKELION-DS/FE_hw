@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Rajdhani&family=Readex+Pro:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <navigation class="nav">
+      <div class="menu-bar">
+        <img src="./images/menu.png" alt="메뉴" />
+        <img src="./images/youtube.png" alt="유튜브 로고" />
+        <b>YouTube</b>
+        <p>KR</p>
+      </div>
+      <div class="search-bar">
+        <input type="text" name="search" size="60px" class="search-text" />
+        <input type="submit" id="submit-btn" />
+        <img src="./images/audio.png" alt="말하기" />
+      </div>
+      <div class="profile-bar">
+        <img src="./images/video-camera.png" alt="동영상 만들기" />
+        <img src="./images/notification-bell.png" alt="알람종" />
+        <img src="./images/user.png" alt="프로필" />
+      </div>
+    </navigation>
+
+    <section class="sec">
+      <div class="sec-left">
+        <div class="video">
+          <iframe
+            width="904"
+            height="509"
+            src="https://www.youtube.com/embed/Os_heh8vPfs"
+            title="aespa 에스파 &#39;Spicy&#39; MV"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="title">
+          <h3>aespa 에스파 'Spicy' MV</h3>
+          <div class="title-sub">
+            <div class="title-profile">
+              <div class="title-profile-img">
+                <img src="./images/SmTown.jpg" alt="sm프로필" />
+              </div>
+              <div class="title-profile-text">
+                <b>SMTOWN</b>
+                <p>구독자 3170만명</p>
+              </div>
+              <div class="title-profile-btn">
+                <p>구독</p>
+              </div>
+            </div>
+            <div class="title-btn">
+              <div class="title-btn-likes">
+                <img src="./images/like.png" alt="좋아요" />
+                <b>99만</b>
+                <p>|</p>
+                <img src="./images/unlike.png" alt="싫어요" />
+              </div>
+              <div class="title-btn-shares">
+                <img src="./images/share.png" alt="공유하기" />
+                <p>공유</p>
+              </div>
+              <div class="title-btn-saves">
+                <img src="./images/menu.png" alt="저장하기" />
+                <p>저장</p>
+              </div>
+              <div class="title-btn-more">
+                <img src="./images/more.png" alt="더보기" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video-script">
+          <p>조회수 <b>77,481,516</b>회 최초 공개: <b>2023. 5. 8.</b></p>
+          <p>aespa's 3rd Mini Album "MY WORLD" is out!</p>
+          <br />
+
+          <p>[Tracklist]</p>
+          <p>01 Welcome To MY World (Feat. nævis)</p>
+          <p>02 Spicy</p>
+          <p>03 Salty & Sweet</p>
+          <p>04 Thirsty</p>
+          <p>05 I'm Unhappy</p>
+          <p>06 'Til We Meet Again</p>
+          <br />
+
+          <p>aespa Official</p>
+        </div>
+
+        <div class="comment">
+          <div class="comment-title">
+            <div class="comment-title-num">
+              <p>댓글 132,182개</p>
+            </div>
+            <div class="comment-title-filter">
+              <img src="./images/filter.png" alt="정렬 필터" />
+              <p>정렬 기준</p>
+            </div>
+          </div>
+
+          <div class="new-comment">
+            <div class="new-comment-content">
+              <div class="new-comment-profile">
+                <img src="./images/user.png" alt="댓글 프로필" />
+              </div>
+              <div class="new-comment-text">
+                <span id="new-comment-text-content">댓글 추가...</span><br />
+                <hr />
+              </div>
+            </div>
+            <div class="new-comment-btn">
+              <input
+                type="button"
+                value="취소"
+                onclick="change_erase()"
+                id="new-comment-btn-css"
+              />
+              <input
+                type="button"
+                value="댓글"
+                onclick="change_add()"
+                id="new-comment-btn-css"
+              />
+            </div>
+          </div>
+
+          <div class="exist-comment">
+            <div class="exist-comment-content">
+              <div class="exist-comment-profile">
+                <img src="./images/user.png" alt="존재하는 댓글 프로필" />
+              </div>
+              <div class="exist-comment-total">
+                <div class="exist-comment-profile-name-date">
+                  <p>MY</p>
+                  <p>5일 전</p>
+                </div>
+                <div class="exist-comment-text">
+                  <p>You want my A to the Z</p>
+                </div>
+                <div class="exist-comment-likes">
+                  <img src="./images/like.png" alt="좋아요" />
+                  <b>1117</b>
+                  <img src="./images/unlike.png" alt="싫어요" />
+                  <p>답글</p>
+                </div>
+                <div class="reply-comment-click">
+                  <span id="reply-comment-click-test">▽ 답글 1개</span><br />
+                </div>
+                <div class="reply-comment">
+                  <div class="reply-comment-profile">
+                    <img src="./images/user.png" alt="답글 프로필" />
+                  </div>
+                  <div class="reply-comment-total">
+                    <div class="reply-comment-profile-name-date">
+                      <p>Naevis</p>
+                      <p>3일 전</p>
+                    </div>
+                    <div class="exist-comment-text">
+                      <p>But you won't 어림없지</p>
+                      <p>맞혀봐 Sweet 또는 Freak</p>
+                      <p>What's hiding underneath</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-right">
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_1.jpg" alt="에스파1" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>[아이돌 민원실 허실장 1회]</b>
+            </div>
+            <div class="more-text-content">
+              <p>한밤 HANBAM</p>
+              <p>조회수 41만회ㆍ2주 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_2.jpg" alt="에스파2" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>[BE ORIGINAL] aespa(에스파) 'Spicy' (4K)</b>
+            </div>
+            <div class="more-text-content">
+              <p>STUDIO CHOOM[스튜디오 춤]</p>
+              <p>조회수 481만회ㆍ2주 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_3.jpg" alt="에스파3" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>남매 사이 숨은 자매 찾기 (feat. 카리나)</b>
+            </div>
+            <div class="more-text-content">
+              <p>Pixid</p>
+              <p>조회수 198만회ㆍ2주 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_4.jpg" alt="에스파4" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>[K-Choreo] 에스파 직캠 'Thirsty'</b>
+            </div>
+            <div class="more-text-content">
+              <p>KBS Kpop</p>
+              <p>조회수 23만회ㆍ2주 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_5.jpg" alt="에스파5" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>럭키OPPA 본격 에스파의 상큼 스파이시한 호캉스 | ep.13</b>
+            </div>
+            <div class="more-text-content">
+              <p>KBS Kpop</p>
+              <p>조회수 38만회ㆍ2주 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_6.jpg" alt="에스파6" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>[예능연구소] aespa - Salty & Sweet FanCam</b>
+            </div>
+            <div class="more-text-content">
+              <p>MBCkpop</p>
+              <p>조회수 25만회ㆍ13일 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_7.jpg" alt="에스파7" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>[예능연구소] aespa - Spicy FanCam</b>
+            </div>
+            <div class="more-text-content">
+              <p>MBCkpop</p>
+              <p>조회수 41만회ㆍ13일 전</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="more-video">
+          <div class="video-img">
+            <img src="./images/moreVideo/aespa_8.jpg" alt="에스파8" />
+          </div>
+          <div class="more-text">
+            <div class="more-text-title">
+              <b>집순이들이 말아주는 내향형 플러팅 | 미주&윈터</b>
+            </div>
+            <div class="more-text-content">
+              <p>KODE 코드</p>
+              <p>조회수 3.1만회ㆍ3시간 전</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./main.js"></script>
+</html>
