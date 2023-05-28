@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>유튜브 상세페이지 만들기</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./images/menu.png" style="width: 25px; height: 25px" />
+        <img src="./images/youtube.png" style="width: 30px; height: 30px" />
+        <span class="title">Youtube</span>
+      </div>
+      <div class="search">
+        <input type="text" value="검색" />
+        <i class="fas fa-search"></i>
+        <img src="./images/audio.png" style="width: 20px; height: 20px" />
+      </div>
+      <div class="icons">
+        <img
+          src="./images/video-camera.png"
+          style="width: 25px; height: 25px"
+        />
+        <img
+          src="./images/notification-bell.png"
+          style="width: 25px; height: 25px"
+        />
+        <img src="./images/user.png" style="width: 25px; height: 25px" />
+      </div>
+    </nav>
+    <div class="player">
+      <div class="many">
+        <section class="video">
+          <video controls src="video/video.mp4"></video>
+        </section>
+        <section class="info">
+          <span class="title"
+            ><b
+              >놀랍습니다! 돌덩이가 고양이 모래로 변하는 과정! 국내최초 블랜딩
+              모래 제작공정 full공개 🪨🔨(feat.갈취왕 미야옹철)</b
+            >
+          </span>
+          <div class="channelAndBtn">
+            <div class="metadata">
+              <img src="./images/avartar.png" alt="" />
+              <div class="infor">
+                <span class="name">미야옹철의 냥냥펀치</span>
+                <span class="subscribers">36.3 만명</span>
+              </div>
+              <div class="subscribe">구독</div>
+            </div>
+            <div class="btnlike">
+              <div class="like">
+                <img
+                  src="./images/like.png"
+                  style="width: 20px; height: 20px"
+                /><span>834</span>
+                <img
+                  src="./images/unlike.png"
+                  style="width: 20px; height: 20px"
+                />
+              </div>
+              <div class="shares">
+                <img
+                  src="./images/share.png"
+                  style="width: 20px; height: 20px"
+                /><span>공유</span>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <span class="dcontent">
+              조회수 1.6만회 2일전 #네고왕 #벤토나이트 <br />
+              고양이가 매일 쓸 수 밖에 없는 필수품 중의 필수품 고양이 화장실
+              모래
+              <br />
+              먼지는 왜 자꾸 나는지, 대체 어떻게 만들길래 그러는건지,,, 왜 나는
+              아직 모래유목민인건지?<br />
+              게다가 요즘 트랜드라는 블랜딩 모래는 대체 무엇인지?
+            </span>
+          </div>
+        </section>
+        <section class="comment">
+          <div class="comtitle">
+            <span class="comcount">댓글 727개</span>
+            <span
+              ><img
+                src="./images/filter.png"
+                style="width: 25px; height: 20px"
+              />정렬 기준</span
+            >
+          </div>
+          <div class="mycomment">
+            <div>
+              <img src="./images/mycomm.png" />
+            </div>
+            <div class="addcomm">
+              <div>
+                <input
+                  type="text"
+                  id="commentInput"
+                  value="댓글쓰기..."
+                /><br />
+                <div class="commbtn">
+                  <button onclick="deleteComment()">취소</button>
+                  <button onclick="showComment()">댓글</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="commwrite">
+            <img src="./images/avartar.png" />
+            <div class="commname">
+              <span class="commtitle">미야옹철의 냥냥펀치</span><br />
+              <span>댓글만 달아도 펠리스샌드 기부천사 많관부</span>
+              <div class="comlike">
+                <img
+                  src="./images/like.png"
+                  style="width: 20px; height: 20px"
+                /><span>84</span>
+                <img
+                  src="./images/unlike.png"
+                  style="width: 20px; height: 20px"
+                />
+              </div>
+              <div class="commshowbtn">
+                <button id="replyButton" onclick="toggleReplyList()">
+                  <i class="fas fa-chevron-down"></i> 답글 1개
+                </button>
+              </div>
+              <div id="replyList" class="commlist">
+                <div class="recomm">
+                  <img src="./images/ava2.png" />
+                  <div>
+                    <span class="recomwrite">말랑달콤</span><br />
+                    <span>고양이들이 행복했으면 좋겠어요~~</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="upNext">
+        <ul>
+          <li class="item">
+            <div class="img"><img src="./images/1.png" alt="" /></div>
+            <div class="itemInfo">
+              <span class="title"
+                >고양이가 '이 행동'을 하지 않는다면 당신, 반가운 존재는
+                아니군요</span
+              >
+              <span class="name">미야옹철의 냥냥편치</span>
+              <span class="views">조회수 33만회 7개월 전</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="img"><img src="./images/2.png" alt="" /></div>
+            <div class="itemInfo">
+              <span class="title"
+                >잠 자는 자세를 보면 우리집 고양이의 기분과 상태를 알 수
+                있다??</span
+              >
+              <span class="name">미야옹철의 냥냥펀치</span>
+              <span class="views">조회수 40만회 1년전</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="img"><img src="./images/3.png" alt="" /></div>
+            <div class="itemInfo">
+              <span class="title"
+                >놀랍습니다! 돌덩이가 고양이 모래로 변하는 과정!
+              </span>
+              <span class="name">미야옹철의 냥냥펀치</span>
+              <span class="views">조회수 1.6만회 3일전</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="img"><img src="./images/4.png" alt="" /></div>
+            <div class="itemInfo">
+              <span class="title"
+                >고양이가 온몸으로 표현하는 '나 아파요'의 신호</span
+              >
+              <span class="name">미야옹철의 냥냥펀치</span>
+              <span class="views">조회수 13만회 1개월 전</span>
+            </div>
+          </li>
+          <li class="item">
+            <div class="img"><img src="./images/5.png" alt="" /></div>
+            <div class="itemInfo">
+              <span class="title"
+                >변비고양이 거대결장 16살 고양이 마지막 모습 널 만나 행복했어
+              </span>
+              <span class="name">Hanoi recipe</span>
+              <span class="views">조회수 5.3천회 4개월전</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
