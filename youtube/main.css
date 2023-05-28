@@ -1,0 +1,453 @@
+/* <!-- 네비게이션 --> */
+
+.navi {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.navi img {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* 동일 사이즈 */
+.img1,
+.img4,
+.img5,
+.img6 {
+  width: 20px;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* youtube logo */
+.img2 {
+  width: 180px;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+  justify-content: center;
+  text-align: center;
+}
+
+.img2 img {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+/* 검색란 */
+.search {
+  width: 450px;
+  height: 40px;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.img3 {
+  width: 25px;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+/* <!-- 비디오나오는 부분 -- >  */
+
+.video {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+/* 메인비디오 */
+
+.mainvideo {
+  display: flex;
+  justify-content: center;
+  padding-left: 30px;
+  padding-top: 20px;
+  width: 60vw;
+  height: 70vh;
+}
+
+#iframe1 {
+  width: 60vw;
+  height: 70vh;
+}
+
+/* 멀티비디오 */
+.multivideo {
+  display: flex;
+  justify-content: center;
+  width: 45vw;
+  height: 70vh;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-left: 3px;
+}
+
+.video1,
+.video2,
+.video3,
+.video4 {
+  display: flex;
+  justify-content: center;
+  padding: 7px 2px;
+}
+
+.video_img,
+.video_img2,
+.video_img3,
+.video_img4 {
+  width: 200px;
+  height: 110px;
+  margin: 0 auto;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.multivideo img {
+  width: 200px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 멀티비디오 텍스트 */
+
+.video_texts,
+.video_texts2,
+.video_texts3,
+.video_texts4 {
+  width: 200px;
+  height: 100px;
+  display: block;
+  padding-left: 6px;
+  margin: 0 atuo;
+}
+
+.multivideo p {
+  font-size: 14px;
+  margin: 0;
+  padding: 2px;
+}
+.multivideo span {
+  font-size: 12px;
+}
+
+/* 비디오 정보 */
+.video_info {
+  display: block;
+  box-sizing: border-box;
+  width: 60vw;
+  height: 30vh;
+  padding-left: 30px;
+  margin: 0;
+}
+
+.video_info_title {
+  font-size: 23px;
+  font-weight: 800;
+  padding: 10px 5px;
+}
+.video_info_state {
+  display: flex;
+  width: 60vw;
+  height: 40px;
+  padding: 5px 0;
+}
+
+.video_info_rmation {
+  display: inline-block;
+  width: 60vw;
+  height: max-content;
+  padding: 10px 5px;
+  background-color: rgb(225, 225, 225);
+  border-radius: 20px;
+  margin: 20px 0;
+  font-size: smaller;
+}
+
+.video_info_rmation div {
+  padding: 3px 10px;
+}
+.profile,
+.profile_goodbad,
+.profile_share,
+.profile_add,
+.profile_dot {
+  width: 90px;
+  margin: 0 auto;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile p {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 6px;
+}
+.video_info img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile_sub {
+  background-color: rgb(221, 223, 223);
+  border-radius: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.profile_goodbad,
+.profile_share,
+.profile_add,
+.profile_dot {
+  background-color: rgb(221, 223, 223);
+  border-radius: 30px;
+}
+
+/* 댓글 */
+
+.texts {
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 60vw;
+  height: 50vh;
+  padding-left: 30px;
+  margin: 0;
+}
+/* texts_total */
+.texts_total {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 5px;
+  margin-top: 60px;
+}
+.texts_total_text {
+  display: flex;
+  justify-content: first baseline;
+  text-align: first;
+
+  width: 200px;
+}
+.image_sort {
+  object-fit: contain;
+  display: flex;
+  justify-content: first baseline;
+  text-align: center;
+  width: 600px;
+}
+
+.image_sort img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+/* texts_add */
+.texts_add {
+  display: block;
+  box-sizing: border-box;
+  width: 60vw;
+  height: 110px;
+  padding: 5px;
+}
+
+.texts_addpart {
+  display: flex;
+  width: 60vw;
+}
+
+.profile1 {
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.profile1 img {
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+#form-commentInfo {
+}
+
+#comment-input {
+  border-radius: 0%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 600px;
+}
+
+/* texts_RemoveSubmitPart */
+.texts_RemoveSubmitPart {
+  width: 60vw;
+  display: flex;
+  justify-content: end;
+  box-sizing: border-box;
+}
+
+/* texts_dumipart */
+
+.texts_dumipart {
+  display: block;
+  justify-content: start;
+  width: 60vw;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.texts_dumipart_pro_info {
+  display: flex;
+}
+
+.texts_dumi_info {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.texts_dumi_profile {
+  display: inline-block;
+  object-fit: contain;
+  width: 60px;
+  height: 60px;
+}
+
+.texts_dumi_profile img {
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.texts_dumi_name {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.texts_dumi_comment {
+  font-size: 16px;
+  padding: 12px 0;
+}
+.texts_dumi_goodbad,
+.text_dumi_reply_img {
+  object-fit: contain;
+  width: auto;
+  height: 40px;
+}
+
+.texts_dumi_goodbad img,
+.text_dumi_reply_img img {
+  object-fit: contain;
+  width: 25px;
+  height: 25px;
+}
+
+.texts_dumi_goodbad {
+  display: flex;
+  justify-content: left;
+}
+
+.texts_dumi_goodbad img {
+  padding: 5px;
+}
+
+.texts_dumi_goodbad p {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.texts_dumi_reply {
+  display: flex;
+}
+
+.text_dumi_reply_img {
+  padding: 5px 0;
+}
+
+.texts_dumi_reply div {
+  padding: 5px 5px;
+  font-size: 13px;
+}
+
+/* texts_replaypart */
+.texts_replaypart {
+  display: none;
+  justify-content: start;
+  width: 60vw;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 55px;
+}
+.texts_dumi_profile2 {
+  display: inline-block;
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.texts_dumi_profile2 img {
+  object-fit: contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.texts_dumi_info2 {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.texts_dumi_name2 {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.texts_dumi_comment2 {
+  font-size: 13px;
+  padding: 10px 0;
+}
