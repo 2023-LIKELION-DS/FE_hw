@@ -79,6 +79,8 @@ header.logo {
   border-width: 1px;
   width: 440px;
   height: 40px;
+  cursor: pointer;
+  outline: none;
 }
 .search img {
   width: 20px;
@@ -90,6 +92,8 @@ header.logo {
   border-width: 1px;
   width: 60px;
   height: 40px;
+  cursor: pointer;
+  outline: none;
 }
 .audio {
   width: 60px;
@@ -123,7 +127,10 @@ header.logo {
   background-color: var(--white-color);
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  outline: none;
 }
+
 .user img {
   margin: 1px;
   margin-right: 1vw;
