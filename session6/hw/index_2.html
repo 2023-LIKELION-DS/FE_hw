@@ -32,13 +32,19 @@
             <span id="secs"></span>
         </div>
         <script>
-            function countdown() {
+            function countdown(a, b) {
+                if (a < 10) {
+                    a = parseInt("0" + a);
+                }
+                if (b < 10) {
+                    b = parseInt("0" + b);
+                }
                 var now = new Date();
                 var open = new Date(
                     now.getFullYear(),
                     now.getMonth(),
                     now.getDate(),
-                    03,
+                    a,
                     00,
                     00
                 );
@@ -46,7 +52,7 @@
                     now.getFullYear(),
                     now.getMonth(),
                     now.getDate(),
-                    05,
+                    b,
                     00,
                     00
                 );
@@ -105,7 +111,9 @@
                 }
             }
 
-            setInterval(countdown, 1000);
+            // var t1 = setInterval(countdown, 1000, 3, 5);
+            // var t2 = setInterval(countdown, 1000, 2, 5);
+            var t3 = setInterval(countdown, 1000, 2, 2);
         </script>
     </body>
 </html>

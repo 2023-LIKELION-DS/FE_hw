@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    /* background-color: black; */
+}
+
+.container {
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+/* navbar */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-menu img {
+    width: 3vh;
+    height: 3vh;
+}
+
+#audio-box {
+    border-radius: 50%;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-item img {
+    margin-right: 2vh;
+}
+
+#search-bar {
+    background-image: url(./img/search.png);
+    background-position: right center;
+    background-size: 1.2vh 1.2vh;
+    height: 2vh;
+    background-repeat: no-repeat;
+}
+
+/* main content */
+.content {
+    margin: 0 auto;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content-now {
+    width: 75%;
+}
+
+.content-main {
+    width: 100%;
+}
+
+.content-title {
+    margin: 0 1.5vh;
+}
+
+.content-title h2 {
+    margin: 1vh 0;
+}
+
+.content-info img {
+    width: 3vh;
+    height: 3vh;
+    margin: 0 1vh;
+    padding: 0.3vh 0.3vh;
+}
+
+.content-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 200px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 200px;
+}
+
+.info-item > .info-user {
+    margin: 1vh 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item #subscribe {
+    margin: 0 auto;
+    font-size: large;
+}
+
+.info-item > button {
+    border-radius: 50px;
+    border: none;
+    width: 7vh;
+    height: 4vh;
+    margin: 0 0.7vh;
+}
+
+.info-item img {
+    width: 2vh;
+    height: 2vh;
+}
+
+#info-user > span {
+    margin: 0.3vh 0.5vh;
+}
+
+.content-detail {
+    background-color: rgb(188, 188, 188);
+    border-radius: 1vh;
+    margin: 0 1vh;
+    padding: 0.1vh 1vh;
+}
+
+.content-detail p {
+    margin: 0.5vh;
+}
+
+/* side contents */
+.content-togo {
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 25%;
+    height: 100%;
+    margin: 0 1.5vh;
+}
+.content-next {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 200px;
+}
+
+.content-text > p {
+    margin-top: 0.3vh;
+    margin-bottom: 0.3vh;
+}
+
+.content-thumb {
+    margin-right: 20px;
+}
+
+.more-contents {
+    text-align: center;
+}
+#btn-more {
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: rgb(140, 140, 140);
+}
+
+/* comment-add */
+.comment-add {
+    margin: 1vh 0;
+    display: flex;
+}
+
+.comment-add img {
+    width: 5vh;
+    height: 5vh;
+    margin: 0 1vh;
+}
+
+.comment-box {
+    width: 62vw;
+    border: none;
+}
+
+.comment-box:focus {
+    outline: none;
+}
+
+.comment-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.comment-controls button {
+    margin-right: 1vh;
+    width: 5vh;
+    height: 3vh;
+    border-radius: 20px;
+    border: none;
+}
+.comment-controls button:hover {
+    background-color: rgb(86, 86, 86);
+    color: white;
+}
+
+/* comment */
+.comment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 200px;
+    margin-top: 2vh;
+}
+
+.comment img {
+    width: 5vh;
+    height: 5vh;
+    margin: 0 1vh;
+}
+
+.comment-thumb {
+    margin-right: 20px;
+}
+
+.channel-name {
+    font-weight: bold;
+    margin-top: 0.3vh;
+    margin-bottom: 0.3vh;
+}
+
+.comment-content {
+    margin-top: 0.3vh;
+    margin-bottom: 0.3vh;
+}
+
+.comment-more {
+    display: flex;
+}
+
+.comment-more > p {
+    margin: 0;
+}
+
+.fa-angle-down,
+.fa-angle-up {
+    margin-right: 0.5rem;
+}
+
+#toggle-btn-up {
+    display: none;
+}
+
+#comment-btn {
+    width: 2vh;
+    height: 2vh;
+}
+
+.recomment {
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 200px;
+    margin-top: 2vh;
+}
+
+.recomment img {
+    width: 5vh;
+    height: 5vh;
+    margin: 0 1vh;
+}
+
+.recomment-thumb {
+    margin-right: 20px;
+}
+
+.recomment-content {
+    margin-top: 0.3vh;
+    margin-bottom: 0.3vh;
+}
+
+@media all and (max-width: 998px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-now {
+        width: 100%;
+    }
+
+    .content-togo {
+        width: 100%;
+    }
+
+    .comment-box {
+        width: 80vw;
+        border: none;
+    }
+}
