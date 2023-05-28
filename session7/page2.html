@@ -91,44 +91,26 @@
                     let count = document.querySelector(".count");
                     count = new Date();
 
-                    function goOpen() {
-                        let u_open = opentime - count;
-                        let o_hour = Math.floor(
-                            (u_open / (1000 * 60 * 60)) % 24
-                        );
-                        let o_min = Math.floor((u_open / (1000 * 60)) % 60);
-                        let o_sec = Math.floor((u_open / 1000) % 60);
-                        document.write("금일 오픈까지 남은 시간<br>");
+                    function Count(time, count) {
+                        let u = time - count;
+                        let hour = Math.floor((u / (1000 * 60 * 60)) % 24);
+                        let min = Math.floor((u / (1000 * 60)) % 60);
+                        let sec = Math.floor((u / 1000) % 60);
                         document.write(
-                            String(o_hour).padStart(2, "0") +
+                            String(hour).padStart(2, "0") +
                                 " : " +
-                                String(o_min).padStart(2, "0") +
+                                String(min).padStart(2, "0") +
                                 " : " +
-                                String(o_sec).padStart(2, "0")
-                        );
-                    }
-
-                    function goClose() {
-                        let u_close = closetime - count;
-                        let c_hour = Math.floor(
-                            (u_close / (1000 * 60 * 60)) % 24
-                        );
-                        let c_min = Math.floor((u_close / (1000 * 60)) % 60);
-                        let c_sec = Math.floor((u_close / 1000) % 60);
-                        document.write("금일 마감까지 남은 시간<br>");
-                        document.write(
-                            String(c_hour).padStart(2, "0") +
-                                " : " +
-                                String(c_min).padStart(2, "0") +
-                                " : " +
-                                String(c_sec).padStart(2, "0")
+                                String(sec).padStart(2, "0")
                         );
                     }
 
                     if (count < opentime) {
-                        goOpen();
+                        document.write("금일 오픈까지 남은 시간<br>");
+                        Count(opentime, count);
                     } else if (count < closetime) {
-                        goClose();
+                        document.write("금일 마감까지 남은 시간<br>");
+                        Count(closetime, count);
                     } else {
                         document.write("금일 마감");
                     }

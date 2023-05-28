@@ -59,21 +59,38 @@
             <div class="title">카운트다운</div>
             <div class="count">
                 <script>
-                    let count = document.querySelector(".count");
-                    var current = new Date();
-                    count = opentime - current;
-                    let c_day = Math.floor(count / (1000 * 60 * 60 * 24));
-                    let c_hour = Math.floor((count / (1000 * 60 * 60)) % 24);
-                    let c_min = Math.floor((count / (1000 * 60)) % 60);
-                    let c_sec = Math.floor((count / 1000) % 60);
-                    if (count <= 0) {
-                        document.write("00일 00시간 00분 00초");
-                    } else {
-                        document.write(c_day + "일 ");
-                        document.write(c_hour + "시간 ");
-                        document.write(c_min + "분 ");
-                        document.write(c_sec + "초");
+                    function Count() {
+                        let current = new Date();
+                        let count = opentime - current;
+
+                        if (count > 0) {
+                            let c_day = Math.floor(
+                                count / (1000 * 60 * 60 * 24)
+                            );
+                            let c_hour = Math.floor(
+                                (count / (1000 * 60 * 60)) % 24
+                            );
+                            let c_min = Math.floor((count / (1000 * 60)) % 60);
+                            let c_sec = Math.floor((count / 1000) % 60);
+                            let res =
+                                c_day +
+                                "일 " +
+                                c_hour +
+                                "시간 " +
+                                c_min +
+                                "분 " +
+                                c_sec +
+                                "초";
+                            document.querySelector(".count").innerHTML = res;
+                        } else {
+                            clearInterval(c);
+                            document.querySelector(".count").innerHTML =
+                                "00일 00시간 00분 00초";
+                        }
                     }
+
+                    document.querySelector(".count").innerHTML = Count();
+                    let c = setInterval(Count, 1000);
                 </script>
             </div>
         </div>

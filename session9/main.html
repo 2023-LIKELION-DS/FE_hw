@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Youtube</title>
+        <link href="main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav>
+            <img class="ham" src="./images/menu.png" style="width: 20px; height: 20px"></img>
+            <img class="logo" src="logo.png" style="width: 100px; height: 30px"></img>
+            <form class="search">
+                <input type="text" placeholder="  검색" class="input">
+            </form>
+            <form class="search">
+                <button type="button" class="sbtn"><img src="./images/search.png" style="width: 20px; height: 20px"></button>
+            </form>
+            <img class="audio" src="./images/audio.png" style="width: 20px; height: 20px">
+            <img  class="dots" src="./images/dots.png" style="width: 20px; height: 20px">
+            <div class="log"><img src="./images/user.png" style="width: 20px; height: 20px; vertical-align: middle;"> 로그인</div>
+        </nav>
+        <header class="main">
+            <section class="first">
+                <iframe class="video" src="손.mp4" controls>
+                </iframe>
+                <div class="title">
+                    <strong>손 모으기 성공 ㅋ</strong>
+                    <div class="pro">
+                        <img src="꽃.jpg" id="proimage"></img>
+                        <div id="name">
+                            <strong>이자벨</strong>
+                            <br />
+                            <small style="color: gray">구독자 5만명</small>
+                        </div>
+                        <span id="gudok">구독</span>
+                        <div class="select">
+                            <div class="like">
+                                <img
+                                    src="./images/like.png"
+                                    style="width: 20px; height: 20px; vertical-align: middle;"
+                                ></img
+                                > 1.1만 |
+                                <img
+                                    src="./images/unlike.png"
+                                    style="width: 20px; height: 20px; vertical-align: middle;"
+                                ></img>
+                            </div>
+                            <div class="share">
+                                <img
+                                    src="./images/share.png"
+                                    style="width: 20px; height: 20px; vertical-align: middle;"
+                                ></img
+                                > 공유
+                            </div>
+                            <div class="dot">
+                                <img
+                                    src="./images/more.png"
+                                    style="width: 20px; height: 20px"
+                                ></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="des">
+                    조회수 <strong>5</strong>만회 <strong>1</strong>일 전
+                    <span id="tag1">#나도 #이제 #천재갱얼쥐되는거임?</span><br>
+                    <span id="tag2">#강아지 #귀여운동영상 #힐링영상 #강아지가세상을지배한다</span><br>
+                    더보기
+                </div>
+                <div class="re-icon">
+                    댓글 101개   <img src="./images/filter.png" style="width: 20px; height: 20px;">정렬 기준
+                </div>
+                <form class="re-plus">
+                    <div class="re-user">
+                    <img src="./images/user.png">
+                    <input type="text" placeholder="댓글 추가..." class="plus">
+                    </div>
+                    <div class="re-btn">
+                        <input type="reset" value="취소" id="reset"></input>
+                        <input type="submit" value="댓글" id="reply"></input>
+                    </div>
+                </form>
+                <script>
+                    const form = document.querySelector(".re-plus");
+                    const input = document.querySelector(".plus");
+                    const plus = document.querySelector("#reply");
+                    form.addEventListener("submit", (e) => {
+                        e.preventDefault();
+                        const text = input.value;
+                        alert(text)});
+                </script>
+                <div class="re-show">
+                    <div class="user">
+                        <img src="./images/user.png">
+                        <div class="u-text">
+                            <span>
+                                윤윤지<span style="color: grey;"> 17시간 전</span>
+                            </span>
+                            <span>
+                                자벨이 너 꽤 똑똑한 강쥐다? ㅋ
+                            </span>
+                            <div class="like2">
+                                <img
+                                    src="./images/like.png"
+                                    style="width: 20px; height: 20px; vertical-align: middle;"
+                                > 94
+                                <img
+                                    src="./images/unlike.png"
+                                    style="width: 20px; height: 20px; vertical-align: middle;"
+                                > 답글
+                            </div>
+                            <span class="rere-btn">
+                                ▼ 답글 1개
+                            </span>
+                        </div>
+                    </div>
+                    <div class="rere-user">
+                        <img src="./images/user.png">
+                        <div class="u-text">
+                            <span>
+                                이자벨<span style="color: grey;"> 3시간 전</span>
+                            </span>
+                            <span>
+                                웅니. 나 무시하지마.
+                            </span>
+                            <div class="like2">
+                                <img
+                                    src="./images/like.png"
+                                    style="width: 15px; height: 15px; vertical-align: middle;"
+                                > 1017
+                                <img
+                                    src="./images/unlike.png"
+                                    style="width: 15px; height: 15px; vertical-align: middle;"
+                                > 답글
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const rere = document.querySelector(".rere-btn");
+                    const re_show = document.querySelector(".re-show");
+                    document.addEventListener("click", (e) => {
+                        rere.innerHTML = "▲ 답글 1개";
+                        const rere_user = document.querySelector(".rere-user");
+                        rere_user.style.display = "flex";
+                        rere_user.style.flexDrection = "row";
+                    });
+                </script>
+            </section>
+            <section class="second">
+                <div class="newvideo">
+                    <img src="1.jpg" class="newimage"></img>
+                    <div class="text">
+                        <strong>기분 짱조아</strong><br />이자벨<br />조회수 1.4만회
+                        · 1시간전<br />
+                    </div>
+                </div>
+                <div class="newvideo">
+                    <img src="2.jpg" class="newimage"></img>
+                    <div class="text">
+                        <strong>난 여기가 좋다니까</strong><br />이자벨<br />조회수
+                        1.4만회 · 2시간전<br />
+                    </div>
+                </div>
+                <div class="newvideo">
+                    <img src="3.jpg" class="newimage"></img>
+                    <div class="text">
+                        <strong>뭘 봐?</strong><br />이자벨<br />조회수 1.4만회 ·
+                        3시간전<br />
+                    </div>
+                </div>
+                <div class="newvideo">
+                    <img src="4.jpg" class="newimage"></img>
+                    <div class="text">
+                        <strong>나 이뿌지</strong><br />이자벨<br />조회수 1.4만회 ·
+                        4시간전<br />
+                    </div>
+                </div>
+                <div class="newvideo">
+                    <img src="5.jpg" class="newimage"></img>
+                    <div class="text">
+                        <strong>간식 존버중</strong><br />이자벨<br />조회수 1.4만회
+                        · 5시간전<br />
+                    </div>
+                </div>
+                <div class="newvideo">
+                    <img src="6.jpg" class="newimage"></img>
+                    <div class="text">
+                        <strong>각도의 중요성 알아??</strong
+                        ><br />이자벨<br />조회수 1.4만회 · 6시간전<br />
+                    </div>
+                </div>
+            </section>
+        </header>
+    </body>
+</html>

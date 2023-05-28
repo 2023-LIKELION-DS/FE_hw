@@ -1,0 +1,296 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.ham {
+    margin-top: 14px;
+    margin-right: 20px;
+}
+.logo {
+    margin-top: 4px;
+    margin-right: 300px;
+}
+
+.input {
+    width: 480px;
+    height: 32px;
+    border-radius: 30px 0px 0px 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gainsboro;
+    margin-right: 0px;
+    margin-top: 11px;
+}
+
+.sbtn {
+    width: 43px;
+    height: 36px;
+    border-radius: 0px 30px 30px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gainsboro;
+    margin-top: 11px;
+    margin-right: 25px;
+}
+
+.audio {
+    margin-top: 14px;
+    margin-right: 300px;
+}
+.dots {
+    margin-top: 14px;
+    margin-right: 20px;
+}
+.log {
+    text-align: center;
+    width: 85px;
+    height: 30px;
+    margin-top: 8px;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: gainsboro;
+    border-width: 1px;
+    padding-top: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    width: 890px;
+    height: 500px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.newvideo {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.newimage {
+    width: 190px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.text {
+    margin: 8px;
+}
+.title > strong {
+    font-size: 20px;
+}
+.pro {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#proimage {
+    overflow: hidden;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#gudok {
+    padding-top: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+}
+
+.select {
+    margin-left: 390px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.like {
+    padding-top: 5px;
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 30px;
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+}
+
+.share {
+    padding-top: 5px;
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 30px;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+}
+
+.dot {
+    padding-top: 5px;
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 100px;
+    width: 40px;
+    height: 30px;
+    margin: 10px;
+}
+
+.des {
+    background-color: gainsboro;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    width: 860px;
+    margin-right: 50px;
+}
+
+#tag1 {
+    color: gray;
+}
+
+#tag2 {
+    color: blue;
+}
+
+.re-icon {
+    margin-top: 40px;
+}
+
+.re-icon > img {
+    margin-top: -5px;
+    vertical-align: middle;
+}
+
+.re-plus {
+    width: 860px;
+    margin-right: 50px;
+    margin-top: 10px;
+    background-color: aliceblue;
+    color: grey;
+    padding: 15px;
+}
+
+.plus {
+    width: 800px;
+    height: 40px;
+    background-color: aliceblue;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid grey;
+}
+
+.re-user {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+
+.re-user > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.re-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#reply {
+    padding-top: 5px;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 0;
+    background-color: aliceblue;
+    color: grey;
+}
+
+#reset {
+    padding-top: 5px;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 0;
+    background-color: aliceblue;
+    color: grey;
+}
+
+#reset:hover,
+#reply:hover {
+    background-color: gainsboro;
+    color: grey;
+    border-radius: 30px;
+    padding-bottom: 5px;
+}
+
+.re-show {
+    width: 860px;
+    margin-right: 50px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+}
+
+.user > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.u-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.like2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.rere-btn {
+    color: blue;
+}
+
+.rere-user {
+    display: none;
+    font-size: 15px;
+    padding-left: 55px;
+    margin-top: 10px;
+}
+
+.rere-user > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
