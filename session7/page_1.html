@@ -25,6 +25,14 @@
     var countdownTime = setInterval(function () {
       var nowDate = new Date().getTime();
       var distance = openDate - nowDate;
+
+      if (distance < 0) {
+        clearInterval(countdownTime);
+        document.querySelector(".countdown_time").innerHTML =
+          "0일 0시간 0분 0초 남았습니다.";
+        return;
+      }
+
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var timeObj = new Date(distance);
       var hours = timeObj.getUTCHours();
@@ -39,9 +47,6 @@
         "분 " +
         seconds +
         "초 남았습니다.";
-      if (distance < 0) {
-        clearInterval(countdownTime);
-      }
     }, 1000);
   </script>
 </html>
