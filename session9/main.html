@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="search-bar">
-        <input type="text" /><button>
+        <input type="text" placeholder="검색" /><button>
           <img src="./img/search.png" alt="" />
         </button>
       </div>
@@ -80,15 +80,51 @@
             <p>설명설명설명</p>
           </div>
         </div>
+        <div class="hidden-related-other-video">
+          <ul class="related-other-vidoes">
+            <li>
+              <a href="#"
+                ><img src="./img/썸네일.png" alt="" />
+                <p>재밌는 영상 모음</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./img/썸네일.png" alt="" />
+                <p>재밌는 영상 모음</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./img/썸네일.png" alt="" />
+                <p>재밌는 영상 모음</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./img/썸네일.png" alt="" />
+                <p>재밌는 영상 모음</p></a
+              >
+            </li>
+          </ul>
+        </div>
         <div class="reples">
           <div class="reple-information">
             <p>댓글 00개</p>
             <p>정렬 기준</p>
           </div>
           <div class="create-reple">
-            <img src="./img/03.png" alt="내 프로필" /><input type="text" />
-            <hr />
+            <img src="./img/02.png" alt="내 프로필" /><input
+              id="reple-write"
+              type="text"
+              placeholder="댓글 입력"
+            />
           </div>
+          <div class="create-reple-buttons">
+            <button id="cancel">취소</button>
+            <button id="add">댓글</button>
+          </div>
+          <hr />
           <div class="reple1">
             <img src="./img/02.png" alt="댓글2프로필" />
             <div class="reple-context">
@@ -96,28 +132,47 @@
               <span>5분전</span>
               <p>아 재밌다~~~~~~~</p>
               <div class="reple-buttons">
-                <img src="./img/like.png" alt="따봉" />144
-                <img src="./img/dislike.png" alt="싫어요" />
+                <button><img src="./img/like.png" alt="따봉" />535</button>
+                <button><img src="./img/dislike.png" alt="싫어요" /></button>
+                <button>답글</button>
               </div>
               <div class="more-reple">
-                <img src="./img/down-arrow.png" alt="꺾쇠" />
-                <p>답글</p>
+                <button onclick="">
+                  <img src="./img/down-arrow.png" alt="꺾쇠" />
+                </button>
               </div>
             </div>
           </div>
           <div class="reple1">
-            <img src="./img/02.png" alt="댓글3프로필" />
+            <img src="./img/02.png" alt="댓글2프로필" />
             <div class="reple-context">
               <h4>저사람</h4>
-              <span>7분전</span>
-              <p>집엔 언제 가나요?</p>
+              <span>5분전</span>
+              <p>아 재밌다~~~~~~~</p>
               <div class="reple-buttons">
-                <img src="./img/like.png" alt="따봉" />535
-                <img src="./img/dislike.png" alt="싫어요" />
+                <button><img src="./img/like.png" alt="따봉" />535</button>
+                <button><img src="./img/dislike.png" alt="싫어요" /></button>
+                <button>답글</button>
               </div>
               <div class="more-reple">
-                <img src="./img/down-arrow.png" alt="꺾쇠" />
-                <p>답글</p>
+                <button onclick="showreple()">
+                  <img src="./img/down-arrow.png" alt="꺾쇠" />
+                </button>
+              </div>
+              <div id="show-reple1-1">
+                <img src="./img/02.png" alt="댓글2프로필" />
+                <div class="reple-context">
+                  <h4>요사람</h4>
+                  <span>5분전</span>
+                  <p>아 재밌다~~~~~~~</p>
+                  <div class="reple-buttons">
+                    <button><img src="./img/like.png" alt="따봉" />535</button>
+                    <button>
+                      <img src="./img/dislike.png" alt="싫어요" />
+                    </button>
+                    <button>답글</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -151,4 +206,27 @@
       </ul>
     </div>
   </body>
+  <script>
+    const showreple = function () {
+      var reple = document.getElementById("show-reple1-1");
+      reple.style.display = "flex";
+      reple.style.flexDirection = "row";
+    };
+    const aler = function () {
+      var input = document.getElementById("reple-write").value;
+      alert(input);
+    };
+
+    const clear = function () {
+      var input = document.getElementById("reple-write");
+      input.value = "";
+      input.focus();
+    };
+
+    var clear_button = document.getElementById("cancel");
+    clear_button.addEventListener("click", clear);
+
+    var aler_button = document.getElementById("add");
+    aler_button.addEventListener("click", aler);
+  </script>
 </html>
