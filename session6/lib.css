@@ -335,6 +335,177 @@
     }
 }
 
+@media all and (min-width: 768px) {
+    html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: 1%;
+        margin-top: 3%;
+    }
+
+    nav > img {
+        width: 300px;
+        height: 80px;
+        margin: 0;
+        padding-right: 5%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        width: 50%;
+        height: 6%;
+    }
+
+    .navbar li {
+        margin-top: 2%;
+    }
+
+    .navbar ul {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .navbar a {
+        width: 18%;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 13px;
+        color: black;
+    }
+
+    .navbar a:hover {
+        color: #771138;
+    }
+
+    .ham {
+        display: none;
+    }
+
+    .search {
+        width: 100%;
+        height: 250px;
+        margin: 1% 0% 0% 0%;
+        background-image: url(검색창.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mid {
+        width: 100%;
+        height: 50%;
+        background-color: #f4f3f0;
+        margin: 0%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 20%;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border-color: #771138;
+        background-color: white;
+        border-style: solid;
+        border-width: 1%;
+    }
+
+    .menu > p {
+        font-size: small;
+        color: #666;
+    }
+
+    .circle:hover {
+        background-color: #771138;
+    }
+
+    .imgs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 6%;
+    }
+    .right {
+        height: 45%;
+        width: 50%;
+    }
+
+    .left {
+        height: 45%;
+        width: 50%;
+    }
+
+    .fin {
+        background: url(도서관.jpg) center no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        height: 20%;
+    }
+
+    .menu2 {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .circle2 {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border-color: white;
+        border-style: solid;
+        border-width: 2%;
+        margin-right: 2%;
+    }
+
+    .circle2:hover {
+        background-color: white;
+    }
+
+    .text {
+        width: 100%;
+        height: 10%;
+        color: white;
+        font-size: small;
+    }
+
+    .text > strong {
+        font-size: large;
+    }
+}
+
 @media all and (max-width: 768px) {
     html {
         margin: 0;
