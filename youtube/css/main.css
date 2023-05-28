@@ -1,0 +1,266 @@
+*{
+  box-sizing: border-box;
+}
+.s{
+  font-size: 0.8em;
+  color: grey;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/** 나브바 **/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+
+.nav-logo {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo-btn {
+  width: 30px;
+  margin: 10px;
+}
+
+#logo-img {
+  width: 120px;
+  margin: 10px;
+}
+
+.search-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.nav-search{
+  width: 430px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}  
+
+.nav-search input {
+  border: 1px solid #F1F1F1;
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  justify-content: space-between;
+}
+
+/* 메인 영상 */
+.main-section {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-profile {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  justify-content: space-between;
+}
+
+.main-profile input {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: #353434;
+  color: #ffffff;
+}
+
+.main-btn {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-like {
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #e6e6e6;
+  color: #000000;
+}
+
+.btn-share, .btn-down, .btn-more {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #e6e6e6;
+  color: #000000;
+}
+
+.btn-more {
+  width: 50px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #e6e6e6;
+  color: #000000;
+}
+
+.sub-info {
+  width: 900px;
+  height: auto;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  padding: 5px 0px 5px 20px;
+}
+
+/* 새로운 댓글 */
+.comment {
+  width: 900px;
+}
+
+.comment-all {
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-new {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+}
+
+.new-text input {
+  width: 800px;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-bottom: 1px solid #F1F1F1;
+  margin-left: 10px;
+  padding: 15px;
+}
+
+.comment-newbtn {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 800px;
+}
+
+/* 댓글 리스트 */
+.li-info {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+}
+
+.li-info img {
+  margin-top: 7px;
+}
+
+.li-name {
+  align-items: center;
+  margin-left: 20px;
+}
+
+.li-btn {
+  width: 240px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 40px 70px;
+}
+
+.li-like, .li-unlike {
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#add-btn, #add-comment {
+  width: 800px;
+  padding-left: 100px;
+}
+
+#add-btn {
+  cursor: pointer;
+}
+
+#add-check {
+  padding-right: 10px;
+}
+
+#add-comment {
+  display: none;
+}
+
+/* .add-comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.add-name {
+  font-size: 0.8em;
+  margin: 15px 0px 20px 10px;
+}
+
+/* 다른 영상 리스트 */
+.other-video {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.other-info {
+  margin: 0px 0px 0px 10px;
+}

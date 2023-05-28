@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Youtube</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+    <!--나브바-->
+    <div class="nav">
+        <div class="nav-logo">
+            <img id="logo-btn" src="./images/menu.png" alt="menu" width="20px">
+            <img id="logo-img" src="./images/logo.png" alt="logo" width="20px">
+        </div>
+
+        <div class="nav-search">
+            <input type="text" placeholder="검색어 입력">
+            <div class="search-icon">
+                <i class="fas fa-keyboard"></i>
+            </div>
+            <div class="search-icon">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="nav-user">
+            <img src="./images/notification-bell.png" width="25px">
+            <img src="./images/user.png" width="25px">
+        </div>
+    </div>
+
+    <div class="section">
+        <!-- 메인 영상 -->    
+        <div class="video">
+            <div class="main-video">
+                <iframe
+                    src="./images/intro.mp4"
+                    width="900px"
+                    height="550px"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="main-info">
+                <div class="main-title">
+                    <h2>2023 덕성여대 근화제 불꽃놀이</h2>
+                </div>
+                <div class="main-section">
+                    <div class="main-profile">
+                        <div class="prof-user">
+                            <img src="./images/user.png" width="50px">
+                        </div>
+                        <div class="prof-name">
+                            <span>이성경</span><br/>
+                            <span class="s">구독자 3.42명</span>
+                        </div>
+                        <input type="button" value="구독">
+                    </div>
+                    <div class="main-btn">
+                        <div class="btn-like">
+                            <img src="./images/like.png" width="20px">
+                            <p>1.9만</p>
+                            <p style="color: grey">|</p>
+                            <img src="./images/unlike.png" width="20px">
+                        </div>
+                        <div class="btn-share">
+                            <img src="./images/share.png" width="20px">
+                            <p>공유</p>
+                        </div>
+                        <p class="btn-down">저장</p>
+                        <div class="btn-more">
+                            <img src="./images/more.png" width="20px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sub-info">
+                <div>
+                    <p>
+                        조회수 30만회 6일 전<br/>
+                        2023 덕성여대 근화제 불꽃놀이 영상입니다<br/>
+                        <span style="color : rgb(76, 151, 212)">#덕성여대 #불꽃놀이 #근화제</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 댓글 -->
+            <div class="comment">
+                <div class="comment-all">
+                    <p>댓글 28개</p>
+                    <div class="comment-filter">
+                        <img src="./images/filter.png" width="20px">
+                        <p>정렬 기준</p>
+                    </div>
+                </div>
+                <div class="comment-new">
+                    <img src="./images/user.png" width="50px">
+                    <div class="new-text">
+                        <input type="text" id="textadd" placeholder="댓글추가...">
+                    </div>
+                </div>
+                <div class="comment-newbtn">
+                    <p id="del" onclick="del_comment()">취소</p>
+                    <p id="add" onclick="comment()">댓글</p>
+                </div>
+
+                <!-- 댓글1 -->
+                <div class="comment-li">
+                    <div class="li-info">
+                        <img src="./images/user.png" width="50px" height="50px">
+                        <div class="li-name">
+                            홍길동 <span class="s">1일전</span>
+                            <p class="li-content">불꽃놀이 너무 멋져요</p>
+                        </div>
+                    </div>
+                    <div class="li-btn">
+                        <div class="li-like">
+                            <img src="./images/like.png" width="20px">
+                            <p>100</p>
+                        </div>
+                        <div class="li-unlike">
+                            <img src="./images/unlike.png" width="20px">
+                            <p>3</p>
+                        </div>
+                        <p>답글</p>
+                    </div>
+                </div> 
+                <!-- 댓글2 -->
+                <div class="comment-li">
+                    <div class="li-info">
+                        <img src="./images/user.png" width="50px" height="50px">
+                        <div class="li-name">
+                            김멋사 <span class="s">3일전</span>
+                            <p class="li-content">아 너무 멋있다. 나도 덕대 가고싶다.</p>
+                        </div>
+                    </div>
+                    <div class="li-btn">
+                        <div class="li-like">
+                            <img src="./images/like.png" width="20px">
+                            <p>30</p>
+                        </div>
+                        <div class="li-unlike">
+                            <img src="./images/unlike.png" width="20px">
+                            <p>1</p>
+                        </div>
+                        <p>답글</p>
+                    </div>
+                </div> 
+                <!-- 댓글3 -->
+                <div class="comment-li">
+                    <div class="li-info">
+                        <img src="./images/user.png" width="50px" height="50px">
+                        <div class="li-name">
+                            안녕하쇼 <span class="s">7일전</span>
+                            <p class="li-content">꽃가루를 날려 폭죽을 크게 터뜨려</p>
+                        </div>
+                    </div>
+                    <div class="li-btn">
+                        <div class="li-like">
+                            <img src="./images/like.png" width="20px">
+                            <p>2</p>
+                        </div>
+                        <div class="li-unlike">
+                            <img src="./images/unlike.png" width="20px">
+                            <p>3</p>
+                        </div>
+                        <p>답글</p>
+                    </div>
+                    <div id="add-btn" onclick="check()">
+                        <p id="add-check" style="color: rgb(76, 151, 212);">∨ 답글 1개</p>
+                    </div>
+                    <div id="add-comment">
+                        <img src="./images/user.png" width="30px" height="30px">
+                        <div class="add-info">
+                            <div class="add-name">
+                                김안녕 <span class="s">2일전</span>
+                                <p class="add-content">이거 노래 제목이 뭐죠?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!-- 다른 영상 리스트 -->
+        <div class="other">
+            <div class="other-video">
+                <img src="./images/thum1.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>가디언즈오브갤럭시3 ost</p>
+                    <div class="s">
+                        <p>김멋사</p>
+                        <p>조회수 4.3만회 •1년전</p>
+                    </div>
+                </div>
+            </div>
+            <div class="other-video">
+                <img src="./images/thum2.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>[Playlist]운전할때 들어요</p>
+                    <div class="s">
+                        <p>두둠칫</p>
+                        <p>조회수 3.2만회 •4달전</p>
+                    </div>
+                </div>
+            </div>
+            <div class="other-video">
+                <img src="./images/thum3.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>덕성여자대학교 근화제 TAKE</p>
+                    <div class="s">
+                        <p>덕성여자대학교 official</p>
+                        <p>조회수 3천회 •1일전</p>
+                    </div>
+                </div>
+            </div>
+            <div class="other-video">
+                <img src="./images/thum2.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>[Playlist]운전할때 들어요</p>
+                    <div class="s">
+                        <p>두둠칫</p>
+                        <p>조회수 3.2만회 •4달전</p>
+                    </div>
+                </div>
+            </div>
+            <div class="other-video">
+                <img src="./images/thum1.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>가디언즈오브갤럭시3 ost</p>
+                    <div class="s">
+                        <p>김멋사</p>
+                        <p>조회수 4.3만회 •1년전</p>
+                    </div>
+                </div>
+            </div>
+            <div class="other-video">
+                <img src="./images/thum2.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>[Playlist]운전할때 들어요</p>
+                    <div class="s">
+                        <p>두둠칫</p>
+                        <p>조회수 3.2만회 •4달전</p>
+                    </div>
+                </div>
+            </div>
+            <div class="other-video">
+                <img src="./images/thum3.png" width="170px" height="100px">
+                <div class="other-info">
+                    <p>덕성여자대학교 근화제 TAKE</p>
+                    <div class="s">
+                        <p>덕성여자대학교 official</p>
+                        <p>조회수 3천회 •1일전</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function comment() {
+        var text = document.getElementById("textadd").value;
+        alert(text);
+    }
+
+    function del_comment() {
+        document.getElementById("textadd").value = null;
+    }
+
+    function check() {
+        if(document.getElementById('add-comment').style.display === 'block'){
+            document.getElementById('add-comment').style.display = 'none';
+            document.getElementById('add-btn').textContent = '∨ 답글 1개';
+        } else {
+            document.getElementById('add-comment').style.display = 'block';
+            document.getElementById('add-btn').textContent = '∧ 답글 1개';
+        }
+    }
+</script>
+</body>
+</html>
