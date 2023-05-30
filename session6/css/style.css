@@ -1,24 +1,3 @@
-@media all and (max-width: 768px) {
-  .art1-hid {
-    display: none;
-  }
-  .hidden {
-    display: none;
-  }
-  .menu2 li {
-    flex-basis: 25%;
-  }
-  .notice-img {
-    margin-right: 40px;
-  }
-}
-
-@media all and (max-width: 1280px) {
-  .menu1 {
-    display: none;
-  }
-}
-
 li {
   list-style: none;
 }
@@ -28,6 +7,11 @@ nav {
 }
 .logo {
   margin-top: 10px;
+}
+.mobile {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
 }
 .menu1 ul {
   display: flex;
@@ -67,7 +51,6 @@ section {
 }
 .menu2 li {
   flex: 1;
-  width: 33%;
 }
 
 .box1 {
@@ -156,7 +139,57 @@ a:hover {
   margin-left: 40px;
   margin-top: 20px;
   width: 550px;
-  height: 400px; 
+  height: 400px;
   background-image: url("../img/04.jpg");
   background-size: cover;
+}
+
+.mobile-hamberger-bar,
+.mobile-mypage {
+  display: none;
+}
+
+@media all and (max-width: 1280px) {
+  .menu1 {
+    display: none;
+  }
+  .menu2 ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .mobile-hamberger-bar,
+  .mobile-mypage {
+    display: flex;
+    justify-content: right;
+  }
+  .mobile-hamberger-bar img,
+  .mobile-mypage img {
+    width: 3rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .art1-hid {
+    display: none;
+  }
+  .hidden {
+    display: none;
+  }
+  .menu2 li {
+    flex-basis: 25%;
+  }
+  .notice-img {
+    margin-right: 40px;
+  }
+  .menu2 ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
