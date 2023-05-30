@@ -23,7 +23,7 @@
     //문제3 do-while
     do {
       var number = prompt("100을 초과하는 숫자를 입력해주세요.");
-    } while (number < 100);
+    } while (number <= 100);
     //문제 4-(1)
     let str = "likelion";
     console.log(str[2] + str[3] + str[4] + str[5]);
@@ -34,7 +34,7 @@
     var date = new Date(2002, 06, 01, 01, 30, 00);
     alert(date);
     //문제 6
-    const getSecondsToday = function (id) {
+    const getSecondsToday = function () {
       var today = new Date();
       today.getDay();
       today.setHours(00);
@@ -44,14 +44,15 @@
       var now = new Date();
       now.getTime();
 
-      var remain = now - today;
-      var _sec = remain * 1000;
-      var _min = _sec * 60;
-      var _hour = _min * 60;
+      var timeDiff = now - today;
+      var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+      var minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+      var seconds = Math.floor((timeDiff / 1000) % 60);
 
-      alert(_hour + "시간" + _min + "분" + _sec + "초");
+      alert(hours + "시간" + minutes + "분" + seconds + "초");
     };
-    getSecondsToday("html요소의id입력");
+    getSecondsToday();
     //문제 7
     const randomNum = function (id) {
       for (i = 0; i < 3; i++) {
