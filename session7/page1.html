@@ -34,37 +34,31 @@
     <div id="countdown_time"></div>
 
     <script>
-        const open = new Date('2023-06-12 00:00:00');
+        const open = new Date('2023-06-12 00:00:00').getTime();
         var countdown_time = document.getElementById("countdown_time");
+        var countdownInterval;
 
         function countdown(){
 
-            var now = new Date(); 
+            var now = new Date().getTime(); 
+            var distance = open - now;
 
-            let days = open.getDate() - now.getDate();
-            let hours = open.getHours() - now.getHours();
-            let minutes = open.getMinutes() - now.getMinutes();
-            let seconds = open.getSeconds() - now.getSeconds();
+            if (distance <= 0) {
+                clearInterval(countdownInterval);
+                countdown_time.innerText = "오픈 시간입니다!";
+                return;
+            }
 
-            if(days<=0){
-                days += 30;
-            }
-            if(hours<=0){
-                hours += 24;
-                days -= 1;
-            }
-            if(minutes<=0){
-                minutes += 60;
-                hours -= 1;
-            }
-            if(seconds<=0){
-                seconds += 60;
-                minutes -= 1;
-            }
+            var days = Math.floor(distance/ (1000 * 60 * 60 *24));
+            var hours = new Date(distance).getHours();
+            var minutes = new Date(distance).getMinutes();
+            var seconds = new Date(distance).getSeconds();
+
             countdown_time.innerText = days + '일 ' + hours +'시간 ' + minutes + '분 ' + seconds + '초';
+        
         }
-
-        setInterval(countdown, 1000);
+        countdownInterval = setInterval(countdown, 1000);
+        
 
     </script>
 </body>
