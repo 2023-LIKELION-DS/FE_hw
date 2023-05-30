@@ -18,7 +18,7 @@
   <body>
     <div class="openTime">
       <span class="OT">운영시간</span>
-      <p>AM 01:00 ~ AM 02:00</p>
+      <p>AM 08:00 ~ PM 06:00</p>
 
       <span class="countD">카운트다운</span>
       <p class="time-title">금일 마감까지 남은 시간</p>
@@ -32,92 +32,63 @@
     </div>
 
     <script>
-      function remaindTime() {
-        var now = new Date();
-        var end = new Date(
-          now.getFullYear(),
-          now.getMonth(),
-          now.getDate(),
-          02,
-          00,
-          00
-        );
-        var open = new Date(
-          now.getFullYear(),
-          now.getMonth(),
-          now.getDate(),
-          01,
-          00,
-          00
-        );
+      function getTimeRemaining(endTime) {
+        var total = Date.parse(endTime) - Date.parse(new Date());
+        var seconds = Math.floor((total / 1000) % 60);
+        var minutes = Math.floor((total / 1000 / 60) % 60);
+        var hours = Math.floor((total / (1000 * 60 * 60)) % 24);
 
-        var nt = now.getTime();
-        var ot = open.getTime();
-        var et = end.getTime();
+        return {
+          total: total,
+          hours: hours < 10 ? "0" + hours : hours,
+          minutes: minutes < 10 ? "0" + minutes : minutes,
+          seconds: seconds < 10 ? "0" + seconds : seconds,
+        };
+      }
 
+      function initializeClock(endTime) {
         var timeElement = document.querySelector(".time");
         var titleElement = document.querySelector("p.time-title");
         var hoursElement = document.querySelector(".hours");
         var minutesElement = document.querySelector(".minutes");
         var secondsElement = document.querySelector(".seconds");
 
-        if (nt < ot) {
-          timeElement.style.display = "block";
-          titleElement.textContent = "금일 오픈까지 남은 시간";
+        function updateClock() {
+          var time = getTimeRemaining(endTime);
 
-          var sec = parseInt((ot - nt) / 1000);
-          var day = parseInt(sec / 60 / 60 / 24);
-          sec = sec - day * 60 * 60 * 24;
-          var hour = parseInt(sec / 60 / 60);
-          sec = sec - hour * 60 * 60;
-          var min = parseInt(sec / 60);
-          sec = parseInt(sec - min * 60);
-
-          if (hour < 10) {
-            hour = "0" + hour;
-          }
-          if (min < 10) {
-            min = "0" + min;
-          }
-          if (sec < 10) {
-            sec = "0" + sec;
+          if (time.total <= 0) {
+            clearInterval(timeinterval);
+            titleElement.textContent = "금일 마감";
+            timeElement.style.display = "none";
+            return;
           }
 
-          hoursElement.textContent = hour;
-          minutesElement.textContent = min;
-          secondsElement.textContent = sec;
-        } else if (nt > et) {
-          titleElement.textContent = "금일 마감";
-          timeElement.style.display = "none";
-        } else {
           timeElement.style.display = "block";
           titleElement.textContent = "금일 마감까지 남은 시간";
-
-          sec = parseInt((et - nt) / 1000);
-          day = parseInt(sec / 60 / 60 / 24);
-          sec = sec - day * 60 * 60 * 24;
-          hour = parseInt(sec / 60 / 60);
-          sec = sec - hour * 60 * 60;
-          min = parseInt(sec / 60);
-          sec = parseInt(sec - min * 60);
-
-          if (hour < 10) {
-            hour = "0" + hour;
-          }
-          if (min < 10) {
-            min = "0" + min;
-          }
-          if (sec < 10) {
-            sec = "0" + sec;
-          }
-
-          hoursElement.textContent = hour;
-          minutesElement.textContent = min;
-          secondsElement.textContent = sec;
+          hoursElement.textContent = time.hours;
+          minutesElement.textContent = time.minutes;
+          secondsElement.textContent = time.seconds;
         }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
       }
 
-      setInterval(remaindTime, 1000);
+      var openTime = new Date();
+      openTime.setHours(08, 00, 00); // Set the opening time
+      var closeTime = new Date();
+      closeTime.setHours(18, 00, 00); // Set the closing time
+
+      if (new Date() < openTime) {
+        initializeClock(openTime);
+      } else if (new Date() > closeTime) {
+        var timeElement = document.querySelector(".time");
+        var titleElement = document.querySelector("p.time-title");
+        timeElement.style.display = "none";
+        titleElement.textContent = "금일 마감";
+      } else {
+        initializeClock(closeTime);
+      }
     </script>
   </body>
 </html>
