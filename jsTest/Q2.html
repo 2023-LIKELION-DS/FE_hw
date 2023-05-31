@@ -8,12 +8,16 @@
   </head>
   <body>
     <script>
-      let welcome;
+      /*let welcome;
       let age = prompt("나이를 입력하세요", 100);
       age = parseInt(age);
       if (age > 20) welocme = "미성년자";
       else welcome = "성인";
-      document.write(age + ":" + welcome);
+      document.write(age + ":" + welcome);*/
+      //수정
+      let age = prompt("나이를 입력하세요:");
+      let welcome = age + ":" + (age >= 20 ? "성인" : "미성년자");
+      alert(welcome);
     </script>
   </body>
 </html>

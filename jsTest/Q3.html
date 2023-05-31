@@ -8,11 +8,14 @@
   </head>
   <body>
     <script>
-      let n = prompt("100을 초과하는 숫자를 입력해주세요.", 0);
-      n = parseInt(n);
-
-      let i = 0;
-      do {} while (i > 100);
+      //do~while 반복문을 사용해 100초과하는 숫자를 입력할 때 까지 반복하세요.
+      //console
+      let n = 0;
+      do {
+        n = prompt("100을 초과하는 숫자를 입력해주세요.", 0);
+        n = parseInt(n);
+        console.log(n);
+      } while (n <= 100);
       document.write("100을 초과했습니다.");
     </script>
   </body>

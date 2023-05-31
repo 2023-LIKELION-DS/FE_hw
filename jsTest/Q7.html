@@ -7,11 +7,33 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="output"></div>
+
     <script>
+      /*
       let rendomNum = Math.random() * 100 + 1;
       document.write("첫번째 랜덤난수:" + " ");
       document.write("두번째 랜덤난수:" + " ");
       document.write("세번째 랜덤난수:" + " ");
+      */
+      function randomNum() {
+        const firstNum = Math.floor(Math.random() * 101); // 101로 해야 0부터 100까지 난수를 생성
+        const secondNum = Math.floor(Math.random() * 101);
+        const thirdNum = Math.floor(Math.random() * 101);
+
+        const output = document.getElementById("output");
+        output.innerHTML =
+          "첫번째 랜덤난수: " +
+          firstNum +
+          "<br>" +
+          "두번째 랜덤난수: " +
+          secondNum +
+          "<br>" +
+          "세번째 랜덤난수: " +
+          thirdNum;
+      }
+
+      randomNum();
     </script>
   </body>
 </html>
