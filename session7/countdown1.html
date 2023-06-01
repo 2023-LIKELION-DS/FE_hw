@@ -52,6 +52,12 @@
         const minutesStr = String(minutes).padStart(2, "0");
         const secondsStr = String(seconds).padStart(2, "0");
         clock.innerText = `${days}일 ${hoursStr}시간 ${minutesStr}분 ${secondsStr}초`;
+
+        if (gap <= 0) {
+          clearInterval();
+          clock.innerText = `오픈이 완료되었습니다`;
+          return;
+        }
       }
       countdown();
       setInterval(countdown, 1000);

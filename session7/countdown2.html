@@ -74,7 +74,7 @@
         var ot = open.getTime();
         var et = end.getTime();
 
-        if (nt < ot && nt > 24) {
+        if (nt < ot) {
           document.querySelector(".time").style.display = "block";
           document.querySelector(".count-box").innerHTML =
             "금일 오픈까지 남은 시간";
