@@ -4,23 +4,23 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Q6</title>
     </head>
     <body>
-        <div class="today"></div>
+        <script>
+            function today() {
+                const today = new Date();
+                const secs = today.getSeconds();
+                const hours = today.getHours();
+                const mins = today.getMinutes();
+
+                const h = hours * 60 * 60;
+                const m = mins * 60;
+                const tsec = h + m + secs;
+
+                return tsec;
+            }
+            alert(today());
+        </script>
     </body>
-    <script>
-        function today() {
-            const today = new Date();
-            const secs = today.getSeconds();
-            const hours = today.gethours();
-            const mins = today.getMinutes();
-
-            const h = hours * 60 * 60;
-            const m = mins * 60;
-            const tsec = h + m + secs;
-
-            alert(tsec);
-        }
-    </script>
 </html>

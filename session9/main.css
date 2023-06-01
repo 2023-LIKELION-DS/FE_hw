@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+}
+.nav-bar img {
+    width: 50px;
+    height: 50px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: row;
+}
+/*nav bar 영역 */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav-bar-icon {
+    margin-top: 10px;
+    margin-right: 30px;
+}
+.nav-bar-icon img {
+    height: 30px;
+    width: 30px;
+}
+.youtubetitle {
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.search {
+    display: flex;
+    flex-direction: row;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    border: solid 3px;
+    border-radius: 5%;
+}
+.search-searching {
+    margin-top: 18px;
+    font-size: 20px;
+}
+.search-icon {
+    margin-top: 13px;
+    margin-left: 85%;
+}
+.search-icon img {
+    width: 30px;
+    height: 30px;
+}
+.record-icon {
+    margin-left: 28px;
+    margin-top: 18px;
+}
+.record-icon img {
+    width: 30px;
+    height: 30px;
+}
+.youtube-more {
+    margin-top: 18px;
+}
+
+.youtube-more img {
+    width: 34px;
+    height: 34px;
+}
+.youtube {
+    display: flex;
+    flex-direction: row;
+}
+/*비디오 영역*/
+.video-main {
+    display: flex;
+    justify-content: center;
+}
+.video-main video {
+    width: 100%;
+}
+
+/*회원 정보*/
+.video-owner img {
+    /*적용안됨..ㅠ*/
+    width: 40px;
+    height: 30px;
+}
+.video-owner-info {
+    margin-top: 0px;
+    margin-left: 8px;
+}
+/*이미지 크기 조절*/
+.video-like img,
+.video-owner img {
+    width: 30px;
+    height: 30px;
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.video-info-front {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.video-owner {
+    display: flex;
+    flex-direction: row;
+}
+.video-owner-info {
+    list-style: none;
+    padding-left: 0px;
+}
+.video-like {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-around;
+}
+.vlike-icon {
+    margin-top: 12px;
+    margin-right: 6px;
+}
+.vunlike-icon {
+    margin-top: 15px;
+    margin-right: 12px;
+}
+.vshare-icon {
+    margin-top: 15px;
+    margin-right: 12px;
+}
+.vfilter {
+    margin-top: 15px;
+    margin-right: 12px;
+}
+.vmore-icon {
+    margin-top: 15px;
+    margin-right: 12px;
+}
+.shareshare {
+    display: flex;
+    flex-direction: row;
+}
+/*영상 정보*/
+.more-info {
+    border: solid gainsboro 6px;
+    background-color: gainsboro;
+    border-radius: 2%;
+}
+
+/* 더 많은 영상*/
+
+/*이미지 크기 조절*/
+.more-video img {
+    width: 200px;
+    height: 130px;
+    border-radius: 5%;
+    margin-right: 5px;
+}
+
+.more-video {
+    list-style: none;
+}
+.more-video h4 {
+    margin-bottom: 0px;
+    font-size: 15px;
+    color: darkgrey;
+}
+.more-video h3 {
+    margin-top: 0px;
+    font-size: 17px;
+}
+.video1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.video2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+/*댓글창*/
+
+/*이미지 크기 조절*/
+.comment-img img {
+    width: 30px;
+    height: 30px;
+}
+.commentlist-img img {
+    width: 30px;
+    height: 30px;
+}
+
+.comment-write {
+    display: flex;
+    flex-direction: row;
+}
+.commentlist {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-cnt {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-top: 26px;
+    margin-bottom: 15px;
+}
+.comment-cnt img {
+    margin-bottom: 0px;
+    margin-left: 12px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.comment-write {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+.comment-plus {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.comment-plus {
+    text-decoration: underline;
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+/*댓글 단거*/
+.comment-what {
+    margin-left: 13px;
+    font-size: 14px;
+}
+.commentwhemwho {
+    display: flex;
+    flex-direction: row;
+}
+
+.days5 {
+    margin-top: 4px;
+    margin-left: 3px;
+    font-size: 3px;
+}
+.comment-like {
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+}
+.comment-icon1 img {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+}
+.comment-icon2 img {
+    width: 17px;
+    height: 17px;
+    margin-left: 20px;
+    margin-right: 27px;
+}
+
+.commentlist {
+    display: flex;
+    flex-direction: column;
+}
+.first-comment {
+    display: flex;
+    flex-direction: row;
+}
+
+#btn {
+    border-style: none;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.comment-respond {
+    margin-left: 23px;
+}
+
+.respond-text {
+    display: flex;
+    flex-direction: column;
+}
+.commentwho2 {
+    display: flex;
+    flex-direction: column;
+}
+.stop {
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    margin-left: 13px;
+}
+.hide {
+    margin-top: 13px;
+}
+.more {
+    display: flex;
+    flex-direction: column;
+}
+.moremore {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.comment-like {
+    margin-left: 13px;
+}

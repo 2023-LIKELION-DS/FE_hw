@@ -15,21 +15,22 @@
     </div>
 </body>
 <script>
+
     function updateTimer() {
-        const dtime=new Date()
-        dtime.setHours(19,0,0)
+        const ddaytime=new Date()
+        ddaytime.setHours(19,0,0)
         const after=new Date ()
         after.setHours(21,0,0)
         const time=new Date();
 
-        const ntime=time.getTime();
+        const nowtime=time.getTime();
         const hours=time.getHours();
         const minutes=time.getMinutes();
         const second=time.getSeconds();
 
 
-        if(dtime>ntime){
-            const differ=dtime.getTime()-time.getTime();
+        if(ddaytime>nowtime){
+            const differ=ddaytime.getTime()-time.getTime();
             const differHour=Math.floor(differ/(60*60*1000));
             const differmin=Math.floor(differ/(60*1000));
             const differsec=Math.floor(differ/1000);
@@ -40,8 +41,8 @@
             document.querySelector(".timer").innerHTML ="금일 오픈까지 남은 시간<br>"+
             differHour +"<span>시간 </span>"+differmins +"<span>분 </span>"+ differsecs+"<span>초 </span>";
         }
-        else if(dtime<=ntime && ntime<=after){
-            const differ=time.getTime()-dtime.getTime();
+        else if(ddaytime<=nowtime && nowtime<=after){
+            const differ=time.getTime()-ddaytime.getTime();
             const differHour=Math.floor(differ/(60*60*1000));
             const differmin=Math.floor(differ/(60*1000));
             const differsec=Math.floor(differ/1000);

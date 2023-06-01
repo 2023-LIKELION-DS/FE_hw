@@ -4,19 +4,29 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Q5</title>
     </head>
     <body>
-        <div class="hi"></div>
-    </body>
-    <script>
-        const time = new Date("2022/06/01 13:30:00");
-        const year = time.getFullYear();
-        const month = time.getMonth();
-        const day = time.getDate();
-        const hours = time.gethours();
-        const mins = time.getMinutes();
+        <script>
+            const date = new Date("2002/06/01:30");
+            const year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDay();
+            var hour = date.getHours();
+            var min = date.getMinutes();
 
-        alert(year + month + day + hours + mins);
-    </script>
+            var setting =
+                year +
+                "년" +
+                month +
+                "월" +
+                day +
+                "일" +
+                hour +
+                "시" +
+                min +
+                "분";
+            alert(setting);
+        </script>
+    </body>
 </html>
