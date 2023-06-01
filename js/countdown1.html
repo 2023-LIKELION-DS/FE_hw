@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown1_LSK</title>
 <style>
+    body {
+        width: 300px;
+        padding: 30px;
+        margin: 50px;
+        font-size: 20px;
+        border-style: double;
+        border-color: red;
+    }
     .title {
         background-color: rgb(216, 216, 216);
+        font-weight: bold;
     }
 </style>
 </head>
 
 <body>
     <div class="open">
-        <span class="title">오픈 시간</span>
-        <div id="opentime">2023년 6월 12일 00시 00분 00초</div>
+        <span class="title">오픈 일시</span>
+        <div id="opentime"></div>
     </div>
     <br />
     <div class="count">
-        <span class="title">카운트다운</span>
+        <span class="title">카운트다운(오픈까지 남은 시간)</span>
         <div id="cd"></div>
     </div>
-</body>
-
 <script>
+    const ot = document.querySelector("#opentime");
     const cd = document.querySelector("#cd");
     const sec = 1000;
     const min = sec * 60;
@@ -35,18 +43,19 @@
         const open = new Date("2023-06-12 00:00:00");
         const now = new Date();
         const timeterm = open - now;
-
-        const days = Math.floor(timeterm / day);
-        const hours = Math.floor((timeterm % day) / hour);
-        const mins = Math.floor((timeterm % hour) / min);
-        const secs = Math.floor((timeterm % min) / sec);
-
-        const hourStr = String(hours);
-        const minStr = String(mins);
-        const secStr = String(secs);
-        cd.innerText = `${days}일 ${hourStr}시간 ${minStr}분 ${secStr}초`;
+        if(timeterm > 0){
+            const days = String(Math.floor(timeterm / day));
+            const hours = String(Math.floor((timeterm % day) / hour));
+            const mins = String(Math.floor((timeterm % hour) / min));
+            const secs = String(Math.floor((timeterm % min) / sec));
+            ot.innerText = open.toLocaleString();
+            cd.innerText = `${days}일 ${hours}시간 ${mins}분 ${secs}초`;
+        } else{
+            cd.innerText = `이미 오픈 일자를 지났습니다`;
+            clearInterval(start);
         }
-    countDown();
-    setInterval(countDown, 1000);
+    }
+    var start = setInterval(countDown, 1000);
 </script>
+</body>
 </html>

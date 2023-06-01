@@ -4,80 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown1_LSK</title>
+    <title>Countdown2_LSK</title>
 <style>
+    body {
+        width: 300px;
+        padding: 30px;
+        margin: 50px;
+        font-size: 20px;
+        border-style: double;
+        border-color: red;
+    }
     .title {
         background-color: rgb(216, 216, 216);
+        font-weight: bold;
     }
 </style>
 </head>
 
 <body>
     <span class="title">운영 시간</span>
-    <div class="run_time">PM 12시 00분 ~ PM 08시 00분</div>
-    <div class="open_time"></div>
-    <div class="close_time"></div>
+    <div id="run-time">AM 10시 00분 ~ PM 08시 00분</div>
     <br />
     <span class="title">카운트다운</span>
-    <div class="until_open_time"></div>
-    <div class="until_close_time"></div>
-    <div class="end_time"></div>
+    <div id="cw"></div>
+    <div id="cd"></div>
 
 </body>
 
 <script>
-    function remainTime(){
-        var now = new Date();
-        var open = new Date(now.getFullYear(),now.getMonth(),now.getDate(),12,00,00);
-        var end = new Date(now.getFullYear(),now.getMonth(),now.getDate(),20,00,00);
+    const cw = document.querySelector("#cw");
+    const cd = document.querySelector("#cd");
+    const sec = 1000;
+    const min = sec * 60; 1000 * 60
+    const hour = min * 60;
+    const day = hour * 24;
 
-        var nt = now.getTime(); // 현재의 시간만 가져온다
-        var ot = open.getTime(); // 오픈시간만 가져온다
-        var et = end.getTime(); // 종료시간만 가져온다.
+    function countdown(){
+        var now = new Date(); /**현재 시간**/
+        /** var now = new Date("2023-06-02 23:00:00"); **/
+        /** var now = new Date("2023-06-02 21:00:00"); **/
+        var open = new Date();
+        open.setHours(10);
+        var close = new Date();
+        close.setHours(20);
 
-        if(nt < ot){
-            ("금일 오픈까지 남은 시간");
+        let remain;
 
-            // day 구하기
-            sec = parseInt(ot - nt)/1000;
-            day = parseInt(sec/60/60/24);
-            sec = (sec - (day * 60 * 60 * 24));
-            // hour 구하기
-            hour = parseInt(sec/60/60);
-            sec = (sec - (hour*60*60));
-            // min 구하기
-            min = parseInt(sec/60);
-            sec = parseInt(sec-(min*60));
-
-            if(hour<10){hour="0"+hour;}
-            if(min<10){min="0"+min;}
-            if(sec<10){sec="0"+sec;}
-            $(".hours").html(hour);
-            $(".minutes").html(min);
-            $(".seconds").html(sec);
-            } else if(nt > et){
-                ("금일 마감");
-            }else {
-                ("금일 마감까지 남은 시간");
-                sec =parseInt(et - nt) / 1000;
-                day  = parseInt(sec / 60 / 60 / 24);
-                sec = (sec - (day * 60 * 60 * 24));
-
-                hour = parseInt(sec / 60 / 60);
-                sec = (sec - (hour * 60 * 60));
-
-                min = parseInt(sec / 60);
-                sec = parseInt(sec-(min*60));
-
-                if(hour<10){hour="0"+hour;}
-                if(min<10){min="0"+min;}
-                if(sec<10){sec="0"+sec;}
-                $(".hours").html(hour);
-                $(".minutes").html(min);
-                $(".seconds").html(sec);
-            }       
-
-    setInterval(remainTime,1000);
+        if(now < open) {
+            var tomorrow = new Date(open);
+            remain = tomorrow - now;
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            cw.innerText = "금일 오픈까지 남은 시간";
+        }else if(now > open && now < close) {
+            remain = close - now;
+            cw.innerText = "금일 마감까지 남은 시간";
+        }else {
+            cw.innerText = "금일 마감";
+            cd.innerText = "";
+            return
+        }
+        
+        const hours = String(Math.floor((remain % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, 0);
+        const mins = String(Math.floor((remain % (1000 * 60 * 60)) /(1000 * 60))).padStart(2, 0);
+        const secs = String(Math.floor((remain % (1000 * 60)) / 1000)).padStart(2, 0);
+        cd.innerText = `${hours} : ${mins} : ${secs}`;
     }
+    setInterval(countdown,1000);
 </script>
 </html>
