@@ -12,62 +12,68 @@
 
     <script>
       // Q1
-      let hello = () => "Hello World!";
+      hello = () => "Hello World!";
 
       // Q2
-      alert("알림창");
       let age = prompt("나이를 입력하세요");
-      let welcome = () =>
-        age > 19
-          ? console.log(age + ": 성인")
-          : console.log(age + ": 미성년자");
-      welcome();
+      let welcome = age < 19 ? "미성년자" : "성인";
+      alert(`${age} : ${welcome}`);
 
       // Q3
-      alert("알림창");
+      let number;
       do {
-        var i = prompt("100을 초과하는 숫자를 입력해주세요.");
-      } while (i > 100);
+        number = prompt("100을 초과하는 숫자를 입력해주세요.");
+      } while (number <= 100 && number !== null);
+
+      console.log(number);
 
       // Q4 (1)
       let str = "likelion";
-      console.log(str[(2, 5)]);
+      console.log(str.slice(4, 8));
 
       // Q4 (2)
       let lion = "lion";
-      console("duksung like lion front", str.includes(lion));
+      console.log("duksung like lion front".includes(lion));
 
       // Q5
-      var date = new Date("2002-06-01 01:30:00");
+      let date = new Date(2002, 5, 1, 1, 30);
       alert(date);
 
       // Q6
-      var today = new Date();
-      let getSecondsToday = () => (seconds = setSeconds(today));
-      alert(getSecondsToday());
+      function getSecondsToday() {
+        let now = new Date(); // 현재 시간
+        let startOfDay = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate()
+        ); // 오늘의 시작 시간
+        let secondsPassed = Math.floor((now - startOfDay) / 1000); // 오늘의 시작 이후로 흐른 초를 계산
+
+        return secondsPassed;
+      }
+
+      let secondsToday = getSecondsToday();
+      alert(secondsToday);
 
       // Q7
       function randomNum() {
-        alert("첫번째 랜덤난수: " + Math.random(0, 100));
-        alert("두번째 랜덤난수: " + Math.random(0, 100));
-        alert("세번째 랜덤난수: " + Math.random(0, 100));
+        let randomNumber = Math.floor(Math.random() * 101); // 0부터 100까지의 난수 생성
+        console.log(randomNumber);
       }
+
       randomNum();
 
       // Q8
       function change() {
-        var text = setElementById(".hz");
+        var element = document.getElementById("hz"); // id가 "hz"인 요소 가져오기
+        var currentValue = element.innerHTML; // 현재 값 가져오기
 
-        switch (text) {
-          case "A":
-            text == "B";
-            break;
-          case "B":
-            text == "C";
-            break;
-          case "C":
-            text == "A";
-            break;
+        if (currentValue === "A") {
+          element.innerHTML = "B";
+        } else if (currentValue === "B") {
+          element.innerHTML = "C";
+        } else {
+          element.innerHTML = "A";
         }
       }
     </script>
