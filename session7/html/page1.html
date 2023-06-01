@@ -33,15 +33,20 @@
                 const dmin = mins - hours * 60;
                 const dsec = secs - mins * 60;
 
-                document.querySelector(".timer").innerHTML =
-                    ddate +
-                    "일 " +
-                    dhour +
-                    "시간 " +
-                    dmin +
-                    "분 " +
-                    dsec +
-                    "초";
+                if (future > now) {
+                    document.querySelector(".timer").innerHTML =
+                        ddate +
+                        "일 " +
+                        dhour +
+                        "시간 " +
+                        dmin +
+                        "분 " +
+                        dsec +
+                        "초";
+                } else {
+                    document.querySelector(".timer").innerHTML = "종료";
+                    clearInterval(updateTimer);
+                }
             }
 
             setInterval(updateTimer, 1000);

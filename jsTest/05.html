@@ -8,26 +8,25 @@
     </head>
     <body>
         <script>
-            const time = new Date("2022/06/01 01:30:00");
-            const year = time.getFullYear();
-            const month = time.getMonth();
-            const day = time.getDate();
-            const hours = time.getHours();
-            const mins = time.getMinutes();
+            const date = new Date("2002/06/01:30");
+            const year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDay();
+            var hour = date.getHours();
+            var min = date.getMinutes();
 
-            const final =
+            var setting =
                 year +
-                "년 " +
+                "년" +
                 month +
-                "월 " +
+                "월" +
                 day +
-                "일, 오전 " +
-                hours +
-                "시 " +
-                mins +
+                "일" +
+                hour +
+                "시" +
+                min +
                 "분";
-
-            alert(final);
+            alert(setting);
         </script>
     </body>
 </html>

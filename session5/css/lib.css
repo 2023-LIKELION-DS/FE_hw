@@ -1,91 +1,367 @@
 * {
-  font-family: "Noto Serif KR", serif;
-  box-sizing: content-box;
-  margin: 10px;
+    font-family: "Noto Serif KR", serif;
+    box-sizing: border-box;
+    margin: 10px;
 }
-@media (max-width: 992px) {
-  .menulogo {
-    color: rgb(252, 252, 252);
-  }
+@media screen and (max-width: 970px) {
+    .logopic {
+        float: left;
+        display: flex;
+        width: 200px;
+        height: 90px;
+        margin-right: 100px;
+    }
+    .menulogo li {
+        display: none;
+    }
+
+    .top_pic {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .bottomlogo {
+        background-color: rgb(239, 239, 239);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-left: 0px;
+        width: 100%;
+    }
+    .bottomlogo1,
+    .bottomlogo2,
+    .bottomlogo5,
+    .bottomlogo6,
+    .bottomlogo7,
+    .bottomlogo8 {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+        padding: 5px 5px;
+        height: 100px;
+        margin-right: 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bottomlogo li img {
+        width: 50px;
+        height: 50px;
+        margin-right: 7px;
+    }
+    .bottomlogo div {
+        display: none;
+    }
+
+    .topic-news,
+    .topic,
+    .news {
+        padding-left: 0px;
+        margin-right: 0px;
+    }
+    .topic-news {
+        width: 50%;
+    }
+    .more {
+        display: flex;
+        justify-content: space-between;
+    }
+    .bottomlogo::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .topic-news {
+        display: none;
+    }
 }
 
-.top_header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media screen and (max-width: 970px) {
+    .logopic {
+        float: left;
+        display: flex;
+        width: 200px;
+        height: 90px;
+        margin-right: 100px;
+    }
+    .menulogo li {
+        display: none;
+    }
+
+    .top_pic {
+        width: 800px;
+        object-fit: cover;
+    }
+    .bottomlogo div {
+        margin: 0px;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .bottomlogo {
+        background-color: rgb(239, 239, 239);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 0px;
+    }
+    .bottomlogo li {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+        padding: 5px 5px;
+        height: 100px;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .bottomlogo li img {
+        width: 50px;
+        height: 50px;
+        margin-right: 7px;
+    }
+    .topic-news,
+    .topic,
+    .news {
+        padding-left: 0px;
+        margin-right: 0px;
+    }
+    .topic-news {
+        width: 50%;
+        margin-right: 0px;
+        float: left;
+    }
+    .bottomlogo::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .topic {
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 5px;
+    }
+    .topic h3 {
+        flex-wrap: nowrap;
+    }
+    .first_one {
+        display: flex;
+        flex-direction: row;
+    }
+    .ngray {
+        color: gainsboro;
+        font-size: 23px;
+        margin-right: 0px;
+    }
+    .nogray {
+        margin-left: 0px;
+        font-size: 23px;
+    }
+    .npink {
+        color: pink;
+        font-size: 23px;
+        margin-right: 0px;
+    }
+    .plus {
+        color: pink;
+        font-size: 23px;
+    }
+    .nopink {
+        margin-left: 0px;
+        font-size: 23px;
+    }
+    .Culture h3 {
+        font-size: 23px;
+    }
+    .notice,
+    .Culture {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+    }
+    .topic,
+    .news {
+        list-style: none;
+        margin-left: 0px;
+    }
+    .topic sub {
+        margin-bottom: 0px;
+        margin-top: 23px;
+        margin-left: 0px;
+    }
+    .news h5 {
+        border-bottom: solid 2px;
+        color: gainsboro;
+    }
+    .news h4 {
+        margin-left: 0px;
+    }
+    .News {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .new-pic img {
+        float: right;
+        width: 500px;
+        margin-left: 60px;
+    }
 }
-.top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%;
-}
-.logopic {
-  display: flex;
-  flex-direction: flex;
-  width: 200px;
-  height: 100px;
-  margin-right: 100px;
-}
-.menu {
-  display: flex;
-  justify-content: center;
-}
-.menulogo {
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 100px;
-}
-.menulogo li {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  width: 100px;
-  padding: 5px 5px;
-  text-align: center;
-}
-.top_pic {
-  width: 100%;
-  text-align: center;
-}
-.logo {
-  display: flex;
-  justify-content: center;
-}
-.bottomlogo {
-  background-color: rgb(239, 239, 239);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.bottomlogo li {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  list-style: none;
-  padding: 5px 5px;
-  height: 100px;
-  text-align: center;
-  margin-right: 30px;
-}
-.bottomlogo li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.bottomlogo li img {
-  width: 50px;
-  height: 50px;
-  margin-right: 7px;
-}
-.news {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  text-align: center;
-  justify-content: center;
+@media screen and (min-width: 971px) {
+    .logopic {
+        float: left;
+        display: flex;
+        width: 200px;
+        height: 90px;
+        margin-right: 100px;
+    }
+    .nav-bar {
+        display: flex;
+    }
+
+    .menulogo {
+        display: flex;
+        padding-left: 0px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .menulogo li {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        width: 120px;
+    }
+
+    .top_pic {
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottomlogo {
+        background-color: rgb(239, 239, 239);
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    .bottomlogo li {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 5px 5px;
+        height: 100px;
+        text-align: center;
+        margin-right: 30px;
+        flex-direction: column;
+    }
+    .bottomlogo li img {
+        width: 50px;
+        height: 50px;
+        margin-right: 7px;
+    }
+    .topic-news,
+    .topic,
+    .news {
+        padding-left: 0px;
+        margin-right: 0px;
+    }
+    .topic-news {
+        width: 50%;
+        margin-right: 0px;
+        float: left;
+    }
+
+    .bottomlogo::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .bottomlogo img {
+        margin-left: 25px;
+    }
+    .topic {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        border-bottom: solid 5px;
+    }
+    .topic h3 {
+        flex-wrap: nowrap;
+    }
+    .first_one {
+        display: flex;
+        flex-direction: row;
+    }
+    .ngray {
+        color: gainsboro;
+        font-size: 23px;
+        margin-right: 0px;
+    }
+    .nogray {
+        margin-left: 0px;
+        font-size: 23px;
+    }
+    .npink {
+        color: pink;
+        font-size: 23px;
+        margin-right: 0px;
+    }
+    .plus {
+        color: pink;
+        font-size: 23px;
+    }
+    .nopink {
+        margin-left: 0px;
+        font-size: 23px;
+    }
+    .Culture h3 {
+        font-size: 23px;
+    }
+    .notice,
+    .Culture {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+    }
+    .topic,
+    .news {
+        list-style: none;
+        margin-left: 0px;
+    }
+    .News {
+        display: flex;
+        flex-direction: row;
+    }
+    .new-pic img {
+        float: right;
+        width: 500px;
+    }
+    .topic sub {
+        margin-bottom: 0px;
+        margin-top: 23px;
+        margin-left: 0px;
+    }
+    .news h5 {
+        border-bottom: solid 2px;
+        color: gainsboro;
+    }
+    .news h4 {
+        margin-left: 0px;
+    }
+    .bottomlogo div {
+        margin: 0px;
+    }
+    .pic-size img {
+        width: 50%;
+        float: right;
+    }
 }
