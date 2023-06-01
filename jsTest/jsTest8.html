@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,18 +7,17 @@
         <title>Document</title>
     </head>
     <body>
+        <span id="hz">A</span><br />
+        <input type="button" value="클릭" onClick="change()" />
         <script>
-            var welcome = function () {
-                let welcome = confirm("확인창");
-                let age = prompt("나이를 입력하시오");
-                if (age < 20) {
-                    confirm(age + ": 미성년자");
+            function change() {
+                var hz = document.getElementById("hz");
+                if (hz.textContent === "A") {
+                    hz.textContent = "B";
                 } else {
-                    confirm(age + ": 성인");
+                    hz.textContent = "C";
                 }
-            };
-
-            welcome();
+            }
         </script>
     </body>
 </html>
