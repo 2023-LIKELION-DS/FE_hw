@@ -9,12 +9,12 @@
     <body>
         <script>
             const today = new Date();
-            today.setHours(24, 0, 0);
+            today.setHours(0, 0, 0);
             const now = new Date();
             let remainingTime;
             function getSecondsToday() {
-                remainingTime = today - now;
-                const secs = Math.floor(remainingTime * 60 * 60);
+                remainingTime = now - today;
+                const secs = Math.floor(remainingTime / 1000);
                 alert(secs);
             }
             getSecondsToday();
