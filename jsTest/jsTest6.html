@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var secondd = new Date();
+            var sec = new Date().setHours(0, 0, 0, 0);
+            function getSecondsToday() {
+                var interval = Math.floor((secondd - sec) / 1000);
+                alert(interval);
+            }
+            getSecondsToday();
+            setInterval(getSecondsToday, 1000);
+        </script>
+    </body>
+</html>
