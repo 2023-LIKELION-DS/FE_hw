@@ -41,12 +41,14 @@
 
     function countdown(){
         var now = new Date(); /**현재 시간**/
-        /** var now = new Date("2023-06-02 23:00:00"); **/
-        /** var now = new Date("2023-06-02 21:00:00"); **/
         var open = new Date();
         open.setHours(10);
+        open.setMinutes(00);
+        open.setSeconds(00);
         var close = new Date();
         close.setHours(20);
+        close.setMinutes(00);
+        close.setSeconds(00);
 
         let remain;
 
