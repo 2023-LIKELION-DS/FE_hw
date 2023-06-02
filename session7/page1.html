@@ -18,7 +18,11 @@
                 //Date()객체를 이용하여 구하고, 오픈시간에서 현재 정보들을 빼서 date_n에 저장하였음
                 const date1 = new Date("2023/06/12 00:00:00");
                 const date0 = new Date();
-                const date_n = date1 - date0;   
+
+                //(피드백 1) pdf에 적혀있는 getTime()을 사용해서 밀리초로 비교를 하는 것을 추천합니다.
+                //(수정전) const date_n = date1 - date0;   
+                //(수정후)
+                date_n = date1.getTime() - date0.getTime();
 
                 //if문 대신 나누기 기호를 이용하고, 각각의 변수에 저장하였음
                 const day1 = Math.floor(date_n / (1000 * 60 * 60 * 24)); 

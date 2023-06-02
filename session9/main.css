@@ -1,0 +1,279 @@
+/*1.위 좌측 상단*/
+.img-wrap{
+    display:flex;
+    margin-top:2%;
+}
+
+.i_menu{
+    margin-left:3%;
+
+}
+/*1.유튜브 로고 */
+.i_youtube1{
+    margin-left:3%;
+
+}
+
+.title{
+    margin:0 1%;
+    font-weight: bold;
+
+}
+
+.title1{
+    font-weight: normal;
+}
+/*1.검색창*/
+.box1{
+    border:1px solid;
+    width:30%;
+    margin:0 0 0 15%;
+    height:10%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.i_search{
+    margin-left:50px;
+
+}
+
+.box2{
+    border:1px solid;
+    height:10%;
+
+}
+/*1.위 우측 상단*/
+.i_audio{
+    margin-left:50px;
+
+}
+
+.i_dots{
+    margin-left:50px;
+
+}
+
+.i_user{
+    margin-left:100%;
+
+}
+
+.img-wrap2{
+    display:flex;
+}
+
+.text00{
+
+}
+/*---------------------*/
+/*2.전체*/
+.plz{
+    display:flex;
+    margin-left:3%;
+}
+/*2.좌측 영상 */
+
+
+.left{
+    display:flex;
+    width:45%;
+}
+
+.right{
+    display:flex;
+    margin-bottom:5%;
+}
+
+/*2.프로필 및 구독 배너*/
+/*2. 좌측 프로필*/
+.r1_text1{
+    font-weight:bold;
+    font-size:20px;
+    margin-top:1%;
+}
+
+.sub{
+    display:flex;
+}
+
+.r1_img1{
+    border:1px solid;
+    border-radius: 100%;
+}
+
+.r1_text23{
+    margin-left:1%;
+}
+
+.r1_text2{
+    font-size:18px;
+    margin-top:3%;
+}
+
+.r1_text3{
+    font-size:13px;
+    margin-top:-15%;
+    color:grey;
+}
+
+.r1_text4{
+    padding-top:-50%;
+    color:white;
+    text-align: center;
+}
+
+.r1_text44{
+    border:1px solid;
+    border-radius: 50%;
+    width:3%;
+    height:1%;
+    margin-left:1%;
+    background-color: black;
+}
+
+.r1_img_wrap{
+    display:flex;
+    margin-left:50%;
+
+}
+
+/* 2. 상세 내용*/
+.box4{
+    background-color: #F1EFEF;
+    width:88%;
+    padding:0.5%;
+    padding-left: 2%;
+    margin-top:2%;
+    border-radius: 2%;
+}
+
+
+/*2. 댓글*/
+.box5{
+    display:flex;
+    margin-top:2%;
+}
+
+.text_5_1{
+    margin-right:5%;
+    font-size: 120%;
+}
+
+.text_5_2{
+    display:flex;
+}
+
+.box6{
+    margin-top: 3%;
+    display:flex;
+}
+
+.box7{
+    margin:1% 0 -1% 1%;
+}
+
+.box8{
+    display:flex;
+    margin-left:85%;
+}
+
+.box9{
+    display:flex;
+}
+
+.text9_14{
+    margin-left:2%;
+    margin-top:-1%;
+}
+
+.text9_1{
+    display:flex;
+    margin-left: 2%;
+}
+
+.text9_2{
+    margin-left:-1%;
+}
+
+.text9_3{
+    margin-left:4%;
+    color:gray;
+
+}
+
+.text9_4{
+    margin-top: -6%;
+    font-size: 17px;
+}
+
+.text9_3{
+
+}
+
+/*댓글 좋아요*/
+.img56{
+    display:flex;
+    text-decoration: center;
+    margin-top:10%;
+}
+
+.img5{
+    display:flex;
+}
+
+.text580{
+    width:70px;
+    margin-left: 5%;
+    margin-top: 2%;
+    color:rgb(32, 32, 32);
+}
+
+.text_ans{
+    margin-left: 10%;
+    margin-top: 1%;
+    width:50px;
+}
+
+/*댓글 답글 토큰*/
+.text10{
+    color:blue;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+/*2. 우측 */
+.r_img1{
+    width:250px;
+    margin-left:-15%;
+    border-radius:8%;
+}
+
+.r_text{
+    padding-left:5%;
+}
+
+.r_text1{
+    margin-top:-0.5%;
+}
+
+.r_text2{
+    margin-top:-3%;
+    color:grey;
+    font-size:14px;
+}  
+
+.r_text3{
+    margin-top:-5%;
+    color:grey;
+    font-size:14px;
+}
+
+.r_img2{
+    margin-left:2%;
+}
+
+
+/* */

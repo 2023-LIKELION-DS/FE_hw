@@ -18,7 +18,27 @@
     <div id="time_e"></div>
 </body>
 <script>
-    function updateTimer() {
+/*(피드백 2) 페이지 2 코드에서 같은 내용의 계산을 중복해서 작성을 해주셨는데 
+이는 비효율적이라고 개인적으로 생각이 듭니다. 따라서 조건문 밖에 연산을 하거나
+새로운 함수를 만들어서 호출하는 것을 추천드립니다.*/
+
+//함수를 만들어서 호출하는 방식으로 다시 작성하였습니다.
+
+function timefunc(time0, time1) {
+    var timeDiff = time1 - time0; 
+
+    var hours = Math.floor(timeDiff / (1000 * 60 * 60));
+    var min = Math.floor((timeDiff / (1000 * 60)) % 60);
+    var sec = Math.floor((timeDiff / 1000) % 60);
+
+    return {
+    hours: hours,
+    minutes: min,
+    seconds: sec
+    };
+}
+
+function updateTimer() {
     var time0_f = new Date();
     time0_f.setHours(17, 0, 0);
 
@@ -26,32 +46,28 @@
     time0_e.setHours(18, 0, 0);
 
     var time0_n = new Date();
-    //time0_n.setHours(2,30, 0);    
+    time0_n.setHours(2, 30, 0);
+
     if (time0_n < time0_f) {
-        var time_t = time0_f - time0_n;
-        var days = Math.floor(time_t / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((time_t / (1000 * 60 * 60)) % 24);
-        var min = Math.floor((time_t / 1000 / 60) % 60);
-        var sec = Math.floor((time_t / 1000) % 60);
-        document.getElementById("time1_f").textContent =
-        "금일 오픈까지 남은 시간"
-        document.getElementById("time2_f").textContent =
-        hours+':'+min+':'+sec;
+    var time_t = timefunc(time0_n, time0_f);
+
+    document.getElementById("time1_f").textContent = "금일 오픈까지 남은 시간";
+    document.getElementById("time2_f").textContent =
+    time_t.hours + ":" + time_t.minutes + ":" + time_t.seconds;
     } 
     else if (time0_n > time0_e) {
-        document.getElementById("time_e").textContent = "금일 마감";
+    document.getElementById("time_e").textContent = "금일 마감";
     } 
     else {
-        var time_t = time0_e - time0_n;
-        var hours = Math.floor(time_t / (1000 * 60 * 60));
-        var min = Math.floor((time_t / 1000 / 60) % 60);
-        var sec = Math.floor((time_t / 1000) % 60);
-        document.getElementById("time1_e").textContent =
-        "금일 마감까지 남은 시간"
-        document.getElementById("time2_e").textContent =
-        hours+':'+min+':'+sec;
+    var time_t = timefunc(time0_n, time0_e);
+
+    document.getElementById("time1_e").textContent = "금일 마감까지 남은 시간";
+    document.getElementById("time2_e").textContent =
+    time_t.hours + ":" + time_t.minutes + ":" + time_t.seconds;
     }
 }
-    setInterval(updateTimer, 1000);
+
+setInterval(updateTimer, 1000);
+
 </script>
 </html>
