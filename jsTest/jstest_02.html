@@ -10,11 +10,7 @@
         <script>
             let age = prompt("나이를 입력하세요", 0);
             let welcome = function () {
-                if (age <= "19") {
-                    alert(age + ":미성년자");
-                } else {
-                    alert(age + ":성인");
-                }
+                age <= "19" ? alert(age + ":미성년자") : alert(age + ":성인");
             };
             welcome();
         </script>

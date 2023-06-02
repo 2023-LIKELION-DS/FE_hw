@@ -33,6 +33,12 @@
                 const days = hours * 24;
                 const diff = open - now;
 
+                if (diff <= 0) {
+                    document.getElementById("countdown").innerHTML = "오픈!";
+                    clearInterval(intervalId);
+                    return;
+                }
+
                 const day = String(Math.floor(diff / days)).padStart(2, 0);
                 const hour = String(Math.floor((diff % days) / hours)).padStart(
                     2,
@@ -61,7 +67,7 @@
                     "초";
             }
 
-            setInterval(countDown, 1000);
+            const interval = setInterval(countDown, 1000);
         </script>
     </body>
 </html>
