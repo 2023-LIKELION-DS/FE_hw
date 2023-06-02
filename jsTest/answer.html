@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsTEST_LSK</title>
+</head>
+<body>
+    <span id="hz">A</span><br/>
+    <input type="button" value="클릭" onClick="change()">
+</body>
+<script>
+    
+    //문제 1
+    var hello = () => "Hello World!";
+
+    //문제 2
+    let age = prompt("나이를 입력하세요");
+    let welcome = age >= 20 ? alert(age + ": 성인") : alert(age + ": 미성년자");
+    welcome();
+    
+    //문제 3
+    do {
+        number = prompt("100을 초과하는 숫자를 입력해주세요. :");
+    } while (number < 100);
+    
+    //문제 4
+    let str = "likelion";
+    console.log(str.slice(2,6));
+
+    let lion = "lion";
+    alert("duksung like lion front" !== lion)
+    // 같은 결과값이 나오는 답
+    //alert("duksung like lion front".includes(lion));
+    
+    //문제 5
+    var new_date = new Date("2002-06-01 01:30:00");
+    alert(new_date.toLocaleString());
+    
+    //문제 6
+    function getSecondsToday() {
+        var date = new Date(); //현재 날짜와 시간을 불러옴
+        var hours = date.getHours() * 3600; //시를 초로 변경
+        var mins = date.getMinutes() * 60; //분을 초로 변경
+        var secs = date.getSeconds();
+        alert(hours + mins + secs);
+    }
+    getSecondsToday();
+    
+    //문제 7
+    function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min +1)) + min;
+    }
+    var rand1 = randomNum(0, 100);
+    var rand2 = randomNum(0, 100);
+    var rand3 = randomNum(0, 100);
+    document.write("첫번째 랜덤난수 : " + rand1 + '<br>');
+    document.write("두번째 랜덤난수 : " + rand2 + '<br>');
+    document.write("세번째 랜덤난수 : " + rand3);
+    
+    //문제 8
+    document.getElementById("hz").addEventListener("click", change);
+
+    function change() {
+        var word = document.getElementById("hz");
+        if (word.innerText == "A") {
+            word.innerText = "B";
+        }else if (word.innerText == "B") {
+            word.innerText = "C";
+        }else {
+            word.innerText = "A";
+        }
+    }
+</script>
+</html>
