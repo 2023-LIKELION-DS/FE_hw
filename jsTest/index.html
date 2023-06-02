@@ -9,49 +9,88 @@
 
     <script> 
     //1    
-        let hello = {
-        return "Hello World!";
-    };
+    let hello = () => "Hello World!";
 
     //2
+    let age = prompt('나이를 입력하세요.');
+    let welcome=age>19 ? alert(age+': 성인') : alert(age+': 미성년자');
+    welcome();
 
     //3
     do{ var num = prompt("100을 초과하는 숫자를 입력해주세요.")
 
     }while(num<=100);
 
-    //4
-    
+    //4-1
+    str.slice(2,6)
+
+    //4-2
+    alert(lion == "lion")
+
     //5
-    const date00 = new Date("2002/06/01 01:30:00");
-    const year3 = getFullYear(date3);
-    const month3 = getMonth(date3);
-    const date3 = getDate(date3);
-    const hours3 = getHours(date3);
-    const min3 = getMinutes(date3);
-    const sec3 = getSeconds(date3);
-    alert(year3+"년 "+month3+"월 "+date3+"일, 오전 "+hours3+"시 "+min3+"분");
+    const date3 = new Date("2002/06/01 01:30:00");
+    const year3 = date3.getFullYear();
+    const month3 = date3.getMonth()+1;
+    const date33 = date3.getDate();
+    const hours3 = date3.getHours();
+    const minutes3 = date3.getMinutes();
+    alert(year3+'년 '+month3+'월 '+date33+'일, 오전 '+hours3+'시 '+minutes3+'분');
+
     //6
     function getSecondsToday(){
-                const date1 = new Date("2023/06/12 00:00:00");
-                const date0 = new Date();
-                const date_n = date1 - date0;   
+        var today=new Date();
+        var time=new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        
+        var sec=Math.floor((today-time)/1000);
+        
+        return sec;
+        
+    }
+    
+    var sec = getSecondsToday();
+    alert(sec);
 
-                const date0 = new Date();
-                const time0 = new Date();
-                time0.setHours(0, 0, 0);
-                const date1 = date0 - time0;
-                
-                const hour1 = Math.floor(date1 / (1000 * 60 * 60));
-                const min1 = Math.floor(date1 / (1000 * 60));
-                const sec1 = Math.floor(date1 / 1000);
-                const hour2=hour1;
-                const min2 = (min1 - hour1 * 60)*60;
-                const sec2 = sec1 - min1 * 60;
-                const hap=min2+sec2;
-        }
-    alert(hap);
+    //7
+    function randomNum(){
+    let random=Math.floor(Math.random()*101);
+    return random;
+    }
+    
+    let random1 = randomNum();
+    document.write('첫번째 랜덤난수 : '+random1);
+    let random2 = randomNum();
+    document.write('두번째 랜덤난수 : '+random2);
+    let random3 = randomNum();
+    document.write('세번째 랜덤난수 : '+random3);
+
     </script>
 
+</body>
+</html>
+
+// 8
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+    function change() {
+        var text = document.getElementById("alpa"); 
+        var text1 = text.innerHTML; 
+        
+        if (text1 == "A") {
+            text.innerHTML = "B";
+        } else if (text1 == "B") {
+            text.innerHTML = "C";
+        } else if (text1 == "C") {
+            text.innerHTML = "A";
+        }
+    }
+</script>
+</head>
+<body>
+<span id="alpa">A</span><br>
+
+<input type="button" value="클릭" onClick="change()">
 </body>
 </html>

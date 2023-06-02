@@ -12,7 +12,24 @@
         list-style:none;
         display:none;
     }
+
+    .total_notice{
+        display:none;
+    }
+
+    .notice2{
+        justify-content:center;
+        margin-top:200px;
+    }
 }
+
+@media (max-width: 768px) {
+        .menu1 {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+    }
+
+
 
 /*
 @media all and (max-width:565px){
