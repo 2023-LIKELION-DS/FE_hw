@@ -27,11 +27,15 @@
     <div id="countdown"></div>
 
     <script>
-      //오픈시간
-      const open = new Date("2023-05-19 09:00:00");
+      // 오픈시간
+      const open = new Date();
+      open.setFullYear(open.getFullYear(), open.getMonth(), open.getDate());
+      open.setHours(9, 0, 0); // 09:00:00
 
-      //마감시간
-      const close = new Date("2023-05-19 17:00:00");
+      // 마감시간
+      const close = new Date();
+      close.setFullYear(close.getFullYear(), close.getMonth(), close.getDate());
+      close.setHours(17, 0, 0); // 17:00:00
 
       function main() {
         setInterval(updateCountdown, 1000);
@@ -50,8 +54,8 @@
         }
       }
 
-      //금일 오픈까지 남은 시간 : 오픈시간 - 현재시간(오픈시간>현재시간)
-      //운영시간 전
+      // 금일 오픈까지 남은 시간: 오픈시간 - 현재시간 (오픈시간 > 현재시간)
+      // 운영시간 전
       function beforeOpen(today) {
         const beforeOpenWindow = document.querySelector("#countdown");
         const openToday = open - today;
@@ -69,8 +73,8 @@
           openTodaySec;
       }
 
-      //금일 마감까지 남은 시간 : 마감시간 - 현재시간(마감시간>현재시간)
-      //운영 중
+      // 금일 마감까지 남은 시간: 마감시간 - 현재시간 (마감시간 > 현재시간)
+      // 운영 중
       function afterOpen(today) {
         const afterOpenWindow = document.querySelector("#countdown");
         const openIng = close - today;
@@ -88,7 +92,7 @@
           openIngSec;
       }
 
-      //금일 마감 : 현재시간 > 마감시간
+      // 금일 마감: 현재시간 > 마감시간
       function closeToday() {
         const closeTodayWindow = document.querySelector("#countdown");
         closeTodayWindow.innerHTML = "금일 마감";

@@ -34,7 +34,7 @@
       const openWindow = document.querySelector("#open");
 
       function showOpenTime() {
-        const date = new Date("2023-06-12 00:00:00");
+        const date = new Date("2023-06-02 00:00:00");
         const str1 =
           date.getFullYear() +
           "년 " +
@@ -55,6 +55,7 @@
 
       // 카운트다운 보여주는 창
       const countWindow = document.querySelector("#count");
+      let intervalId;
 
       function countDown() {
         const today = new Date();
@@ -75,10 +76,15 @@
           "분 " +
           leftTimeSec +
           "초 남았습니다";
+
+        if (today > date2) {
+          clearInterval(intervalId);
+          document.getElementById("count").style.display = "none";
+        }
       }
 
       countDown();
-      setInterval(countDown, 1000);
+      intervalId = setInterval(countDown, 1000);
     </script>
   </body>
 </html>

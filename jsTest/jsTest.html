@@ -12,15 +12,17 @@
     <input type="button" value="클릭" onClick="change()" />
 
     <script>
-      // 문제 1
+      // // 문제 1
       var hello = () => "Hello World!";
 
-      //문제 2
+      // //문제 2
       let age = prompt("나이를 입력하세요");
       let welcome = age > 20 ? alert(age + ":성인") : alert(age + ":미성년자");
       welcome();
 
       //문제 3 do-while반복문을 사용해 100 초과하는 숫자를 입력할 때 까지 반복하세요.
+
+      let num;
 
       do {
         num = prompt("100을 초과하는 숫자를 입력해주세요");
@@ -36,11 +38,11 @@
 
       console.log("duksung like lion front".includes("lion"));
 
-      //문제 5
+      // //문제 5
       var date = new Date("2002-06-01 01:30:00");
       alert(date);
 
-      //문제 6 오늘 하루가 시작된 이후 몇 초나 지났는지 반환하는 함수
+      // //문제 6 오늘 하루가 시작된 이후 몇 초나 지났는지 반환하는 함수
       function getSecondsToday() {
         var date = new Date();
 
@@ -51,7 +53,7 @@
       }
       getSecondsToday();
 
-      //문제 7
+      // //문제 7
 
       function randomNum() {
         var rand = Math.floor(Math.random() * 100);
@@ -63,7 +65,7 @@
       }
       randomNum();
 
-      //문제 8
+      // //문제 8
 
       document.getElementById("hz").addEventListener("click", change);
 
